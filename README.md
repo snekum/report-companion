@@ -23,7 +23,7 @@ What doesn't work yet:
 
 - **The fine-tuned model inside the browser.** The browser version stores the weights at 4-bit precision, and that rounding undoes most of the fine-tuning: only 10% of its answers come out in a valid format, against 100% in Python on the same 40 documents. The cause is that training rounded the base model one way and the browser rounds it another. The step-by-step investigation is in [results/deployment/diag_browser/](results/deployment/diag_browser/) and [PROGRESS.md](PROGRESS.md). A retrain on a base rounded exactly the way the browser rounds it is under way.
 
-Results: [results/RESULTS.md](results/RESULTS.md) · Model card: [docs/MODEL_CARD.md](docs/MODEL_CARD.md) · Walkthrough: [docs/WALKTHROUGH.md](docs/WALKTHROUGH.md) · Progress log: [PROGRESS.md](PROGRESS.md)
+Live demo: [snekum.github.io/report-companion](https://snekum.github.io/report-companion/) (needs a browser with WebGPU, such as recent Chrome or Edge, to run the model; the prepared examples work anywhere) · Results: [results/RESULTS.md](results/RESULTS.md) · Model card: [docs/MODEL_CARD.md](docs/MODEL_CARD.md) · Walkthrough: [docs/WALKTHROUGH.md](docs/WALKTHROUGH.md) · Progress log: [PROGRESS.md](PROGRESS.md)
 
 ## Repository layout
 
