@@ -1,0 +1,17 @@
+3 to do, 0 done
+loaded Qwen3-1.7B-q4f16_1-MLC intel gen-9 12578 ms
+3 to do, 0 done
+loaded ReportCompanion-Qwen3-1.7B-q4f16_1-MLC intel gen-9 18659 ms
+node:internal/modules/run_main:107
+    triggerUncaughtException(
+    ^
+
+page.evaluate: Execution context was destroyed, most likely because of a navigation.
+    at D:\portfolio\report-companion\app\scripts\browser-eval.mjs:27:24 {
+  log: [],
+  name: 'Error'
+}
+
+Node.js v24.14.1
+2 to do, 1 done
+loaded ReportCompanion-Qwen3-1.7B-q4f16_1-MLC intel gen-9 13301 ms

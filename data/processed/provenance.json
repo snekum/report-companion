@@ -1,0 +1,30 @@
+{
+  "built_at": "2026-11-23T09:54:57+00:00",
+  "synthea": {
+    "version": "v4.0.0",
+    "release": "https://github.com/synthetichealth/synthea/releases/tag/v4.0.0",
+    "jar_sha256": "ed43c20ad40ba5c3bc724503a5af032715fe3c491620b766148e7c2361e6ecc1",
+    "command": "pipeline/run_synthea.sh (seed 20261123, clinician seed 20261123, reference date 20250601, population 700, Massachusetts)",
+    "code_licence": "Apache-2.0",
+    "data_note": "Synthea's FAQ describes its generated synthetic data as public domain. All patients are synthetic; no real patient data is used."
+  },
+  "fixtures": {
+    "pipeline/fixtures/fictional_lab_ranges.json": "Authored fictional labs and illustrative reference ranges (Synthea has none). Not clinical reference intervals.",
+    "pipeline/fixtures/lab_catalog.json": "Authored mapping of Synthea LOINC codes to display names."
+  },
+  "split": {
+    "method": "sha256(salt + Synthea patient UUID) before rendering",
+    "salt": "report-companion-split-v1",
+    "fractions": {
+      "train": 0.7,
+      "val": 0.08,
+      "test": 0.16,
+      "demo": 0.06
+    }
+  },
+  "held_out_template_families": [
+    "L3",
+    "V3"
+  ],
+  "generator": "render-v1"
+}

@@ -1,0 +1,67 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "report-companion/extraction/v1",
+  "title": "Report Companion extraction v1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["document_date", "labs", "medications", "follow_up"],
+  "properties": {
+    "document_date": {
+      "anyOf": [
+        { "type": "null" },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["value", "evidence"],
+          "properties": {
+            "value": { "type": "string", "minLength": 1 },
+            "evidence": { "type": "string", "minLength": 1 }
+          }
+        }
+      ]
+    },
+    "labs": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["test", "value", "unit", "reference_range", "date", "evidence"],
+        "properties": {
+          "test": { "type": "string", "minLength": 1 },
+          "value": { "type": "string", "minLength": 1 },
+          "unit": { "type": ["string", "null"] },
+          "reference_range": { "type": ["string", "null"] },
+          "date": { "type": ["string", "null"] },
+          "evidence": { "type": "string", "minLength": 1 }
+        }
+      }
+    },
+    "medications": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["name", "dose", "frequency", "status", "evidence"],
+        "properties": {
+          "name": { "type": "string", "minLength": 1 },
+          "dose": { "type": ["string", "null"] },
+          "frequency": { "type": ["string", "null"] },
+          "status": { "enum": ["current", "not_current", "unclear"] },
+          "evidence": { "type": "string", "minLength": 1 }
+        }
+      }
+    },
+    "follow_up": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["instruction", "evidence"],
+        "properties": {
+          "instruction": { "type": "string", "minLength": 1 },
+          "evidence": { "type": "string", "minLength": 1 }
+        }
+      }
+    }
+  }
+}

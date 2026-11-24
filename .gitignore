@@ -1,0 +1,24 @@
+# local toolchains and venvs
+tools/jre/
+tools/*.jar
+.venv-*/
+__pycache__/
+*.pyc
+# generated raw data (reproducible from pipeline/run_synthea.sh)
+data/raw/
+# model weights and large artefacts (not published without approval)
+model/outputs/*/checkpoint-*/
+model/outputs/**/*.safetensors
+model/outputs/**/*.bin
+# stock Qwen tokenizer copied next to each adapter (11 MB each); it comes with the base model
+model/outputs/**/tokenizer.json
+model/merged/
+model/mlc/
+# app
+app/node_modules/
+app/dist/
+app/.vite/
+node_modules/
+app/.chrome-profile/
+data/interim/
+dist/

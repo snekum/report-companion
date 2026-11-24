@@ -1,0 +1,55 @@
+[
+  {
+    "id": "checkup",
+    "title": "Preparing for a routine check-up",
+    "person": "Otis Hyatt",
+    "who": "Otis, 65, has two lab reports from different labs a year apart.",
+    "goal": "See what changed between the two reports, and write down questions before the check-up.",
+    "docIds": [
+      "demo-checkup-L1-2179b261",
+      "demo-checkup-L2-18c990f3"
+    ],
+    "compare": [
+      "demo-checkup-L1-2179b261",
+      "demo-checkup-L2-18c990f3"
+    ],
+    "starterQuestions": [
+      "Which of these results would you like to recheck, and when?"
+    ]
+  },
+  {
+    "id": "newdoctor",
+    "title": "Organising records before seeing a new doctor",
+    "person": "Donovan Johns",
+    "who": "Donovan, 64, is moving to a new practice and has a summary, a letter and a lab report.",
+    "goal": "Build one tidy list of medicines (current, stopped, unclear) and recent results to bring along.",
+    "docIds": [
+      "demo-newdoctor-V1-9ea93e09",
+      "demo-newdoctor-V2-03af7202",
+      "demo-newdoctor-L2-b2e4f228"
+    ],
+    "compare": null,
+    "starterQuestions": [
+      "Should I keep taking all of the medicines on the current list?"
+    ]
+  },
+  {
+    "id": "parent",
+    "title": "Helping a parent prepare for an appointment",
+    "person": "Santo O'Connell",
+    "who": "An adult child is helping Santo, 68, make sense of a results printout, a portal message and a visit summary.",
+    "goal": "Understand what each paper says, spot repeated tests, and bring a one-page brief to the appointment.",
+    "docIds": [
+      "demo-parent-L4-2e846889",
+      "demo-parent-L5-6d402a04",
+      "demo-parent-V1-66135c14"
+    ],
+    "compare": [
+      "demo-parent-L4-2e846889",
+      "demo-parent-L5-6d402a04"
+    ],
+    "starterQuestions": [
+      "Is there anything we should bring or do before the next appointment?"
+    ]
+  }
+]

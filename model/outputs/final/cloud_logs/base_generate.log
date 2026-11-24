@@ -1,0 +1,47 @@
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+40 to do (0 already in /kaggle/working/rc/results/predictions/base-t4_val40.jsonl)
+Loading weights:   0%|          | 0/311 [00:00<?, ?it/s]Loading weights:   0%|          | 1/311 [00:00<03:23,  1.52it/s]Loading weights:   1%|          | 2/311 [00:01<03:35,  1.43it/s]Loading weights:   1%|▏         | 4/311 [00:01<01:38,  3.12it/s]Loading weights:   5%|▌         | 16/311 [00:01<00:16, 17.45it/s]Loading weights:  10%|█         | 32/311 [00:01<00:07, 38.69it/s]Loading weights:  15%|█▌        | 47/311 [00:01<00:04, 58.20it/s]Loading weights:  19%|█▉        | 59/311 [00:01<00:03, 68.65it/s]Loading weights:  23%|██▎       | 71/311 [00:02<00:03, 77.90it/s]Loading weights:  26%|██▋       | 82/311 [00:02<00:02, 82.44it/s]Loading weights:  30%|██▉       | 93/311 [00:02<00:02, 86.44it/s]Loading weights:  34%|███▍      | 107/311 [00:02<00:02, 99.90it/s]Loading weights:  40%|████      | 125/311 [00:02<00:01, 116.58it/s]Loading weights:  44%|████▍     | 138/311 [00:02<00:01, 111.76it/s]Loading weights:  50%|████▉     | 154/311 [00:02<00:01, 124.37it/s]Loading weights:  54%|█████▍    | 169/311 [00:02<00:01, 124.73it/s]Loading weights:  59%|█████▊    | 182/311 [00:03<00:01, 117.12it/s]Loading weights:  64%|██████▎   | 198/311 [00:03<00:00, 128.40it/s]Loading weights:  68%|██████▊   | 213/311 [00:03<00:00, 131.03it/s]Loading weights:  73%|███████▎  | 227/311 [00:03<00:00, 128.24it/s]Loading weights:  78%|███████▊  | 244/311 [00:03<00:00, 139.68it/s]Loading weights:  83%|████████▎ | 259/311 [00:03<00:00, 129.74it/s]Loading weights:  89%|████████▊ | 276/311 [00:03<00:00, 140.27it/s]Loading weights:  94%|█████████▎| 291/311 [00:03<00:00, 133.46it/s]Loading weights:  98%|█████████▊| 305/311 [00:03<00:00, 134.87it/s]Loading weights: 100%|██████████| 311/311 [00:03<00:00, 79.14it/s] 
+  16/40  45.3s/batch  eta 1.1 min
+  32/40  56.8s/batch  eta 0.4 min
+  40/40  58.1s/batch  eta 0.0 min
+20 to do (0 already in /kaggle/working/rc/results/predictions/base_challenge.jsonl)
+Loading weights:   0%|          | 0/311 [00:00<?, ?it/s]Loading weights:   0%|          | 1/311 [00:00<03:41,  1.40it/s]Loading weights:   1%|          | 2/311 [00:01<03:41,  1.39it/s]Loading weights:   2%|▏         | 5/311 [00:01<01:11,  4.26it/s]Loading weights:   5%|▌         | 17/311 [00:01<00:15, 18.87it/s]Loading weights:  11%|█         | 34/311 [00:01<00:06, 41.91it/s]Loading weights:  15%|█▌        | 48/311 [00:01<00:04, 58.78it/s]Loading weights:  19%|█▉        | 60/311 [00:01<00:03, 70.84it/s]Loading weights:  23%|██▎       | 72/311 [00:02<00:02, 81.47it/s]Loading weights:  29%|██▊       | 89/311 [00:02<00:02, 102.22it/s]Loading weights:  33%|███▎      | 103/311 [00:02<00:01, 109.69it/s]Loading weights:  37%|███▋      | 116/311 [00:02<00:01, 108.50it/s]Loading weights:  43%|████▎     | 133/311 [00:02<00:01, 124.18it/s]Loading weights:  47%|████▋     | 147/311 [00:02<00:01, 126.04it/s]Loading weights:  52%|█████▏    | 161/311 [00:02<00:01, 121.58it/s]Loading weights:  57%|█████▋    | 177/311 [00:02<00:01, 131.42it/s]Loading weights:  61%|██████▏   | 191/311 [00:02<00:00, 131.08it/s]Loading weights:  66%|██████▌   | 205/311 [00:03<00:00, 125.59it/s]Loading weights:  71%|███████   | 221/311 [00:03<00:00, 134.36it/s]Loading weights:  76%|███████▌  | 235/311 [00:03<00:00, 132.86it/s]Loading weights:  80%|████████  | 249/311 [00:03<00:00, 126.45it/s]Loading weights:  85%|████████▌ | 265/311 [00:03<00:00, 135.34it/s]Loading weights:  90%|████████▉ | 279/311 [00:03<00:00, 134.01it/s]Loading weights:  94%|█████████▍| 293/311 [00:03<00:00, 127.40it/s]Loading weights:  99%|█████████▉| 309/311 [00:03<00:00, 135.98it/s]Loading weights: 100%|██████████| 311/311 [00:03<00:00, 80.85it/s] 
+  16/20  20.9s/batch  eta 0.1 min
+  20/20  10.8s/batch  eta 0.0 min
+204 to do (0 already in /kaggle/working/rc/results/predictions/base_test.jsonl)
+Loading weights:   0%|          | 0/311 [00:00<?, ?it/s]Loading weights:   0%|          | 1/311 [00:00<03:31,  1.47it/s]Loading weights:   1%|          | 2/311 [00:01<03:41,  1.39it/s]Loading weights:   1%|▏         | 4/311 [00:01<01:32,  3.32it/s]Loading weights:   5%|▍         | 15/311 [00:01<00:17, 17.08it/s]Loading weights:   9%|▊         | 27/311 [00:01<00:08, 32.87it/s]Loading weights:  13%|█▎        | 39/311 [00:01<00:05, 48.49it/s]Loading weights:  18%|█▊        | 56/311 [00:01<00:03, 73.25it/s]Loading weights:  23%|██▎       | 70/311 [00:02<00:02, 87.11it/s]Loading weights:  26%|██▋       | 82/311 [00:02<00:02, 94.65it/s]Loading weights:  30%|███       | 94/311 [00:02<00:02, 100.36it/s]Loading weights:  36%|███▌      | 111/311 [00:02<00:01, 118.31it/s]Loading weights:  40%|████      | 125/311 [00:02<00:01, 122.11it/s]Loading weights:  45%|████▍     | 139/311 [00:02<00:01, 119.81it/s]Loading weights:  50%|████▉     | 155/311 [00:02<00:01, 130.30it/s]Loading weights:  54%|█████▍    | 169/311 [00:02<00:01, 130.18it/s]Loading weights:  59%|█████▉    | 183/311 [00:02<00:01, 125.30it/s]Loading weights:  64%|██████▍   | 199/311 [00:03<00:00, 134.63it/s]Loading weights:  68%|██████▊   | 213/311 [00:03<00:00, 130.39it/s]Loading weights:  73%|███████▎  | 227/311 [00:03<00:00, 123.51it/s]Loading weights:  78%|███████▊  | 243/311 [00:03<00:00, 132.88it/s]Loading weights:  83%|████████▎ | 257/311 [00:03<00:00, 132.48it/s]Loading weights:  87%|████████▋ | 271/311 [00:03<00:00, 125.62it/s]Loading weights:  92%|█████████▏| 287/311 [00:03<00:00, 134.43it/s]Loading weights:  97%|█████████▋| 301/311 [00:03<00:00, 133.44it/s]Loading weights: 100%|██████████| 311/311 [00:03<00:00, 80.54it/s] 
+  16/204  10.6s/batch  eta 2.1 min
+  32/204  26.3s/batch  eta 3.3 min
+  48/204  67.0s/batch  eta 5.6 min
+  64/204  50.2s/batch  eta 5.6 min
+  80/204  48.6s/batch  eta 5.2 min
+  96/204  49.4s/batch  eta 4.7 min
+  112/204  45.7s/batch  eta 4.1 min
+  128/204  45.0s/batch  eta 3.4 min
+  144/204  47.0s/batch  eta 2.7 min
+  160/204  53.7s/batch  eta 2.0 min
+  176/204  58.2s/batch  eta 1.3 min
+  192/204  56.4s/batch  eta 0.6 min
+  204/204  50.7s/batch  eta 0.0 min
+20 to do (0 already in /kaggle/working/rc/results/predictions/base-b1_test.jsonl)
+Loading weights:   0%|          | 0/311 [00:00<?, ?it/s]Loading weights:   0%|          | 1/311 [00:00<03:41,  1.40it/s]Loading weights:   1%|          | 2/311 [00:01<03:42,  1.39it/s]Loading weights:   1%|▏         | 4/311 [00:01<01:32,  3.33it/s]Loading weights:   5%|▌         | 16/311 [00:01<00:16, 18.14it/s]Loading weights:   9%|▉         | 28/311 [00:01<00:08, 33.71it/s]Loading weights:  14%|█▍        | 45/311 [00:01<00:04, 58.11it/s]Loading weights:  19%|█▉        | 59/311 [00:01<00:03, 73.94it/s]Loading weights:  23%|██▎       | 71/311 [00:02<00:02, 83.75it/s]Loading weights:  27%|██▋       | 83/311 [00:02<00:02, 91.78it/s]Loading weights:  32%|███▏      | 100/311 [00:02<00:01, 111.48it/s]Loading weights:  37%|███▋      | 114/311 [00:02<00:01, 116.99it/s]Loading weights:  41%|████      | 128/311 [00:02<00:01, 115.94it/s]Loading weights:  46%|████▋     | 144/311 [00:02<00:01, 127.44it/s]Loading weights:  51%|█████     | 158/311 [00:02<00:01, 128.40it/s]Loading weights:  55%|█████▌    | 172/311 [00:02<00:01, 123.73it/s]Loading weights:  60%|██████    | 188/311 [00:02<00:00, 133.32it/s]Loading weights:  65%|██████▍   | 202/311 [00:03<00:00, 132.80it/s]Loading weights:  69%|██████▉   | 216/311 [00:03<00:00, 127.02it/s]Loading weights:  75%|███████▍  | 232/311 [00:03<00:00, 135.67it/s]Loading weights:  79%|███████▉  | 246/311 [00:03<00:00, 134.70it/s]Loading weights:  84%|████████▎ | 260/311 [00:03<00:00, 127.41it/s]Loading weights:  89%|████████▊ | 276/311 [00:03<00:00, 134.87it/s]Loading weights:  93%|█████████▎| 290/311 [00:03<00:00, 131.86it/s]Loading weights:  98%|█████████▊| 304/311 [00:03<00:00, 125.91it/s]Loading weights: 100%|██████████| 311/311 [00:03<00:00, 80.73it/s] 
+  1/20  6.4s/batch  eta 2.0 min
+  2/20  22.1s/batch  eta 4.3 min
+  3/20  6.0s/batch  eta 3.3 min
+  4/20  18.6s/batch  eta 3.5 min
+  5/20  35.5s/batch  eta 4.4 min
+  6/20  42.9s/batch  eta 5.1 min
+  7/20  38.3s/batch  eta 5.3 min
+  8/20  46.2s/batch  eta 5.4 min
+  9/20  14.7s/batch  eta 4.7 min
+  10/20  24.0s/batch  eta 4.2 min
+  11/20  9.3s/batch  eta 3.6 min
+  12/20  26.8s/batch  eta 3.2 min
+  13/20  30.3s/batch  eta 2.9 min
+  14/20  10.5s/batch  eta 2.4 min
+  15/20  30.1s/batch  eta 2.0 min
+  16/20  42.0s/batch  eta 1.7 min
+  17/20  12.0s/batch  eta 1.2 min
+  18/20  48.1s/batch  eta 0.9 min
+  19/20  39.2s/batch  eta 0.4 min
+  20/20  48.1s/batch  eta 0.0 min

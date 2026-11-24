@@ -1,0 +1,32 @@
+{
+  "checkedAt": "2026-11-23T09:55:03.126Z",
+  "capability": {
+    "webgpu": true,
+    "shaderF16": true,
+    "adapterDescription": "intel gen-9",
+    "problem": null
+  },
+  "option": {
+    "key": "original",
+    "label": "Original Qwen3-1.7B",
+    "modelId": "Qwen3-1.7B-q4f16_1-MLC",
+    "downloadMB": 984,
+    "available": true,
+    "unavailableReason": null
+  },
+  "loadMs": 363999.09999996424,
+  "first": {
+    "raw": "<think>\n\n</think>\n\n{\n  \"document_date\": null,\n  \"labs\": [\n    {\n      \"test\": \"Glucose\",\n      \"value\": \"104\",\n      \"unit\": \"mg/dL\",\n      \"reference_range\": \"70-99\",\n      \"date\": \"2024-03-14\"\n    },\n    {\n      \"test\": \"Hemoglobin A1c\",\n      \"value\": \"5.9\",\n      \"unit\": \"%\",\n      \"reference_range\": \"4.0-5.6\",\n      \"date\": \"2024-03-14\"\n    },\n    {\n      \"test\": \"Total cholesterol\",\n      \"value\": \"212\",\n      \"unit\": \"mg/dL\",\n      \"reference_range\": \"<200\",\n      \"date\": \"2024-03-14\"\n    }\n  ],\n  \"medications\": [],\n  \"follow_up\": [\n    \"Repeat fasting glucose in 3 months.\"\n  ]\n}",
+    "latencyMs": 154213.79999995232,
+    "promptTokens": 620,
+    "completionTokens": 217
+  },
+  "second": {
+    "raw": "<think>\n\n</think>\n\n{\n  \"document_date\": null,\n  \"labs\": [\n    {\n      \"test\": \"Glucose\",\n      \"value\": \"104\",\n      \"unit\": \"mg/dL\",\n      \"reference_range\": \"70-99\",\n      \"date\": \"2024-03-14\"\n    },\n    {\n      \"test\": \"Hemoglobin A1c\",\n      \"value\": \"5.9\",\n      \"unit\": \"%\",\n      \"reference_range\": \"4.0-5.6\",\n      \"date\": \"2024-03-14\"\n    },\n    {\n      \"test\": \"Total cholesterol\",\n      \"value\": \"212\",\n      \"unit\": \"mg/dL\",\n      \"reference_range\": \"<200\",\n      \"date\": \"2024-03-14\"\n    }\n  ],\n  \"medications\": [],\n  \"follow_up\": [\n    \"Repeat fasting glucose in 3 months.\"\n  ]\n}",
+    "latencyMs": 126306.30000001192,
+    "promptTokens": 620,
+    "completionTokens": 217
+  },
+  "deterministic": true,
+  "ok": true
+}

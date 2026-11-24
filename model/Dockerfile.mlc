@@ -1,0 +1,16 @@
+# Pinned MLC toolchain for weight conversion (Linux; the Windows nightly
+# wheels are missing SPIRV-Tools.dll). Versions are the ones that installed
+# together on 2026-11-23.
+#  - CPU torch goes in first so mlc-llm does not pull the CUDA build.
+#  - apache-tvm-ffi 0.1.16 segfaults while compiling the quantize kernel; 0.1.13 works.
+#  - numpy is held at 2.2.6: numpy 2.5 rejects the TVM dtype objects that
+#    mlc-llm 0.26.dev6's Qwen3 loader passes to ndarray.astype().
+FROM python:3.12-slim
+# the CPU torch wheel download from pytorch.org timed out once at pip's default 15 s
+ENV PIP_DEFAULT_TIMEOUT=300 PIP_RETRIES=10
+RUN pip install --no-cache-dir torch==2.9.1 --index-url https://download.pytorch.org/whl/cpu \
+ && pip install --no-cache-dir --pre -f https://mlc.ai/wheels \
+      mlc-llm-nightly-cpu==0.26.dev6 mlc-ai-nightly-cpu==0.26.dev246 apache-tvm-ffi==0.1.13 \
+      psutil huggingface_hub safetensors "numpy==2.2.6" "torch==2.9.1" \
+      --extra-index-url https://download.pytorch.org/whl/cpu \
+ && python -c "import numpy, torch; assert numpy.__version__ == '2.2.6', numpy.__version__; print('numpy', numpy.__version__, 'torch', torch.__version__)"

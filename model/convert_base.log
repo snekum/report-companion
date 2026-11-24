@@ -1,0 +1,415 @@
+#0 building with "desktop-linux" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile.mlc
+#1 transferring dockerfile: 994B 0.0s done
+#1 DONE 0.1s
+
+#2 [internal] load metadata for docker.io/library/python:3.12-slim
+#2 DONE 0.1s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [1/2] FROM docker.io/library/python:3.12-slim@sha256:5e2bdb1b0d542d5039cffb8181c65930093949194a65c365dfb1b0fe13a4fa5b
+#4 resolve docker.io/library/python:3.12-slim@sha256:5e2bdb1b0d542d5039cffb8181c65930093949194a65c365dfb1b0fe13a4fa5b 0.0s done
+#4 CACHED
+
+#5 [2/2] RUN pip install --no-cache-dir torch==2.9.1 --index-url https://download.pytorch.org/whl/cpu  && pip install --no-cache-dir --pre -f https://mlc.ai/wheels       mlc-llm-nightly-cpu==0.26.dev6 mlc-ai-nightly-cpu==0.26.dev246 apache-tvm-ffi==0.1.16       psutil huggingface_hub safetensors "numpy==2.2.6" "torch==2.9.1"       --extra-index-url https://download.pytorch.org/whl/cpu  && python -c "import numpy, torch; assert numpy.__version__ == '2.2.6', numpy.__version__; print('numpy', numpy.__version__, 'torch', torch.__version__)"
+#5 3.210 Looking in indexes: https://download.pytorch.org/whl/cpu
+#5 3.824 Collecting torch==2.9.1
+#5 4.094   Downloading https://download-r2.pytorch.org/whl/cpu/torch-2.9.1%2Bcpu-cp312-cp312-manylinux_2_28_x86_64.whl.metadata (29 kB)
+#5 4.167 Collecting filelock (from torch==2.9.1)
+#5 4.306   Downloading filelock-4.2.4-py3-none-any.whl.metadata (2.0 kB)
+#5 4.359 Collecting typing-extensions>=4.10.0 (from torch==2.9.1)
+#5 4.399   Downloading typing_extensions-4.16.0-py3-none-any.whl.metadata (3.3 kB)
+#5 4.434 Collecting setuptools (from torch==2.9.1)
+#5 4.462   Downloading https://download.pytorch.org/whl/setuptools-78.1.0-py3-none-any.whl.metadata (6.6 kB)
+#5 4.521 Collecting sympy>=1.13.3 (from torch==2.9.1)
+#5 4.557   Downloading sympy-1.14.0-py3-none-any.whl.metadata (12 kB)
+#5 4.627 Collecting networkx>=2.5.1 (from torch==2.9.1)
+#5 4.664   Downloading networkx-3.7-py3-none-any.whl.metadata (6.7 kB)
+#5 4.707 Collecting jinja2 (from torch==2.9.1)
+#5 4.736   Downloading https://download.pytorch.org/whl/jinja2-3.1.6-py3-none-any.whl.metadata (2.9 kB)
+#5 4.807 Collecting fsspec>=0.8.5 (from torch==2.9.1)
+#5 4.848   Downloading fsspec-2026.9.0-py3-none-any.whl.metadata (10 kB)
+#5 4.947 Collecting mpmath<1.4,>=1.1.0 (from sympy>=1.13.3->torch==2.9.1)
+#5 4.984   Downloading mpmath-1.3.0-py3-none-any.whl.metadata (8.6 kB)
+#5 5.044 Collecting MarkupSafe>=2.0 (from jinja2->torch==2.9.1)
+#5 5.075   Downloading https://download.pytorch.org/whl/markupsafe-3.0.3-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (2.7 kB)
+#5 5.117 Downloading https://download-r2.pytorch.org/whl/cpu/torch-2.9.1%2Bcpu-cp312-cp312-manylinux_2_28_x86_64.whl (184.4 MB)
+#5 36.13    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 184.4/184.4 MB 5.9 MB/s eta 0:00:00
+#5 36.28 Downloading fsspec-2026.9.0-py3-none-any.whl (221 kB)
+#5 36.44 Downloading networkx-3.7-py3-none-any.whl (2.1 MB)
+#5 36.78    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.1/2.1 MB 6.5 MB/s eta 0:00:00
+#5 36.83 Downloading sympy-1.14.0-py3-none-any.whl (6.3 MB)
+#5 37.84    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 6.3/6.3 MB 6.3 MB/s eta 0:00:00
+#5 37.87 Downloading typing_extensions-4.16.0-py3-none-any.whl (45 kB)
+#5 37.93 Downloading filelock-4.2.4-py3-none-any.whl (162 kB)
+#5 37.98 Downloading https://download.pytorch.org/whl/jinja2-3.1.6-py3-none-any.whl (134 kB)
+#5 38.04 Downloading https://download.pytorch.org/whl/setuptools-78.1.0-py3-none-any.whl (1.3 MB)
+#5 38.24    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.3/1.3 MB 6.1 MB/s eta 0:00:00
+#5 38.28 Downloading https://download.pytorch.org/whl/markupsafe-3.0.3-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (22 kB)
+#5 38.33 Downloading mpmath-1.3.0-py3-none-any.whl (536 kB)
+#5 38.41    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 536.2/536.2 kB 8.4 MB/s eta 0:00:00
+#5 39.37 Installing collected packages: mpmath, typing-extensions, sympy, setuptools, networkx, MarkupSafe, fsspec, filelock, jinja2, torch
+#5 71.18 Successfully installed MarkupSafe-3.0.3 filelock-4.2.4 fsspec-2026.9.0 jinja2-3.1.6 mpmath-1.3.0 networkx-3.7 setuptools-78.1.0 sympy-1.14.0 torch-2.9.1+cpu typing-extensions-4.16.0
+#5 71.18 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager, possibly rendering your system unusable. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv. Use the --root-user-action option if you know what you are doing and want to suppress this warning.
+#5 72.45 Looking in indexes: https://pypi.org/simple, https://download.pytorch.org/whl/cpu
+#5 72.45 Looking in links: https://mlc.ai/wheels
+#5 74.18 Collecting mlc-llm-nightly-cpu==0.26.dev6
+#5 75.01   Downloading https://github.com/mlc-ai/package/releases/download/v0.9.dev0/mlc_llm_nightly_cpu-0.26.dev6-py3-none-manylinux_2_28_x86_64.whl (24.9 MB)
+#5 80.67      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 24.9/24.9 MB 4.4 MB/s eta 0:00:00
+#5 81.72 Collecting mlc-ai-nightly-cpu==0.26.dev246
+#5 82.34   Downloading https://github.com/mlc-ai/package/releases/download/v0.9.dev0/mlc_ai_nightly_cpu-0.26.dev246-py3-none-manylinux_2_28_x86_64.whl (72.9 MB)
+#5 96.00      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 72.9/72.9 MB 5.4 MB/s eta 0:00:00
+#5 97.19 Collecting apache-tvm-ffi==0.1.16
+#5 97.37   Downloading apache_tvm_ffi-0.1.16-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (6.2 kB)
+#5 98.34 Collecting psutil
+#5 98.41   Downloading psutil-7.2.2-cp36-abi3-manylinux2010_x86_64.manylinux_2_12_x86_64.manylinux_2_28_x86_64.whl.metadata (22 kB)
+#5 99.34 Collecting huggingface_hub
+#5 99.40   Downloading huggingface_hub-2.4.0-py3-none-any.whl.metadata (16 kB)
+#5 100.5 Collecting safetensors
+#5 100.5   Downloading safetensors-0.9.0rc1-cp310-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (4.2 kB)
+#5 101.8 Collecting numpy==2.2.6
+#5 101.9   Downloading numpy-2.2.6-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (62 kB)
+#5 101.9 Requirement already satisfied: torch==2.9.1 in /usr/local/lib/python3.12/site-packages (2.9.1+cpu)
+#5 102.7 Collecting datasets (from mlc-llm-nightly-cpu==0.26.dev6)
+#5 102.8   Downloading datasets-5.2.0-py3-none-any.whl.metadata (24 kB)
+#5 103.7 Collecting fastapi (from mlc-llm-nightly-cpu==0.26.dev6)
+#5 103.7   Downloading fastapi-0.165.0-py3-none-any.whl.metadata (27 kB)
+#5 104.6 Collecting flashinfer-python (from mlc-llm-nightly-cpu==0.26.dev6)
+#5 104.6   Downloading flashinfer_python-0.7.6rc1-py3-none-any.whl.metadata (14 kB)
+#5 105.4 Collecting ml_dtypes>=0.5.1 (from mlc-llm-nightly-cpu==0.26.dev6)
+#5 105.5   Downloading ml_dtypes-0.7.0-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (11 kB)
+#5 106.4 Collecting openai (from mlc-llm-nightly-cpu==0.26.dev6)
+#5 106.4   Downloading openai-3.57.0-py3-none-any.whl.metadata (45 kB)
+#5 107.4 Collecting pandas (from mlc-llm-nightly-cpu==0.26.dev6)
+#5 107.5   Downloading pandas-3.1.1-cp312-cp312-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl.metadata (16 kB)
+#5 107.9 Collecting prompt_toolkit (from mlc-llm-nightly-cpu==0.26.dev6)
+#5 108.0   Downloading prompt_toolkit-3.0.53-py3-none-any.whl.metadata (6.4 kB)
+#5 108.2 Collecting requests (from mlc-llm-nightly-cpu==0.26.dev6)
+#5 108.3   Downloading requests-2.34.2-py3-none-any.whl.metadata (4.8 kB)
+#5 109.2 Collecting sentencepiece (from mlc-llm-nightly-cpu==0.26.dev6)
+#5 109.2   Downloading sentencepiece-0.2.3-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (34 kB)
+#5 110.1 Collecting shortuuid (from mlc-llm-nightly-cpu==0.26.dev6)
+#5 110.1   Downloading shortuuid-1.0.13-py3-none-any.whl.metadata (5.8 kB)
+#5 110.9 Collecting tiktoken (from mlc-llm-nightly-cpu==0.26.dev6)
+#5 110.9   Downloading tiktoken-0.14.0-cp312-cp312-manylinux_2_28_x86_64.whl.metadata (6.7 kB)
+#5 111.1 Collecting tqdm (from mlc-llm-nightly-cpu==0.26.dev6)
+#5 111.2   Downloading tqdm-4.70.1-py3-none-any.whl.metadata (57 kB)
+#5 112.0 Collecting transformers (from mlc-llm-nightly-cpu==0.26.dev6)
+#5 112.0   Downloading transformers-5.24.0-py3-none-any.whl.metadata (31 kB)
+#5 112.9 Collecting uvicorn (from mlc-llm-nightly-cpu==0.26.dev6)
+#5 112.9   Downloading uvicorn-0.54.0-py3-none-any.whl.metadata (6.6 kB)
+#5 113.0 Requirement already satisfied: typing_extensions in /usr/local/lib/python3.12/site-packages (from mlc-ai-nightly-cpu==0.26.dev246) (4.16.0)
+#5 113.0 Requirement already satisfied: filelock in /usr/local/lib/python3.12/site-packages (from torch==2.9.1) (4.2.4)
+#5 113.0 Requirement already satisfied: setuptools in /usr/local/lib/python3.12/site-packages (from torch==2.9.1) (78.1.0)
+#5 113.0 Requirement already satisfied: sympy>=1.13.3 in /usr/local/lib/python3.12/site-packages (from torch==2.9.1) (1.14.0)
+#5 113.0 Requirement already satisfied: networkx>=2.5.1 in /usr/local/lib/python3.12/site-packages (from torch==2.9.1) (3.7)
+#5 113.0 Requirement already satisfied: jinja2 in /usr/local/lib/python3.12/site-packages (from torch==2.9.1) (3.1.6)
+#5 113.0 Requirement already satisfied: fsspec>=0.8.5 in /usr/local/lib/python3.12/site-packages (from torch==2.9.1) (2026.9.0)
+#5 113.7 Collecting click<9.0.0,>=8.4.2 (from huggingface_hub)
+#5 113.8   Downloading click-8.5.1-py3-none-any.whl.metadata (2.6 kB)
+#5 114.6 Collecting hf-xet<2.0.0,>=1.6.0 (from huggingface_hub)
+#5 114.7   Downloading hf_xet-1.8.0-cp38-abi3-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (4.9 kB)
+#5 115.4 Collecting httpx2<3,>=2.0.0 (from huggingface_hub)
+#5 115.5   Downloading httpx2-2.16.2-py3-none-any.whl.metadata (10.0 kB)
+#5 115.6 Collecting packaging>=20.9 (from huggingface_hub)
+#5 115.7   Downloading packaging-26.3-py3-none-any.whl.metadata (3.5 kB)
+#5 116.6 Collecting pyyaml>=5.1 (from huggingface_hub)
+#5 116.6   Downloading pyyaml-6.0.4-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (2.3 kB)
+#5 117.1 Collecting anyio>=4.10 (from httpx2<3,>=2.0.0->huggingface_hub)
+#5 117.1   Downloading anyio-4.16.0-py3-none-any.whl.metadata (4.7 kB)
+#5 117.9 Collecting httpcore2==2.16.2 (from httpx2<3,>=2.0.0->huggingface_hub)
+#5 117.9   Downloading httpcore2-2.16.2-py3-none-any.whl.metadata (28 kB)
+#5 118.0 Collecting idna>=3.18 (from httpx2<3,>=2.0.0->huggingface_hub)
+#5 118.1   Downloading idna-3.20-py3-none-any.whl.metadata (7.2 kB)
+#5 118.8 Collecting truststore>=0.10 (from httpx2<3,>=2.0.0->huggingface_hub)
+#5 118.9   Downloading truststore-0.10.5-py3-none-any.whl.metadata (4.5 kB)
+#5 119.7 Collecting h11>=0.16 (from httpcore2==2.16.2->httpx2<3,>=2.0.0->huggingface_hub)
+#5 119.7   Downloading h11-0.16.0-py3-none-any.whl.metadata (8.3 kB)
+#5 119.7 Requirement already satisfied: mpmath<1.4,>=1.1.0 in /usr/local/lib/python3.12/site-packages (from sympy>=1.13.3->torch==2.9.1) (1.3.0)
+#5 120.9 Collecting pyarrow>=24.0.0 (from datasets->mlc-llm-nightly-cpu==0.26.dev6)
+#5 120.9   Downloading pyarrow-26.0.1-cp312-cp312-manylinux_2_28_x86_64.whl.metadata (3.0 kB)
+#5 121.7 Collecting dill<0.4.2,>=0.3.0 (from datasets->mlc-llm-nightly-cpu==0.26.dev6)
+#5 121.8   Downloading dill-0.4.1-py3-none-any.whl.metadata (10 kB)
+#5 123.1 Collecting xxhash (from datasets->mlc-llm-nightly-cpu==0.26.dev6)
+#5 123.1   Downloading xxhash-4.1.0-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (18 kB)
+#5 124.3 Collecting multiprocess<0.70.20 (from datasets->mlc-llm-nightly-cpu==0.26.dev6)
+#5 124.3   Downloading multiprocess-0.70.19-py312-none-any.whl.metadata (7.5 kB)
+#5 125.3 Collecting starlette>=1.6.0 (from fastapi->mlc-llm-nightly-cpu==0.26.dev6)
+#5 125.4   Downloading starlette-1.10.0-py3-none-any.whl.metadata (6.6 kB)
+#5 126.4 Collecting pydantic>=2.9.0 (from fastapi->mlc-llm-nightly-cpu==0.26.dev6)
+#5 126.4   Downloading pydantic-2.14.4-py3-none-any.whl.metadata (143 kB)
+#5 127.3 Collecting typing-inspection>=0.4.2 (from fastapi->mlc-llm-nightly-cpu==0.26.dev6)
+#5 127.3   Downloading typing_inspection-0.4.5-py3-none-any.whl.metadata (2.6 kB)
+#5 128.1 Collecting annotated-doc>=0.0.2 (from fastapi->mlc-llm-nightly-cpu==0.26.dev6)
+#5 128.2   Downloading annotated_doc-0.0.7-py3-none-any.whl.metadata (6.4 kB)
+#5 129.0 Collecting opentelemetry-api>=1.44.0 (from fastapi->mlc-llm-nightly-cpu==0.26.dev6)
+#5 129.1   Downloading opentelemetry_api-1.45.2-py3-none-any.whl.metadata (1.4 kB)
+#5 129.9 Collecting cuda-python>=12.0 (from flashinfer-python->mlc-llm-nightly-cpu==0.26.dev6)
+#5 130.0   Downloading cuda_python-13.5.0-py3-none-any.whl.metadata (6.8 kB)
+#5 131.0 Collecting cuda-tile>=1.4.0 (from flashinfer-python->mlc-llm-nightly-cpu==0.26.dev6)
+#5 131.0   Downloading cuda_tile-1.8.1-cp312-cp312-manylinux2014_x86_64.whl.metadata (7.3 kB)
+#5 131.8 Collecting einops (from flashinfer-python->mlc-llm-nightly-cpu==0.26.dev6)
+#5 131.8   Downloading einops-0.9.0.dev0-py3-none-any.whl.metadata (13 kB)
+#5 132.7 Collecting nccl-extensions>=0.1.0 (from flashinfer-python->mlc-llm-nightly-cpu==0.26.dev6)
+#5 132.7   Downloading nccl_extensions-0.2.0-cp312-cp312-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl.metadata (8.0 kB)
+#5 133.6 Collecting nccl4py>=0.4.1 (from flashinfer-python->mlc-llm-nightly-cpu==0.26.dev6)
+#5 133.7   Downloading nccl4py-0.7.0rc1-cp312-cp312-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl.metadata (3.2 kB)
+#5 134.6 Collecting ninja (from flashinfer-python->mlc-llm-nightly-cpu==0.26.dev6)
+#5 134.6   Downloading ninja-1.13.2-py3-none-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (5.4 kB)
+#5 135.5 Collecting nvidia-cudnn-frontend>=1.33.0 (from flashinfer-python->mlc-llm-nightly-cpu==0.26.dev6)
+#5 135.5   Downloading nvidia_cudnn_frontend-1.33.0-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (20 kB)
+#5 136.3 Collecting nvidia-cutlass-dsl>=4.8.0 (from flashinfer-python->mlc-llm-nightly-cpu==0.26.dev6)
+#5 136.4   Downloading nvidia_cutlass_dsl-4.9.0.dev1-py3-none-any.whl.metadata (3.3 kB)
+#5 137.2 Collecting nvidia-ml-py (from flashinfer-python->mlc-llm-nightly-cpu==0.26.dev6)
+#5 137.2   Downloading nvidia_ml_py-13.615.71-py3-none-any.whl.metadata (9.7 kB)
+#5 138.4 Collecting portalocker>=4.4.2 (from portalocker[win32]>=4.4.2->flashinfer-python->mlc-llm-nightly-cpu==0.26.dev6)
+#5 138.5   Downloading portalocker-4.4.2-py3-none-any.whl.metadata (10 kB)
+#5 139.2 Collecting tabulate (from flashinfer-python->mlc-llm-nightly-cpu==0.26.dev6)
+#5 139.3   Downloading tabulate-0.10.0-py3-none-any.whl.metadata (40 kB)
+#5 139.3 Requirement already satisfied: MarkupSafe>=2.0 in /usr/local/lib/python3.12/site-packages (from jinja2->torch==2.9.1) (3.0.3)
+#5 140.3 Collecting jiter<1,>=0.16.0 (from openai->mlc-llm-nightly-cpu==0.26.dev6)
+#5 140.4   Downloading jiter-0.19.0-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (5.2 kB)
+#5 141.2 Collecting sniffio (from openai->mlc-llm-nightly-cpu==0.26.dev6)
+#5 141.2   Downloading sniffio-1.3.1-py3-none-any.whl.metadata (3.9 kB)
+#5 142.2 Collecting python-dateutil>=2.9.0 (from pandas->mlc-llm-nightly-cpu==0.26.dev6)
+#5 142.2   Downloading python_dateutil-4.0.0-py3-none-any.whl.metadata (7.3 kB)
+#5 143.0 Collecting wcwidth>=0.1.4 (from prompt_toolkit->mlc-llm-nightly-cpu==0.26.dev6)
+#5 143.0   Downloading wcwidth-0.9.5-cp310-abi3-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (26 kB)
+#5 143.5 Collecting charset_normalizer<4,>=2 (from requests->mlc-llm-nightly-cpu==0.26.dev6)
+#5 143.5   Downloading charset_normalizer-3.5.3-cp312-cp312-manylinux1_x86_64.manylinux_2_28_x86_64.manylinux_2_5_x86_64.whl.metadata (43 kB)
+#5 143.9 Collecting urllib3<3,>=1.26 (from requests->mlc-llm-nightly-cpu==0.26.dev6)
+#5 143.9   Downloading urllib3-2.8.0-py3-none-any.whl.metadata (7.4 kB)
+#5 144.2 Collecting certifi>=2023.5.7 (from requests->mlc-llm-nightly-cpu==0.26.dev6)
+#5 144.2   Downloading certifi-2026.11.20-py3-none-any.whl.metadata (2.5 kB)
+#5 145.6 Collecting regex (from tiktoken->mlc-llm-nightly-cpu==0.26.dev6)
+#5 145.7   Downloading regex-2026.11.19-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (40 kB)
+#5 146.8 Collecting tokenizers<0.24.0,>=0.23.1 (from transformers->mlc-llm-nightly-cpu==0.26.dev6)
+#5 146.9   Downloading tokenizers-0.23.3-cp310-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (9.8 kB)
+#5 147.7 Collecting typer (from transformers->mlc-llm-nightly-cpu==0.26.dev6)
+#5 147.8   Downloading typer-0.29.2-py3-none-any.whl.metadata (16 kB)
+#5 148.7 Collecting cuda-bindings~=13.5.0 (from cuda-python>=12.0->flashinfer-python->mlc-llm-nightly-cpu==0.26.dev6)
+#5 148.8   Downloading cuda_bindings-13.5.0-cp312-cp312-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl.metadata (2.5 kB)
+#5 149.5 Collecting cuda-core~=1.2.0 (from cuda-python>=12.0->flashinfer-python->mlc-llm-nightly-cpu==0.26.dev6)
+#5 149.6   Downloading cuda_core-1.2.2-cp312-cp312-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl.metadata (3.4 kB)
+#5 150.4 Collecting cuda-pathfinder~=1.1 (from cuda-python>=12.0->flashinfer-python->mlc-llm-nightly-cpu==0.26.dev6)
+#5 150.5   Downloading cuda_pathfinder-1.9.1-py3-none-any.whl.metadata (1.9 kB)
+#5 151.3 Collecting nvidia-cutlass-dsl-libs-base==4.9.0.dev1 (from nvidia-cutlass-dsl>=4.8.0->flashinfer-python->mlc-llm-nightly-cpu==0.26.dev6)
+#5 151.3   Downloading nvidia_cutlass_dsl_libs_base-4.9.0.dev1-py3-none-any.whl.metadata (3.0 kB)
+#5 152.1 Collecting nvidia-cutlass-dsl-libs-cu12==4.9.0.dev1 (from nvidia-cutlass-dsl>=4.8.0->flashinfer-python->mlc-llm-nightly-cpu==0.26.dev6)
+#5 152.2   Downloading nvidia_cutlass_dsl_libs_cu12-4.9.0.dev1-cp312-cp312-manylinux_2_28_x86_64.whl.metadata (3.0 kB)
+#5 152.9 Collecting nvidia-cutlass-dsl-libs-core==4.9.0.dev1 (from nvidia-cutlass-dsl-libs-base==4.9.0.dev1->nvidia-cutlass-dsl>=4.8.0->flashinfer-python->mlc-llm-nightly-cpu==0.26.dev6)
+#5 153.0   Downloading nvidia_cutlass_dsl_libs_core-4.9.0.dev1-py3-none-any.whl.metadata (3.0 kB)
+#5 153.7 Collecting annotated-types>=0.6.0 (from pydantic>=2.9.0->fastapi->mlc-llm-nightly-cpu==0.26.dev6)
+#5 153.8   Downloading annotated_types-0.8.0-py3-none-any.whl.metadata (15 kB)
+#5 155.7 Collecting pydantic-core==2.50.5 (from pydantic>=2.9.0->fastapi->mlc-llm-nightly-cpu==0.26.dev6)
+#5 155.8   Downloading pydantic_core-2.50.5-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (6.6 kB)
+#5 156.6 Collecting tzdata (from python-dateutil>=2.9.0->pandas->mlc-llm-nightly-cpu==0.26.dev6)
+#5 156.7   Downloading tzdata-2026.6-py2.py3-none-any.whl.metadata (1.4 kB)
+#5 157.6 Collecting shellingham>=1.3.0 (from typer->transformers->mlc-llm-nightly-cpu==0.26.dev6)
+#5 157.7   Downloading shellingham-1.5.4-py2.py3-none-any.whl.metadata (3.5 kB)
+#5 158.5 Collecting rich>=13.8.0 (from typer->transformers->mlc-llm-nightly-cpu==0.26.dev6)
+#5 158.5   Downloading rich-15.0.0-py3-none-any.whl.metadata (18 kB)
+#5 159.4 Collecting nvidia-cutlass-dsl-libs-cu13==4.9.0.dev1 (from nvidia-cutlass-dsl[cu13]>=4.8.0; sys_platform != "win32" or platform_machine != "ARM64"->nvidia-cudnn-frontend>=1.33.0->flashinfer-python->mlc-llm-nightly-cpu==0.26.dev6)
+#5 159.5   Downloading nvidia_cutlass_dsl_libs_cu13-4.9.0.dev1-cp312-cp312-manylinux_2_28_x86_64.whl.metadata (3.0 kB)
+#5 160.2 Collecting markdown-it-py>=2.2.0 (from rich>=13.8.0->typer->transformers->mlc-llm-nightly-cpu==0.26.dev6)
+#5 160.3   Downloading markdown_it_py-4.3.0-py3-none-any.whl.metadata (7.9 kB)
+#5 160.6 Collecting pygments<3.0.0,>=2.13.0 (from rich>=13.8.0->typer->transformers->mlc-llm-nightly-cpu==0.26.dev6)
+#5 160.7   Downloading pygments-2.21.0-py3-none-any.whl.metadata (2.5 kB)
+#5 161.4 Collecting mdurl~=0.1 (from markdown-it-py>=2.2.0->rich>=13.8.0->typer->transformers->mlc-llm-nightly-cpu==0.26.dev6)
+#5 161.4   Downloading mdurl-0.1.2-py3-none-any.whl.metadata (1.6 kB)
+#5 161.5 Downloading apache_tvm_ffi-0.1.16-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (3.5 MB)
+#5 162.4    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 3.5/3.5 MB 4.3 MB/s eta 0:00:00
+#5 162.4 Downloading numpy-2.2.6-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (16.5 MB)
+#5 165.2    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 16.5/16.5 MB 6.0 MB/s eta 0:00:00
+#5 165.3 Downloading psutil-7.2.2-cp36-abi3-manylinux2010_x86_64.manylinux_2_12_x86_64.manylinux_2_28_x86_64.whl (155 kB)
+#5 165.3 Downloading huggingface_hub-2.4.0-py3-none-any.whl (857 kB)
+#5 165.4    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 857.0/857.0 kB 8.2 MB/s eta 0:00:00
+#5 165.5 Downloading safetensors-0.9.0rc1-cp310-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (594 kB)
+#5 165.6    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 594.1/594.1 kB 6.1 MB/s eta 0:00:00
+#5 165.6 Downloading click-8.5.1-py3-none-any.whl (126 kB)
+#5 165.7 Downloading hf_xet-1.8.0-cp38-abi3-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (4.3 MB)
+#5 166.4    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 4.3/4.3 MB 6.2 MB/s eta 0:00:00
+#5 166.4 Downloading httpx2-2.16.2-py3-none-any.whl (97 kB)
+#5 166.5 Downloading httpcore2-2.16.2-py3-none-any.whl (85 kB)
+#5 166.5 Downloading ml_dtypes-0.7.0-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (463 kB)
+#5 166.7 Downloading packaging-26.3-py3-none-any.whl (129 kB)
+#5 166.7 Downloading pyyaml-6.0.4-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (849 kB)
+#5 166.9    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 849.2/849.2 kB 6.7 MB/s eta 0:00:00
+#5 166.9 Downloading tqdm-4.70.1-py3-none-any.whl (80 kB)
+#5 167.0 Downloading datasets-5.2.0-py3-none-any.whl (608 kB)
+#5 167.0    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 608.3/608.3 kB 7.9 MB/s eta 0:00:00
+#5 167.1 Downloading fastapi-0.165.0-py3-none-any.whl (159 kB)
+#5 167.2 Downloading flashinfer_python-0.7.6rc1-py3-none-any.whl (96.9 MB)
+#5 183.1    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 96.9/96.9 MB 6.1 MB/s eta 0:00:00
+#5 183.1 Downloading openai-3.57.0-py3-none-any.whl (2.5 MB)
+#5 183.5    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.5/2.5 MB 6.5 MB/s eta 0:00:00
+#5 183.6 Downloading pandas-3.1.1-cp312-cp312-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl (12.0 MB)
+#5 186.0    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 12.0/12.0 MB 5.0 MB/s eta 0:00:00
+#5 186.0 Downloading prompt_toolkit-3.0.53-py3-none-any.whl (392 kB)
+#5 186.2 Downloading requests-2.34.2-py3-none-any.whl (73 kB)
+#5 186.3 Downloading sentencepiece-0.2.3-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (1.7 MB)
+#5 186.7    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.7/1.7 MB 3.8 MB/s eta 0:00:00
+#5 186.7 Downloading shortuuid-1.0.13-py3-none-any.whl (10 kB)
+#5 186.8 Downloading tiktoken-0.14.0-cp312-cp312-manylinux_2_28_x86_64.whl (1.2 MB)
+#5 187.1    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.2/1.2 MB 4.0 MB/s eta 0:00:00
+#5 187.1 Downloading transformers-5.24.0-py3-none-any.whl (13.5 MB)
+#5 190.0    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 13.5/13.5 MB 4.7 MB/s eta 0:00:00
+#5 190.1 Downloading uvicorn-0.54.0-py3-none-any.whl (87 kB)
+#5 190.1 Downloading annotated_doc-0.0.7-py3-none-any.whl (5.3 kB)
+#5 190.2 Downloading anyio-4.16.0-py3-none-any.whl (134 kB)
+#5 190.2 Downloading certifi-2026.11.20-py3-none-any.whl (127 kB)
+#5 190.3 Downloading charset_normalizer-3.5.3-cp312-cp312-manylinux1_x86_64.manylinux_2_28_x86_64.manylinux_2_5_x86_64.whl (257 kB)
+#5 190.4 Downloading cuda_python-13.5.0-py3-none-any.whl (7.6 kB)
+#5 190.4 Downloading cuda_tile-1.8.1-cp312-cp312-manylinux2014_x86_64.whl (536 kB)
+#5 190.5    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 536.3/536.3 kB 5.7 MB/s eta 0:00:00
+#5 190.5 Downloading dill-0.4.1-py3-none-any.whl (120 kB)
+#5 190.6 Downloading h11-0.16.0-py3-none-any.whl (37 kB)
+#5 190.7 Downloading idna-3.20-py3-none-any.whl (69 kB)
+#5 190.7 Downloading jiter-0.19.0-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (338 kB)
+#5 190.8 Downloading multiprocess-0.70.19-py312-none-any.whl (150 kB)
+#5 190.9 Downloading nccl_extensions-0.2.0-cp312-cp312-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl (25.1 MB)
+#5 194.9    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 25.1/25.1 MB 6.1 MB/s eta 0:00:00
+#5 195.0 Downloading nccl4py-0.7.0rc1-cp312-cp312-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl (3.7 MB)
+#5 195.6    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 3.7/3.7 MB 6.0 MB/s eta 0:00:00
+#5 195.7 Downloading nvidia_cudnn_frontend-1.33.0-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (28.4 MB)
+#5 200.9    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 28.4/28.4 MB 5.5 MB/s eta 0:00:00
+#5 200.9 Downloading nvidia_cutlass_dsl-4.9.0.dev1-py3-none-any.whl (10 kB)
+#5 201.0 Downloading nvidia_cutlass_dsl_libs_base-4.9.0.dev1-py3-none-any.whl (591 kB)
+#5 201.1    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 591.9/591.9 kB 6.1 MB/s eta 0:00:00
+#5 201.1 Downloading nvidia_cutlass_dsl_libs_cu12-4.9.0.dev1-cp312-cp312-manylinux_2_28_x86_64.whl (125.3 MB)
+#5 221.7    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 125.3/125.3 MB 6.1 MB/s eta 0:00:00
+#5 221.8 Downloading nvidia_cutlass_dsl_libs_core-4.9.0.dev1-py3-none-any.whl (2.0 MB)
+#5 222.1    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.0/2.0 MB 7.0 MB/s eta 0:00:00
+#5 222.1 Downloading opentelemetry_api-1.45.2-py3-none-any.whl (60 kB)
+#5 222.1 Downloading portalocker-4.4.2-py3-none-any.whl (129 kB)
+#5 222.2 Downloading pyarrow-26.0.1-cp312-cp312-manylinux_2_28_x86_64.whl (55.0 MB)
+#5 231.4    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 55.0/55.0 MB 6.0 MB/s eta 0:00:00
+#5 231.5 Downloading pydantic-2.14.4-py3-none-any.whl (494 kB)
+#5 231.6 Downloading pydantic_core-2.50.5-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (2.3 MB)
+#5 232.0    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.3/2.3 MB 6.3 MB/s eta 0:00:00
+#5 232.0 Downloading python_dateutil-4.0.0-py3-none-any.whl (92 kB)
+#5 232.1 Downloading regex-2026.11.19-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (809 kB)
+#5 232.2    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 809.2/809.2 kB 7.2 MB/s eta 0:00:00
+#5 232.3 Downloading starlette-1.10.0-py3-none-any.whl (80 kB)
+#5 232.3 Downloading tokenizers-0.23.3-cp310-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (3.4 MB)
+#5 232.9    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 3.4/3.4 MB 6.0 MB/s eta 0:00:00
+#5 232.9 Downloading truststore-0.10.5-py3-none-any.whl (19 kB)
+#5 233.0 Downloading typing_inspection-0.4.5-py3-none-any.whl (14 kB)
+#5 233.0 Downloading urllib3-2.8.0-py3-none-any.whl (135 kB)
+#5 233.1 Downloading wcwidth-0.9.5-cp310-abi3-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (822 kB)
+#5 233.2    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 822.7/822.7 kB 7.2 MB/s eta 0:00:00
+#5 233.3 Downloading einops-0.9.0.dev0-py3-none-any.whl (67 kB)
+#5 233.3 Downloading ninja-1.13.2-py3-none-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (183 kB)
+#5 233.4 Downloading nvidia_ml_py-13.615.71-py3-none-any.whl (58 kB)
+#5 233.4 Downloading sniffio-1.3.1-py3-none-any.whl (10 kB)
+#5 233.5 Downloading tabulate-0.10.0-py3-none-any.whl (39 kB)
+#5 233.5 Downloading typer-0.29.2-py3-none-any.whl (121 kB)
+#5 233.6 Downloading xxhash-4.1.0-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (472 kB)
+#5 233.7 Downloading annotated_types-0.8.0-py3-none-any.whl (13 kB)
+#5 233.8 Downloading cuda_bindings-13.5.0-cp312-cp312-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl (8.4 MB)
+#5 235.1    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 8.4/8.4 MB 6.3 MB/s eta 0:00:00
+#5 235.2 Downloading cuda_core-1.2.2-cp312-cp312-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl (6.6 MB)
+#5 236.2    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 6.6/6.6 MB 6.2 MB/s eta 0:00:00
+#5 236.3 Downloading cuda_pathfinder-1.9.1-py3-none-any.whl (63 kB)
+#5 236.3 Downloading nvidia_cutlass_dsl_libs_cu13-4.9.0.dev1-cp312-cp312-manylinux_2_28_x86_64.whl (125.5 MB)
+#5 260.7    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 125.5/125.5 MB 5.1 MB/s eta 0:00:00
+#5 260.8 Downloading rich-15.0.0-py3-none-any.whl (310 kB)
+#5 260.9 Downloading shellingham-1.5.4-py2.py3-none-any.whl (9.8 kB)
+#5 260.9 Downloading tzdata-2026.6-py2.py3-none-any.whl (348 kB)
+#5 261.0 Downloading markdown_it_py-4.3.0-py3-none-any.whl (96 kB)
+#5 261.1 Downloading pygments-2.21.0-py3-none-any.whl (1.3 MB)
+#5 261.4    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.3/1.3 MB 3.7 MB/s eta 0:00:00
+#5 261.4 Downloading mdurl-0.1.2-py3-none-any.whl (10.0 kB)
+#5 263.6 Installing collected packages: nvidia-ml-py, xxhash, wcwidth, urllib3, tzdata, typing-inspection, truststore, tqdm, tabulate, sniffio, shortuuid, shellingham, sentencepiece, safetensors, regex, pyyaml, pygments, pydantic-core, pyarrow, psutil, portalocker, packaging, opentelemetry-api, numpy, ninja, mdurl, jiter, idna, hf-xet, h11, einops, dill, cuda-tile, cuda-pathfinder, click, charset_normalizer, certifi, apache-tvm-ffi, annotated-types, annotated-doc, uvicorn, requests, python-dateutil, pydantic, prompt_toolkit, multiprocess, ml_dtypes, markdown-it-py, httpcore2, cuda-core, cuda-bindings, anyio, tiktoken, starlette, rich, pandas, nvidia-cutlass-dsl-libs-core, nccl4py, mlc-ai-nightly-cpu, httpx2, cuda-python, typer, openai, nvidia-cutlass-dsl-libs-base, nccl-extensions, huggingface_hub, fastapi, tokenizers, nvidia-cutlass-dsl-libs-cu13, nvidia-cutlass-dsl-libs-cu12, datasets, transformers, nvidia-cutlass-dsl, nvidia-cudnn-frontend, flashinfer-python, mlc-llm-nightly-cpu
+#5 363.5 Successfully installed annotated-doc-0.0.7 annotated-types-0.8.0 anyio-4.16.0 apache-tvm-ffi-0.1.16 certifi-2026.11.20 charset_normalizer-3.5.3 click-8.5.1 cuda-bindings-13.5.0 cuda-core-1.2.2 cuda-pathfinder-1.9.1 cuda-python-13.5.0 cuda-tile-1.8.1 datasets-5.2.0 dill-0.4.1 einops-0.9.0.dev0 fastapi-0.165.0 flashinfer-python-0.7.6rc1 h11-0.16.0 hf-xet-1.8.0 httpcore2-2.16.2 httpx2-2.16.2 huggingface_hub-2.4.0 idna-3.20 jiter-0.19.0 markdown-it-py-4.3.0 mdurl-0.1.2 ml_dtypes-0.7.0 mlc-ai-nightly-cpu-0.26.dev246 mlc-llm-nightly-cpu-0.26.dev6 multiprocess-0.70.19 nccl-extensions-0.2.0 nccl4py-0.7.0rc1 ninja-1.13.2 numpy-2.2.6 nvidia-cudnn-frontend-1.33.0 nvidia-cutlass-dsl-4.9.0.dev1 nvidia-cutlass-dsl-libs-base-4.9.0.dev1 nvidia-cutlass-dsl-libs-core-4.9.0.dev1 nvidia-cutlass-dsl-libs-cu12-4.9.0.dev1 nvidia-cutlass-dsl-libs-cu13-4.9.0.dev1 nvidia-ml-py-13.615.71 openai-3.57.0 opentelemetry-api-1.45.2 packaging-26.3 pandas-3.1.1 portalocker-4.4.2 prompt_toolkit-3.0.53 psutil-7.2.2 pyarrow-26.0.1 pydantic-2.14.4 pydantic-core-2.50.5 pygments-2.21.0 python-dateutil-4.0.0 pyyaml-6.0.4 regex-2026.11.19 requests-2.34.2 rich-15.0.0 safetensors-0.9.0rc1 sentencepiece-0.2.3 shellingham-1.5.4 shortuuid-1.0.13 sniffio-1.3.1 starlette-1.10.0 tabulate-0.10.0 tiktoken-0.14.0 tokenizers-0.23.3 tqdm-4.70.1 transformers-5.24.0 truststore-0.10.5 typer-0.29.2 typing-inspection-0.4.5 tzdata-2026.6 urllib3-2.8.0 uvicorn-0.54.0 wcwidth-0.9.5 xxhash-4.1.0
+#5 363.5 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager, possibly rendering your system unusable. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv. Use the --root-user-action option if you know what you are doing and want to suppress this warning.
+#5 364.9 
+#5 364.9 [notice] A new release of pip is available: 25.0.1 -> 26.3
+#5 364.9 [notice] To update, run: pip install --upgrade pip
+#5 368.5 numpy 2.2.6 torch 2.9.1+cpu
+#5 DONE 372.0s
+
+#6 exporting to image
+#6 exporting layers
+#6 exporting layers 170.9s done
+#6 exporting manifest sha256:50a6974be1ef19c4da4751994f8c289997770d00e6a09d8fe4c4b730e3c17f3e 0.0s done
+#6 exporting config sha256:4831fff13855d2ce132adac2240ff918af4abacbe6dfdb36d89e673e1dc105ed 0.0s done
+#6 exporting attestation manifest sha256:188b4ac430f0881ad0f32d6242bf82cbecf6d8c75499fbd356d0cd05f2bb7d87 0.0s done
+#6 exporting manifest list sha256:9593ea903ff9f321872b7708117e087dc8260e2c0762bf47da729b679dc68b45 0.0s done
+#6 naming to docker.io/library/rc-mlc:2026-11-23
+#6 naming to docker.io/library/rc-mlc:2026-11-23 done
+#6 unpacking to docker.io/library/rc-mlc:2026-11-23
+#6 unpacking to docker.io/library/rc-mlc:2026-11-23 92.4s done
+#6 DONE 263.4s
+Fetching 12 files:   0%|          | 0/12 [00:00<?, ?it/s]Fetching 12 files: 100%|██████████| 12/12 [00:00<00:00, 425.67it/s]
+/usr/local/lib/python3.12/site-packages/tvm_ffi/_optional_torch_c_dlpack.py:194: UserWarning: Failed to JIT torch c dlpack extension, EnvTensorAllocator will not be enabled.
+We recommend installing via `pip install torch-c-dlpack-ext`
+  warnings.warn(
+[12:08:59] /workspace/tvm/src/target/canonicalizer/llvm/arm_aprofile.cc:104: Warning: Cannot parse target features for target: {"kind": "llvm", "keys": ("arm_cpu", "cpu"), "device": "arm_cpu", "model": "snapdragon835", "mattr": ("+neon",), "mtriple": "arm64-linux-android"}. LLVM was not compiled with support for Arm(R)-based targets.
+[12:08:59] /workspace/tvm/src/target/canonicalizer/llvm/arm_aprofile.cc:104: Warning: Cannot parse target features for target: {"kind": "llvm", "keys": ("arm_cpu", "cpu"), "device": "arm_cpu", "model": "kirin970", "mattr": ("+neon",), "mtriple": "arm64-linux-android"}. LLVM was not compiled with support for Arm(R)-based targets.
+[12:08:59] /workspace/tvm/src/target/canonicalizer/llvm/arm_aprofile.cc:104: Warning: Cannot parse target features for target: {"kind": "llvm", "keys": ("arm_cpu", "cpu"), "device": "arm_cpu", "model": "bcm2837", "mattr": ("+neon",), "mtriple": "armv7l-linux-gnueabihf"}. LLVM was not compiled with support for Arm(R)-based targets.
+[12:08:59] /workspace/tvm/src/target/canonicalizer/llvm/arm_aprofile.cc:104: Warning: Cannot parse target features for target: {"kind": "llvm", "keys": ("arm_cpu", "cpu"), "device": "arm_cpu", "model": "bcm2711", "mattr": ("+neon",), "mcpu": "cortex-a72", "mtriple": "armv8l-linux-gnueabihf"}. LLVM was not compiled with support for Arm(R)-based targets.
+[12:08:59] /workspace/tvm/src/target/canonicalizer/llvm/arm_aprofile.cc:104: Warning: Cannot parse target features for target: {"kind": "llvm", "keys": ("arm_cpu", "cpu"), "device": "arm_cpu", "model": "pynq", "mattr": ("+neon",), "mtriple": "armv7a-linux-eabi"}. LLVM was not compiled with support for Arm(R)-based targets.
+[12:08:59] /workspace/tvm/src/target/canonicalizer/llvm/arm_aprofile.cc:104: Warning: Cannot parse target features for target: {"kind": "llvm", "keys": ("arm_cpu", "cpu"), "device": "arm_cpu", "model": "beagleai", "mattr": ("+neon", "+vfp4", "+thumb2"), "mcpu": "cortex-a15", "mtriple": "armv7a-linux-gnueabihf"}. LLVM was not compiled with support for Arm(R)-based targets.
+[12:08:59] /workspace/tvm/src/target/canonicalizer/llvm/arm_aprofile.cc:104: Warning: Cannot parse target features for target: {"kind": "llvm", "keys": ("arm_cpu", "cpu"), "device": "arm_cpu", "model": "stm32mp1", "mattr": ("+neon", "+vfp4", "+thumb2"), "mcpu": "cortex-a7", "mtriple": "armv7a-linux-gnueabihf"}. LLVM was not compiled with support for Arm(R)-based targets.
+[12:08:59] /workspace/tvm/src/target/canonicalizer/llvm/arm_aprofile.cc:104: Warning: Cannot parse target features for target: {"kind": "llvm", "keys": ("arm_cpu", "cpu"), "device": "arm_cpu", "model": "snapdragon835", "mattr": ("+neon",), "mtriple": "arm64-linux-android"}. LLVM was not compiled with support for Arm(R)-based targets.
+[12:08:59] /workspace/tvm/src/target/canonicalizer/llvm/arm_aprofile.cc:104: Warning: Cannot parse target features for target: {"kind": "llvm", "keys": ("arm_cpu", "cpu"), "device": "arm_cpu", "model": "beagleai", "mattr": ("+neon", "+vfp4", "+thumb2"), "mcpu": "cortex-a15", "mtriple": "armv7a-linux-gnueabihf"}. LLVM was not compiled with support for Arm(R)-based targets.
+[12:08:59] /workspace/tvm/src/target/canonicalizer/llvm/arm_aprofile.cc:104: Warning: Cannot parse target features for target: {"kind": "llvm", "keys": ("arm_cpu", "cpu"), "device": "arm_cpu", "model": "kirin970", "mattr": ("+neon",), "mtriple": "arm64-linux-android"}. LLVM was not compiled with support for Arm(R)-based targets.
+[12:08:59] /workspace/tvm/src/target/canonicalizer/llvm/arm_aprofile.cc:104: Warning: Cannot parse target features for target: {"kind": "llvm", "keys": ("arm_cpu", "cpu"), "device": "arm_cpu", "model": "stm32mp1", "mattr": ("+neon", "+vfp4", "+thumb2"), "mcpu": "cortex-a7", "mtriple": "armv7a-linux-gnueabihf"}. LLVM was not compiled with support for Arm(R)-based targets.
+[12:08:59] /workspace/tvm/src/target/canonicalizer/llvm/arm_aprofile.cc:104: Warning: Cannot parse target features for target: {"kind": "llvm", "keys": ("arm_cpu", "cpu"), "device": "arm_cpu", "model": "bcm2711", "mattr": ("+neon",), "mcpu": "cortex-a72", "mtriple": "armv8l-linux-gnueabihf"}. LLVM was not compiled with support for Arm(R)-based targets.
+[12:08:59] /workspace/tvm/src/target/canonicalizer/llvm/arm_aprofile.cc:104: Warning: Cannot parse target features for target: {"kind": "llvm", "keys": ("arm_cpu", "cpu"), "device": "arm_cpu", "model": "pynq", "mattr": ("+neon",), "mtriple": "armv7a-linux-eabi"}. LLVM was not compiled with support for Arm(R)-based targets.
+[12:08:59] /workspace/tvm/src/target/canonicalizer/llvm/arm_aprofile.cc:104: Warning: Cannot parse target features for target: {"kind": "llvm", "keys": ("arm_cpu", "cpu"), "device": "arm_cpu", "model": "bcm2837", "mattr": ("+neon",), "mtriple": "armv7l-linux-gnueabihf"}. LLVM was not compiled with support for Arm(R)-based targets.
+/usr/local/lib/python3.12/site-packages/tvm_ffi/_optional_torch_c_dlpack.py:194: UserWarning: Failed to JIT torch c dlpack extension, EnvTensorAllocator will not be enabled.
+We recommend installing via `pip install torch-c-dlpack-ext`
+  warnings.warn(
+[12:09:04] /workspace/tvm/src/target/canonicalizer/llvm/arm_aprofile.cc:104: Warning: Cannot parse target features for target: {"kind": "llvm", "mtriple": "arm64-apple-macos"}. LLVM was not compiled with support for Arm(R)-based targets.
+[12:09:04] /workspace/tvm/src/target/canonicalizer/llvm/arm_aprofile.cc:104: Warning: Cannot parse target features for target: {"kind": "llvm", "mcpu": "apple-m1", "mtriple": "arm64-apple-macos"}. LLVM was not compiled with support for Arm(R)-based targets.
+[12:09:04] /workspace/tvm/src/target/canonicalizer/llvm/arm_aprofile.cc:104: Warning: Cannot parse target features for target: {"kind": "llvm", "mtriple": "arm64-apple-macos"}. LLVM was not compiled with support for Arm(R)-based targets.
+[12:09:04] /workspace/tvm/src/target/canonicalizer/llvm/arm_aprofile.cc:104: Warning: Cannot parse target features for target: {"kind": "llvm", "mcpu": "apple-m1", "mtriple": "arm64-apple-macos"}. LLVM was not compiled with support for Arm(R)-based targets.
+[12:09:04] /workspace/tvm/src/target/canonicalizer/llvm/arm_aprofile.cc:104: Warning: Cannot parse target features for target: {"kind": "llvm", "mtriple": "arm64-apple-macos"}. LLVM was not compiled with support for Arm(R)-based targets.
+[12:09:04] /workspace/tvm/src/target/canonicalizer/llvm/arm_aprofile.cc:104: Warning: Cannot parse target features for target: {"kind": "llvm", "mcpu": "apple-m2", "mtriple": "arm64-apple-macos"}. LLVM was not compiled with support for Arm(R)-based targets.
+[2026-11-23 12:09:04] INFO auto_config.py:113: [92mFound[0m model configuration: /hf/hub/models--Qwen--Qwen3-1.7B/snapshots/70d244cc86ccca08cf5af4e1e306ecf908b1ad5e/config.json
+[2026-11-23 12:09:19] INFO auto_device.py:80: [92mFound[0m device: cpu:0
+[2026-11-23 12:09:19] INFO auto_weight.py:71: Finding weights in: /hf/hub/models--Qwen--Qwen3-1.7B/snapshots/70d244cc86ccca08cf5af4e1e306ecf908b1ad5e
+[2026-11-23 12:09:19] INFO auto_weight.py:137: [91mNot found[0m Huggingface PyTorch
+[2026-11-23 12:09:19] INFO auto_weight.py:144: [92mFound[0m source weight format: huggingface-safetensor. Source configuration: /hf/hub/models--Qwen--Qwen3-1.7B/snapshots/70d244cc86ccca08cf5af4e1e306ecf908b1ad5e/model.safetensors.index.json
+[2026-11-23 12:09:19] INFO auto_weight.py:107: Using source weight configuration: [1m/hf/hub/models--Qwen--Qwen3-1.7B/snapshots/70d244cc86ccca08cf5af4e1e306ecf908b1ad5e/model.safetensors.index.json[0m. Use `--source` to override.
+[2026-11-23 12:09:19] INFO auto_weight.py:111: Using source weight format: [1mhuggingface-safetensor[0m. Use `--source-format` to override.
+[2026-11-23 12:09:19] INFO auto_config.py:151: [92mFound[0m model type: [1mqwen3[0m. Use `--model-type` to override.
+[2026-11-23 12:09:19] INFO qwen3_model.py:77: [1mcontext_window_size[0m not found in config.json. Falling back to [1mmax_position_embeddings[0m (40960)
+[2026-11-23 12:09:19] INFO qwen3_model.py:91: [1mprefill_chunk_size[0m defaults to 2048
+[2026-11-23 12:09:21] WARNING utils.py:26: Unused extern parameters: lm_head.weight
+[1mWeight conversion with arguments:[0m
+  [1m--config[0m          /hf/hub/models--Qwen--Qwen3-1.7B/snapshots/70d244cc86ccca08cf5af4e1e306ecf908b1ad5e/config.json
+  [1m--quantization[0m    GroupQuantize(name='q4f16_1', kind='group-quant', group_size=32, quantize_dtype='int4', storage_dtype='uint32', model_dtype='float16', linear_weight_layout='NK', quantize_embedding=True, quantize_final_fc=True, num_elem_per_storage=8, num_storage_per_group=4, max_int_value=7, tensor_parallel_shards=0)
+  [1m--model-type[0m      qwen3
+  [1m--device[0m          cpu:0
+  [1m--source[0m          /hf/hub/models--Qwen--Qwen3-1.7B/snapshots/70d244cc86ccca08cf5af4e1e306ecf908b1ad5e/model.safetensors.index.json
+  [1m--source-format[0m   huggingface-safetensor
+  [1m--output[0m          /out
+Start storing to cache /out
+  0%|          | 0/226 [00:00<?, ?it/s]                                       [2026-11-23 12:09:21] INFO huggingface_loader.py:188: Loading HF parameters from: /hf/hub/models--Qwen--Qwen3-1.7B/snapshots/70d244cc86ccca08cf5af4e1e306ecf908b1ad5e/model-00001-of-00002.safetensors
+  0%|          | 0/226 [00:00<?, ?it/s]                                       [2026-11-23 12:09:48] INFO group_quantization.py:230: Compiling quantize function for key: ((151936, 2048), float16, cpu, axis=1, output_transpose=False)
+  0%|          | 0/226 [00:27<?, ?it/s]!!!!!!! Segfault encountered !!!!!!!
+  File "<unknown>", line 0, in _PyObject_MakeTpCall
+  File "<unknown>", line 0, in _PyEval_EvalFrameDefault
+  File "<unknown>", line 0, in _PyEval_EvalFrameDefault
+  File "<unknown>", line 0, in _PyObject_FastCallDictTstate
+  File "<unknown>", line 0, in _PyObject_MakeTpCall
+  File "<unknown>", line 0, in _PyEval_EvalFrameDefault
+  File "<unknown>", line 0, in _PyEval_EvalFrameDefault
+  File "<unknown>", line 0, in _PyEval_EvalFrameDefault
+  File "<unknown>", line 0, in _PyEval_EvalFrameDefault
+  File "<unknown>", line 0, in PyEval_EvalCode
+  File "<unknown>", line 0, in PyObject_Vectorcall
+  File "<unknown>", line 0, in _PyEval_EvalFrameDefault
+  File "<unknown>", line 0, in Py_RunMain
+  File "<unknown>", line 0, in Py_BytesMain
+  File "<unknown>", line 0, in _start
+  File "<unknown>", line 0, in 0xffffffffffffffff
+
+bash: line 6:    19 Segmentation fault      (core dumped) python -m mlc_llm convert_weight "$SRC_DIR" --quantization q4f16_1 --device cpu -o /out

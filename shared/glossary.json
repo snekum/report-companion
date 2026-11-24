@@ -1,0 +1,222 @@
+{
+  "_about": "General definitions written for this project in plain words, each linked to the MedlinePlus (US National Library of Medicine) page it is based on. They describe what a test measures in general. They say nothing about any individual result and are not medical advice. Links checked 2026-11-23.",
+  "accessed": "2026-11-23",
+  "entries": [
+    {
+      "id": "reference_range",
+      "kind": "structure",
+      "title": "Reference range",
+      "terms": ["reference range", "ref", "normal range", "range"],
+      "definition": "The span of results a laboratory printed for comparison, usually based on results from healthy people tested with the same method. Different labs can print different ranges for the same test, and a result just outside a range is not automatically a problem. Only a clinician who knows the person can say what a result means.",
+      "source": { "title": "MedlinePlus: How to Understand Your Lab Results", "url": "https://medlineplus.gov/lab-tests/how-to-understand-your-lab-results/" }
+    },
+    {
+      "id": "units",
+      "kind": "structure",
+      "title": "Units",
+      "terms": ["unit", "units"],
+      "definition": "The unit tells you how a result was measured, for example mg/dL (milligrams per decilitre) or mmol/L (millimoles per litre). The same test can be reported in different units, so two numbers can only be compared directly when their units match.",
+      "source": { "title": "MedlinePlus: How to Understand Your Lab Results", "url": "https://medlineplus.gov/lab-tests/how-to-understand-your-lab-results/" }
+    },
+    {
+      "id": "hba1c",
+      "kind": "test",
+      "title": "Hemoglobin A1c (HbA1c)",
+      "terms": ["hemoglobin a1c", "haemoglobin a1c", "hba1c", "a1c"],
+      "definition": "Measures how much of the hemoglobin in red blood cells has sugar attached. Because red blood cells last a few months, it reflects average blood sugar over roughly the past three months rather than a single moment.",
+      "source": { "title": "MedlinePlus: Hemoglobin A1C (HbA1c) Test", "url": "https://medlineplus.gov/lab-tests/hemoglobin-a1c-hba1c-test/" }
+    },
+    {
+      "id": "glucose",
+      "kind": "test",
+      "title": "Glucose",
+      "terms": ["glucose", "blood glucose", "fasting glucose", "glu"],
+      "definition": "Measures the amount of glucose (a type of sugar the body uses for energy) in the blood at the time the sample was taken. Whether the person had eaten beforehand affects the result.",
+      "source": { "title": "MedlinePlus: Blood Glucose Test", "url": "https://medlineplus.gov/lab-tests/blood-glucose-test/" }
+    },
+    {
+      "id": "cholesterol",
+      "kind": "test",
+      "title": "Cholesterol and triglycerides",
+      "terms": ["total cholesterol", "cholesterol", "chol", "ldl", "ldl cholesterol", "ldl-c", "hdl", "hdl cholesterol", "hdl-c", "triglycerides", "trig"],
+      "definition": "A cholesterol test (often called a lipid panel) measures fats in the blood: total cholesterol, LDL cholesterol, HDL cholesterol and triglycerides. LDL and HDL are two kinds of particles that carry cholesterol around the body.",
+      "source": { "title": "MedlinePlus: Cholesterol Levels", "url": "https://medlineplus.gov/lab-tests/cholesterol-levels/" }
+    },
+    {
+      "id": "triglycerides",
+      "kind": "test",
+      "title": "Triglycerides",
+      "terms": ["triglycerides", "triglyceride", "trig"],
+      "definition": "Triglycerides are a type of fat in the blood that the body uses to store energy. The test is usually part of a cholesterol test.",
+      "source": { "title": "MedlinePlus: Triglycerides Test", "url": "https://medlineplus.gov/lab-tests/triglycerides-test/" }
+    },
+    {
+      "id": "creatinine",
+      "kind": "test",
+      "title": "Creatinine",
+      "terms": ["creatinine", "creat"],
+      "definition": "Creatinine is a waste product made by muscles and filtered out of the blood by the kidneys. The test is one way of checking how well the kidneys are filtering.",
+      "source": { "title": "MedlinePlus: Creatinine Test", "url": "https://medlineplus.gov/lab-tests/creatinine-test/" }
+    },
+    {
+      "id": "egfr",
+      "kind": "test",
+      "title": "eGFR (estimated glomerular filtration rate)",
+      "terms": ["egfr", "estimated gfr", "gfr"],
+      "definition": "An estimate of how much blood the kidneys filter each minute. It is calculated from a creatinine result together with details such as age, rather than measured directly.",
+      "source": { "title": "MedlinePlus: Glomerular Filtration Rate (GFR) Test", "url": "https://medlineplus.gov/lab-tests/glomerular-filtration-rate-gfr-test/" }
+    },
+    {
+      "id": "bun",
+      "kind": "test",
+      "title": "BUN (blood urea nitrogen)",
+      "terms": ["bun", "blood urea nitrogen", "urea nitrogen", "urea nitrogen (bun)"],
+      "definition": "Measures urea nitrogen, a waste product formed when the body breaks down protein, which the kidneys remove from the blood. It is often reported alongside creatinine.",
+      "source": { "title": "MedlinePlus: BUN (Blood Urea Nitrogen)", "url": "https://medlineplus.gov/lab-tests/bun-blood-urea-nitrogen/" }
+    },
+    {
+      "id": "sodium",
+      "kind": "test",
+      "title": "Sodium",
+      "terms": ["sodium", "na"],
+      "definition": "Sodium is an electrolyte, a mineral that carries an electric charge in body fluids. It helps control the balance of fluid in the body and the working of nerves and muscles.",
+      "source": { "title": "MedlinePlus: Sodium Blood Test", "url": "https://medlineplus.gov/lab-tests/sodium-blood-test/" }
+    },
+    {
+      "id": "potassium",
+      "kind": "test",
+      "title": "Potassium",
+      "terms": ["potassium", "k"],
+      "definition": "Potassium is an electrolyte that nerves and muscles, including the heart, need in order to work properly.",
+      "source": { "title": "MedlinePlus: Potassium Blood Test", "url": "https://medlineplus.gov/lab-tests/potassium-blood-test/" }
+    },
+    {
+      "id": "chloride",
+      "kind": "test",
+      "title": "Chloride",
+      "terms": ["chloride", "cl"],
+      "definition": "Chloride is an electrolyte that works with sodium and other electrolytes to keep the body's fluids and acid-base balance steady.",
+      "source": { "title": "MedlinePlus: Chloride Blood Test", "url": "https://medlineplus.gov/lab-tests/chloride-blood-test/" }
+    },
+    {
+      "id": "co2",
+      "kind": "test",
+      "title": "Carbon dioxide (CO2, bicarbonate)",
+      "terms": ["carbon dioxide", "carbon dioxide (co2)", "co2", "bicarbonate", "bicarbonate (total co2)"],
+      "definition": "Measures the amount of carbon dioxide in the blood, most of it in the form of bicarbonate. It is part of the electrolyte panel and relates to the body's acid-base balance.",
+      "source": { "title": "MedlinePlus: Carbon Dioxide (CO2) in Blood", "url": "https://medlineplus.gov/lab-tests/carbon-dioxide-co2-in-blood/" }
+    },
+    {
+      "id": "calcium",
+      "kind": "test",
+      "title": "Calcium",
+      "terms": ["calcium", "calcium, total", "ca"],
+      "definition": "Measures calcium in the blood. Calcium is needed for bones and teeth and also for nerves, muscles and the heart.",
+      "source": { "title": "MedlinePlus: Calcium Blood Test", "url": "https://medlineplus.gov/lab-tests/calcium-blood-test/" }
+    },
+    {
+      "id": "hemoglobin",
+      "kind": "test",
+      "title": "Hemoglobin",
+      "terms": ["hemoglobin", "haemoglobin", "hgb", "hb"],
+      "definition": "Hemoglobin is the protein in red blood cells that carries oxygen from the lungs to the rest of the body. It is usually measured as part of a complete blood count.",
+      "source": { "title": "MedlinePlus: Hemoglobin Test", "url": "https://medlineplus.gov/lab-tests/hemoglobin-test/" }
+    },
+    {
+      "id": "hematocrit",
+      "kind": "test",
+      "title": "Hematocrit",
+      "terms": ["hematocrit", "haematocrit", "hct"],
+      "definition": "The percentage of the blood's volume that is made up of red blood cells.",
+      "source": { "title": "MedlinePlus: Hematocrit Test", "url": "https://medlineplus.gov/lab-tests/hematocrit-test/" }
+    },
+    {
+      "id": "wbc",
+      "kind": "test",
+      "title": "White blood cell count (WBC)",
+      "terms": ["white blood cell count", "wbc", "leukocytes", "white cell count"],
+      "definition": "Counts the white blood cells in a sample of blood. White blood cells are part of the immune system.",
+      "source": { "title": "MedlinePlus: White Blood Count (WBC)", "url": "https://medlineplus.gov/lab-tests/white-blood-count-wbc/" }
+    },
+    {
+      "id": "rbc",
+      "kind": "test",
+      "title": "Red blood cell count (RBC)",
+      "terms": ["red blood cell count", "rbc", "erythrocytes"],
+      "definition": "Counts the red blood cells, which carry oxygen, in a sample of blood.",
+      "source": { "title": "MedlinePlus: Red Blood Cell (RBC) Count", "url": "https://medlineplus.gov/lab-tests/red-blood-cell-rbc-count/" }
+    },
+    {
+      "id": "rbc_indices",
+      "kind": "test",
+      "title": "MCV, MCH and MCHC",
+      "terms": ["mcv", "mch", "mchc"],
+      "definition": "Measurements that describe red blood cells: MCV is their average size, MCH is the average amount of hemoglobin in each cell, and MCHC is the average concentration of hemoglobin in them. They are reported as part of a complete blood count.",
+      "source": { "title": "MedlinePlus: Complete Blood Count (CBC)", "url": "https://medlineplus.gov/lab-tests/complete-blood-count-cbc/" }
+    },
+    {
+      "id": "platelets",
+      "kind": "test",
+      "title": "Platelet count",
+      "terms": ["platelet count", "platelets", "plt"],
+      "definition": "Counts platelets, small cell fragments in the blood that help it to clot.",
+      "source": { "title": "MedlinePlus: Platelet Tests", "url": "https://medlineplus.gov/lab-tests/platelet-tests/" }
+    },
+    {
+      "id": "alt",
+      "kind": "test",
+      "title": "ALT (alanine aminotransferase)",
+      "terms": ["alt", "alanine aminotransferase", "alanine aminotransferase (alt)"],
+      "definition": "ALT is an enzyme found mostly in the liver. The test measures how much of it is in the blood and is one of the liver function tests.",
+      "source": { "title": "MedlinePlus: ALT Blood Test", "url": "https://medlineplus.gov/lab-tests/alt-blood-test/" }
+    },
+    {
+      "id": "ast",
+      "kind": "test",
+      "title": "AST (aspartate aminotransferase)",
+      "terms": ["ast", "aspartate aminotransferase", "aspartate aminotransferase (ast)"],
+      "definition": "AST is an enzyme found in the liver and in other tissues such as muscle. The test measures how much is in the blood and is often reported with ALT.",
+      "source": { "title": "MedlinePlus: AST Test", "url": "https://medlineplus.gov/lab-tests/ast-test/" }
+    },
+    {
+      "id": "alp",
+      "kind": "test",
+      "title": "Alkaline phosphatase (ALP)",
+      "terms": ["alkaline phosphatase", "alp"],
+      "definition": "ALP is an enzyme found throughout the body, with much of it coming from the liver and bones. The test measures how much is in the blood.",
+      "source": { "title": "MedlinePlus: Alkaline Phosphatase", "url": "https://medlineplus.gov/lab-tests/alkaline-phosphatase/" }
+    },
+    {
+      "id": "bilirubin",
+      "kind": "test",
+      "title": "Bilirubin",
+      "terms": ["bilirubin", "bilirubin, total", "total bilirubin", "tbil"],
+      "definition": "Bilirubin is a yellowish substance made when the body breaks down old red blood cells. The liver processes it so it can leave the body.",
+      "source": { "title": "MedlinePlus: Bilirubin Blood Test", "url": "https://medlineplus.gov/lab-tests/bilirubin-blood-test/" }
+    },
+    {
+      "id": "albumin",
+      "kind": "test",
+      "title": "Albumin",
+      "terms": ["albumin", "alb"],
+      "definition": "Albumin is a protein made by the liver. It helps keep fluid inside blood vessels and carries substances around the body.",
+      "source": { "title": "MedlinePlus: Albumin Blood Test", "url": "https://medlineplus.gov/lab-tests/albumin-blood-test/" }
+    },
+    {
+      "id": "protein",
+      "kind": "test",
+      "title": "Total protein",
+      "terms": ["total protein", "protein, total", "tp"],
+      "definition": "Measures the total amount of protein in the blood, mainly albumin and globulins.",
+      "source": { "title": "MedlinePlus: Total Protein and Albumin/Globulin (A/G) Ratio", "url": "https://medlineplus.gov/lab-tests/total-protein-and-albumin-globulin-a-g-ratio/" }
+    },
+    {
+      "id": "bmp",
+      "kind": "panel",
+      "title": "Metabolic panel",
+      "terms": ["basic metabolic panel", "bmp", "comprehensive metabolic panel", "cmp"],
+      "definition": "A group of blood tests ordered together, usually including glucose, calcium, electrolytes (sodium, potassium, chloride, carbon dioxide) and kidney tests (BUN, creatinine). The comprehensive version adds liver tests and proteins.",
+      "source": { "title": "MedlinePlus: Basic Metabolic Panel (BMP)", "url": "https://medlineplus.gov/lab-tests/basic-metabolic-panel-bmp/" }
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "name": "report-companion",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc --noEmit && vite build",
+    "preview": "vite preview",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "sync-shared": "node scripts/sync-shared.mjs",
+    "verify:ui": "node scripts/verify-ui.mjs",
+    "verify:webgpu": "node scripts/verify-webgpu.mjs"
+  },
+  "dependencies": {
+    "@mlc-ai/web-llm": "0.2.89",
+    "react": "19.3.1",
+    "react-dom": "19.3.1"
+  },
+  "devDependencies": {
+    "@types/node": "24.19.2",
+    "@types/react": "19.3.0",
+    "@types/react-dom": "19.3.0",
+    "@vitejs/plugin-react": "6.3.0",
+    "jsdom": "31.0.1",
+    "playwright-core": "1.65.1",
+    "typescript": "7.0.2",
+    "vite": "8.3.8",
+    "vitest": "5.1.1"
+  }
+}

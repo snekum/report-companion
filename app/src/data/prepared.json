@@ -1,0 +1,1053 @@
+{
+ "builtOn": "2026-11-23",
+ "journeys": [
+  {
+   "id": "checkup",
+   "title": "Preparing for a routine check-up",
+   "person": "Otis Hyatt",
+   "who": "Otis, 65, has two lab reports from different labs a year apart.",
+   "goal": "See what changed between the two reports, and write down questions before the check-up.",
+   "docIds": [
+    "demo-checkup-L1-2179b261",
+    "demo-checkup-L2-18c990f3"
+   ],
+   "compare": [
+    "demo-checkup-L1-2179b261",
+    "demo-checkup-L2-18c990f3"
+   ],
+   "starterQuestions": [
+    "Which of these results would you like to recheck, and when?"
+   ]
+  },
+  {
+   "id": "newdoctor",
+   "title": "Organising records before seeing a new doctor",
+   "person": "Donovan Johns",
+   "who": "Donovan, 64, is moving to a new practice and has a summary, a letter and a lab report.",
+   "goal": "Build one tidy list of medicines (current, stopped, unclear) and recent results to bring along.",
+   "docIds": [
+    "demo-newdoctor-V1-9ea93e09",
+    "demo-newdoctor-V2-03af7202",
+    "demo-newdoctor-L2-b2e4f228"
+   ],
+   "compare": null,
+   "starterQuestions": [
+    "Should I keep taking all of the medicines on the current list?"
+   ]
+  },
+  {
+   "id": "parent",
+   "title": "Helping a parent prepare for an appointment",
+   "person": "Santo O'Connell",
+   "who": "An adult child is helping Santo, 68, make sense of a results printout, a portal message and a visit summary.",
+   "goal": "Understand what each paper says, spot repeated tests, and bring a one-page brief to the appointment.",
+   "docIds": [
+    "demo-parent-L4-2e846889",
+    "demo-parent-L5-6d402a04",
+    "demo-parent-V1-66135c14"
+   ],
+   "compare": [
+    "demo-parent-L4-2e846889",
+    "demo-parent-L5-6d402a04"
+   ],
+   "starterQuestions": [
+    "Is there anything we should bring or do before the next appointment?"
+   ]
+  }
+ ],
+ "documents": [
+  {
+   "id": "demo-checkup-L1-2179b261",
+   "journey": "checkup",
+   "title": "Lab report, last year",
+   "kind": "lab_report",
+   "family": "L1",
+   "text": "NORTHBROOK COMMUNITY LABORATORY\nPatient: Otis Hyatt    DOB: 07/19/1961\nCollected: 10/07/2025    Reported: 10/08/2025\nOrdering clinician: Dr. M. Lindqvist\n\nTEST                      RESULT   UNITS          REFERENCE RANGE\nGlucose                   87.6     mg/dL          70-99\nUrea nitrogen (BUN)       7.7      mg/dL          7-20\nCreatinine, serum         1.0      mg/dL          0.6-1.3\nCalcium                   8.9      mg/dL          8.5-10.2\nSodium                    143.2    mmol/L         135-145\nPotassium                 4.4      mmol/L         3.5-5.1\nChloride                  108.5    mmol/L         98-107\nCarbon dioxide (CO2)      24.3     mmol/L         22-29\nHbA1c                     6.0      %              4.0-5.6\n\nResults reviewed electronically. Ranges are those of this laboratory.\n",
+   "reference": {
+    "document_date": {
+     "value": "10/08/2025",
+     "evidence": "Collected: 10/07/2025    Reported: 10/08/2025"
+    },
+    "labs": [
+     {
+      "test": "Glucose",
+      "value": "87.6",
+      "unit": "mg/dL",
+      "reference_range": "70-99",
+      "date": null,
+      "evidence": "Glucose                   87.6     mg/dL          70-99"
+     },
+     {
+      "test": "Urea nitrogen (BUN)",
+      "value": "7.7",
+      "unit": "mg/dL",
+      "reference_range": "7-20",
+      "date": null,
+      "evidence": "Urea nitrogen (BUN)       7.7      mg/dL          7-20"
+     },
+     {
+      "test": "Creatinine, serum",
+      "value": "1.0",
+      "unit": "mg/dL",
+      "reference_range": "0.6-1.3",
+      "date": null,
+      "evidence": "Creatinine, serum         1.0      mg/dL          0.6-1.3"
+     },
+     {
+      "test": "Calcium",
+      "value": "8.9",
+      "unit": "mg/dL",
+      "reference_range": "8.5-10.2",
+      "date": null,
+      "evidence": "Calcium                   8.9      mg/dL          8.5-10.2"
+     },
+     {
+      "test": "Sodium",
+      "value": "143.2",
+      "unit": "mmol/L",
+      "reference_range": "135-145",
+      "date": null,
+      "evidence": "Sodium                    143.2    mmol/L         135-145"
+     },
+     {
+      "test": "Potassium",
+      "value": "4.4",
+      "unit": "mmol/L",
+      "reference_range": "3.5-5.1",
+      "date": null,
+      "evidence": "Potassium                 4.4      mmol/L         3.5-5.1"
+     },
+     {
+      "test": "Chloride",
+      "value": "108.5",
+      "unit": "mmol/L",
+      "reference_range": "98-107",
+      "date": null,
+      "evidence": "Chloride                  108.5    mmol/L         98-107"
+     },
+     {
+      "test": "Carbon dioxide (CO2)",
+      "value": "24.3",
+      "unit": "mmol/L",
+      "reference_range": "22-29",
+      "date": null,
+      "evidence": "Carbon dioxide (CO2)      24.3     mmol/L         22-29"
+     },
+     {
+      "test": "HbA1c",
+      "value": "6.0",
+      "unit": "%",
+      "reference_range": "4.0-5.6",
+      "date": null,
+      "evidence": "HbA1c                     6.0      %              4.0-5.6"
+     }
+    ],
+    "medications": [],
+    "follow_up": []
+   },
+   "outputs": {
+    "finetuned": {
+     "label": "Fine-tuned (pilot run)",
+     "description": "QLoRA adapter trained for this task; run in 4-bit (nf4) with the same prompt and greedy decoding as the original. Pilot adapter: 160 training documents, 1 epoch; known to cut some lab lists short.",
+     "raw": "{\"document_date\": {\"value\": \"10/08/2025\", \"evidence\": \"Collected: 10/07/2025    Reported: 10/08/2025\"}, \"labs\": [{\"test\": \"Glucose\", \"value\": \"87.6\", \"unit\": \"mg/dL\", \"reference_range\": \"70-99\", \"date\": null, \"evidence\": \"Glucose                   87.6     mg/dL          70-99\"}, {\"test\": \"Urea nitrogen (BUN)\", \"value\": \"7.7\", \"unit\": \"mg/dL\", \"reference_range\": \"7-20\", \"date\": null, \"evidence\": \"Urea nitrogen (BUN)       7.7      mg/dL          7-20\"}, {\"test\": \"Creatinine, serum\", \"value\": \"1.0\", \"unit\": \"mg/dL\", \"reference_range\": \"0.6-1.3\", \"date\": null, \"evidence\": \"Creatinine, serum         1.0      mg/dL          0.6-1.3\"}, {\"test\": \"Calcium\", \"value\": \"8.9\", \"unit\": \"mg/dL\", \"reference_range\": \"8.5-10.2\", \"date\": null, \"evidence\": \"Calcium                   8.9      mg/dL          8.5-10.2\"}, {\"test\": \"Sodium\", \"value\": \"143.2\", \"unit\": \"mmol/L\", \"reference_range\": \"135-145\", \"date\": null, \"evidence\": \"Sodium                    143.2    mmol/L         135-145\"}, {\"test\": \"Potassium\", \"value\": \"4.4\", \"unit\": \"mmol/L\", \"reference_range\": \"3.5-5.1\", \"date\": null, \"evidence\": \"Potassium                 4.4      mmol/L         3.5-5.1\"}, {\"test\": \"Chloride\", \"value\": \"108.5\", \"unit\": \"mmol/L\", \"reference_range\": \"98-107\", \"date\": null, \"evidence\": \"Chloride                  108.5    mmol/L         98-107\"}, {\"test\": \"Carbon dioxide (CO2)\", \"value\": \"24.3\", \"unit\": \"mmol/L\", \"reference_range\": \"22-29\", \"date\": null, \"evidence\": \"Carbon dioxide (CO2)      24.3     mmol/L         22-29\"}, {\"test\": \"HbA1c\", \"value\": \"6.0\", \"unit\": \"%\", \"reference_range\": \"4.0-5.6\", \"date\": null, \"evidence\": \"HbA1c                     6.0      %              4.0-5.6\"}], \"medications\": [], \"follow_up\": []}",
+     "latencyMs": 34072,
+     "generatedOn": "2026-11-23",
+     "runtime": "Python, transformers + bitsandbytes on a GTX 1650"
+    },
+    "original": {
+     "label": "Original Qwen3-1.7B",
+     "description": "The original model with the extraction prompt; 4-bit (nf4), greedy decoding.",
+     "raw": "{\n  \"document_date\": null,\n  \"labs\": [\n    {\n      \"test\": \"Glucose\",\n      \"value\": \"87.6\",\n      \"unit\": \"mg/dL\",\n      \"reference_range\": \"70-99\",\n      \"date\": null,\n      \"evidence\": \"\"\n    },\n    {\n      \"test\": \"Urea nitrogen (BUN)\",\n      \"value\": \"7.7\",\n      \"unit\": \"mg/dL\",\n      \"reference_range\": \"7-20\",\n      \"date\": null,\n      \"evidence\": \"\"\n    },\n    {\n      \"test\": \"Creatinine, serum\",\n      \"value\": \"1.0\",\n      \"unit\": \"mg/dL\",\n      \"reference_range\": \"0.6-1.3\",\n      \"date\": null,\n      \"evidence\": \"\"\n    },\n    {\n      \"test\": \"Calcium\",\n      \"value\": \"8.9\",\n      \"unit\": \"mg/dL\",\n      \"reference_range\": \"8.5-10.2\",\n      \"date\": null,\n      \"evidence\": \"\"\n    },\n    {\n      \"test\": \"Sodium\",\n      \"value\": \"143.2\",\n      \"unit\": \"mmol/L\",\n      \"reference_range\": \"135-145\",\n      \"date\": null,\n      \"evidence\": \"\"\n    },\n    {\n      \"test\": \"Potassium\",\n      \"value\": \"4.4\",\n      \"unit\": \"mmol/L\",\n      \"reference_range\": \"3.5-5.1\",\n      \"date\": null,\n      \"evidence\": \"\"\n    },\n    {\n      \"test\": \"Chloride\",\n      \"value\": \"108.5\",\n      \"unit\": \"mmol/L\",\n      \"reference_range\": \"98-107\",\n      \"date\": null,\n      \"evidence\": \"\"\n    },\n    {\n      \"test\": \"Carbon dioxide (CO2)\",\n      \"value\": \"24.3\",\n      \"unit\": \"mmol/L\",\n      \"reference_range\": \"22-29\",\n      \"date\": null,\n      \"evidence\": \"\"\n    },\n    {\n      \"test\": \"HbA1c\",\n      \"value\": \"6.0\",\n      \"unit\": \"%\",\n      \"reference_range\": \"4.0-5.6\",\n      \"date\": null,\n      \"evidence\": \"\"\n    }\n  ],\n  \"medications\": {\n    \"name\": null,\n    \"dose\": null,\n    \"frequency\": null,\n    \"status\": \"current\",\n    \"evidence\": \"\"\n  },\n  \"follow_up\": [\n    {\n      \"instruction\": \"Results reviewed electronically. Ranges are those of this laboratory.\",\n      \"evidence\": \"\"\n    }\n  ]\n}",
+     "latencyMs": 49679,
+     "generatedOn": "2026-11-23",
+     "runtime": "Python, transformers + bitsandbytes on a GTX 1650"
+    },
+    "rules": {
+     "label": "Rule-based lab rows",
+     "description": "Deterministic dictionary + pattern matching. Lab rows and the document date only.",
+     "raw": "{\"document_date\": {\"value\": \"10/08/2025\", \"evidence\": \"Collected: 10/07/2025    Reported: 10/08/2025\"}, \"labs\": [{\"test\": \"Glucose\", \"value\": \"87.6\", \"unit\": \"mg/dL\", \"reference_range\": \"70-99\", \"date\": null, \"evidence\": \"Glucose                   87.6     mg/dL          70-99\"}, {\"test\": \"Urea nitrogen (BUN)\", \"value\": \"7.7\", \"unit\": \"mg/dL\", \"reference_range\": \"7-20\", \"date\": null, \"evidence\": \"Urea nitrogen (BUN)       7.7      mg/dL          7-20\"}, {\"test\": \"Creatinine, serum\", \"value\": \"1.0\", \"unit\": \"mg/dL\", \"reference_range\": \"0.6-1.3\", \"date\": null, \"evidence\": \"Creatinine, serum         1.0      mg/dL          0.6-1.3\"}, {\"test\": \"Calcium\", \"value\": \"8.9\", \"unit\": \"mg/dL\", \"reference_range\": \"8.5-10.2\", \"date\": null, \"evidence\": \"Calcium                   8.9      mg/dL          8.5-10.2\"}, {\"test\": \"Sodium\", \"value\": \"143.2\", \"unit\": \"mmol/L\", \"reference_range\": \"135-145\", \"date\": null, \"evidence\": \"Sodium                    143.2    mmol/L         135-145\"}, {\"test\": \"Potassium\", \"value\": \"4.4\", \"unit\": \"mmol/L\", \"reference_range\": \"3.5-5.1\", \"date\": null, \"evidence\": \"Potassium                 4.4      mmol/L         3.5-5.1\"}, {\"test\": \"Chloride\", \"value\": \"108.5\", \"unit\": \"mmol/L\", \"reference_range\": \"98-107\", \"date\": null, \"evidence\": \"Chloride                  108.5    mmol/L         98-107\"}, {\"test\": \"Carbon dioxide (CO2)\", \"value\": \"24.3\", \"unit\": \"mmol/L\", \"reference_range\": \"22-29\", \"date\": null, \"evidence\": \"Carbon dioxide (CO2)      24.3     mmol/L         22-29\"}, {\"test\": \"HbA1c\", \"value\": \"6.0\", \"unit\": \"%\", \"reference_range\": \"4.0-5.6\", \"date\": null, \"evidence\": \"HbA1c                     6.0      %              4.0-5.6\"}], \"medications\": [], \"follow_up\": []}",
+     "latencyMs": 2.163,
+     "generatedOn": "2026-11-23",
+     "runtime": "Python reference implementation"
+    }
+   },
+   "provenance": {
+    "source": "Synthea v4.0.0 synthetic record",
+    "synthea_patient_uuid": "154fd724-1e36-a172-9fe3-87b4bc29243b",
+    "anchor_encounter": "154fd724-1e36-a172-5143-8c757cf6a2fe",
+    "anchor_date": "2025-10-07",
+    "fictional_lab": "northbrook",
+    "generator": "build_demo-v1"
+   }
+  },
+  {
+   "id": "demo-checkup-L2-18c990f3",
+   "journey": "checkup",
+   "title": "Lab report, this year",
+   "kind": "lab_report",
+   "family": "L2",
+   "text": "Riverside Clinic Lab Services - Laboratory Report\nName: Hyatt, Otis   Date of birth: 07/19/1961\nSpecimen collected 10/13/2026; report issued 10/14/2026\n\n  Urea nitrogen (BUN): 17.6 mg/dL (ref 6 - 24)\n  Calcium: 10.0 mg/dL (ref 8.7 - 10.3)\n  Potassium: 3.8 mmol/L (ref 3.5 - 5.2)\n  Carbon dioxide (CO2): 20.0 mmol/L (ref 20 - 29)\n  HbA1c: 6.1 % (ref 4.8 - 5.6)\n  Total cholesterol: 221.9 mg/dL (ref 100 - 199)\n  Triglycerides: 144.9 mg/dL (ref 0 - 149)\n  LDL cholesterol: 131.8 mg/dL\n  HDL cholesterol: 61.1 mg/dL\n",
+   "reference": {
+    "document_date": {
+     "value": "10/14/2026",
+     "evidence": "Specimen collected 10/13/2026; report issued 10/14/2026"
+    },
+    "labs": [
+     {
+      "test": "Urea nitrogen (BUN)",
+      "value": "17.6",
+      "unit": "mg/dL",
+      "reference_range": "6 - 24",
+      "date": null,
+      "evidence": "Urea nitrogen (BUN): 17.6 mg/dL (ref 6 - 24)"
+     },
+     {
+      "test": "Calcium",
+      "value": "10.0",
+      "unit": "mg/dL",
+      "reference_range": "8.7 - 10.3",
+      "date": null,
+      "evidence": "Calcium: 10.0 mg/dL (ref 8.7 - 10.3)"
+     },
+     {
+      "test": "Potassium",
+      "value": "3.8",
+      "unit": "mmol/L",
+      "reference_range": "3.5 - 5.2",
+      "date": null,
+      "evidence": "Potassium: 3.8 mmol/L (ref 3.5 - 5.2)"
+     },
+     {
+      "test": "Carbon dioxide (CO2)",
+      "value": "20.0",
+      "unit": "mmol/L",
+      "reference_range": "20 - 29",
+      "date": null,
+      "evidence": "Carbon dioxide (CO2): 20.0 mmol/L (ref 20 - 29)"
+     },
+     {
+      "test": "HbA1c",
+      "value": "6.1",
+      "unit": "%",
+      "reference_range": "4.8 - 5.6",
+      "date": null,
+      "evidence": "HbA1c: 6.1 % (ref 4.8 - 5.6)"
+     },
+     {
+      "test": "Total cholesterol",
+      "value": "221.9",
+      "unit": "mg/dL",
+      "reference_range": "100 - 199",
+      "date": null,
+      "evidence": "Total cholesterol: 221.9 mg/dL (ref 100 - 199)"
+     },
+     {
+      "test": "Triglycerides",
+      "value": "144.9",
+      "unit": "mg/dL",
+      "reference_range": "0 - 149",
+      "date": null,
+      "evidence": "Triglycerides: 144.9 mg/dL (ref 0 - 149)"
+     },
+     {
+      "test": "LDL cholesterol",
+      "value": "131.8",
+      "unit": "mg/dL",
+      "reference_range": null,
+      "date": null,
+      "evidence": "LDL cholesterol: 131.8 mg/dL"
+     },
+     {
+      "test": "HDL cholesterol",
+      "value": "61.1",
+      "unit": "mg/dL",
+      "reference_range": null,
+      "date": null,
+      "evidence": "HDL cholesterol: 61.1 mg/dL"
+     }
+    ],
+    "medications": [],
+    "follow_up": []
+   },
+   "outputs": {
+    "finetuned": {
+     "label": "Fine-tuned (pilot run)",
+     "description": "QLoRA adapter trained for this task; run in 4-bit (nf4) with the same prompt and greedy decoding as the original. Pilot adapter: 160 training documents, 1 epoch; known to cut some lab lists short.",
+     "raw": "{\"document_date\": {\"value\": \"10/14/2026\", \"evidence\": \"Specimen collected 10/13/2026; report issued 10/14/2026\"}, \"labs\": [{\"test\": \"Urea nitrogen (BUN)\", \"value\": \"17.6\", \"unit\": \"mg/dL\", \"reference_range\": \"6 - 24\", \"date\": null, \"evidence\": \"Urea nitrogen (BUN): 17.6 mg/dL (ref 6 - 24)\"}], \"labs\": [{\"test\": \"Calcium\", \"value\": \"10.0\", \"unit\": \"mg/dL\", \"reference_range\": \"8.7 - 10.3\", \"date\": null, \"evidence\": \"Calcium: 10.0 mg/dL (ref 8.7 - 10.3)\"}], \"labs\": [{\"test\": \"Potassium\", \"value\": \"3.8\", \"unit\": \"mmol/L\", \"reference_range\": \"3.5 - 5.2\", \"date\": null, \"evidence\": \"Potassium: 3.8 mmol/L (ref 3.5 - 5.2)\"}], \"labs\": [{\"test\": \"Carbon dioxide (CO2)\", \"value\": \"20.0\", \"unit\": \"mmol/L\", \"reference_range\": \"20 - 29\", \"date\": null, \"evidence\": \"Carbon dioxide (CO2): 20.0 mmol/L (ref 20 - 29)\"}], \"labs\": [{\"test\": \"HbA1c\", \"value\": \"6.1\", \"unit\": \"%\", \"reference_range\": \"4.8 - 5.6\", \"date\": null, \"evidence\": \"HbA1c: 6.1 % (ref 4.8 - 5.6)\"}], \"labs\": [{\"test\": \"Total cholesterol\", \"value\": \"221.9\", \"unit\": \"mg/dL\", \"reference_range\": \"100 - 199\", \"date\": null, \"evidence\": \"Total cholesterol: 221.9 mg/dL (ref 100 - 199)\"}], \"labs\": [{\"test\": \"Triglycerides\", \"value\": \"144.9\", \"unit\": \"mg/dL\", \"reference_range\": \"0 - 149\", \"date\": null, \"evidence\": \"Triglycerides: 144.9 mg/dL (ref 0 - 149)\"}], \"labs\": [{\"test\": \"LDL cholesterol\", \"value\": \"131.8\", \"unit\": \"mg/dL\", \"reference_range\": null, \"date\": null, \"evidence\": \"LDL cholesterol: 131.8 mg/dL\"}], \"labs\": [{\"test\": \"HDL cholesterol\", \"value\": \"61.1\", \"unit\": \"mg/dL\", \"reference_range\": null, \"date\": null, \"evidence\": \"HDL cholesterol: 61.1 mg/dL\"}], \"medications\": [], \"follow_up\": []}",
+     "latencyMs": 34072,
+     "generatedOn": "2026-11-23",
+     "runtime": "Python, transformers + bitsandbytes on a GTX 1650"
+    },
+    "original": {
+     "label": "Original Qwen3-1.7B",
+     "description": "The original model with the extraction prompt; 4-bit (nf4), greedy decoding.",
+     "raw": "{\n  \"document_date\": null,\n  \"labs\": [\n    {\n      \"test\": \"Urea nitrogen (BUN)\",\n      \"value\": \"17.6\",\n      \"unit\": \"mg/dL\",\n      \"reference_range\": \"6 - 24\",\n      \"date\": null,\n      \"evidence\": \"Urea nitrogen (BUN): 17.6 mg/dL (ref 6 - 24)\"\n    },\n    {\n      \"test\": \"Calcium\",\n      \"value\": \"10.0\",\n      \"unit\": \"mg/dL\",\n      \"reference_range\": \"8.7 - 10.3\",\n      \"date\": null,\n      \"evidence\": \"Calcium: 10.0 mg/dL (ref 8.7 - 10.3)\"\n    },\n    {\n      \"test\": \"Potassium\",\n      \"value\": \"3.8\",\n      \"unit\": \"mmol/L\",\n      \"reference_range\": \"3.5 - 5.2\",\n      \"date\": null,\n      \"evidence\": \"Potassium: 3.8 mmol/L (ref 3.5 - 5.2)\"\n    },\n    {\n      \"test\": \"Carbon dioxide (CO2)\",\n      \"value\": \"20.0\",\n      \"unit\": \"mmol/L\",\n      \"reference_range\": \"20 - 29\",\n      \"date\": null,\n      \"evidence\": \"Carbon dioxide (CO2): 20.0 mmol/L (ref 20 - 29)\"\n    },\n    {\n      \"test\": \"HbA1c\",\n      \"value\": \"6.1\",\n      \"unit\": \"%\",\n      \"reference_range\": \"4.8 - 5.6\",\n      \"date\": null,\n      \"evidence\": \"HbA1c: 6.1 % (ref 4.8 - 5.6)\"\n    },\n    {\n      \"test\": \"Total cholesterol\",\n      \"value\": \"221.9\",\n      \"unit\": \"mg/dL\",\n      \"reference_range\": \"100 - 199\",\n      \"date\": null,\n      \"evidence\": \"Total cholesterol: 221.9 mg/dL (ref 100 - 199)\"\n    },\n    {\n      \"test\": \"Triglycerides\",\n      \"value\": \"144.9\",\n      \"unit\": \"mg/dL\",\n      \"reference_range\": \"0 - 149\",\n      \"date\": null,\n      \"evidence\": \"Triglycerides: 144.9 mg/dL (ref 0 - 149)\"\n    },\n    {\n      \"test\": \"LDL cholesterol\",\n      \"value\": \"131.8\",\n      \"unit\": \"mg/dL\",\n      \"reference_range\": null,\n      \"date\": null,\n      \"evidence\": \"LDL cholesterol: 131.8 mg/dL\"\n    },\n    {\n      \"test\": \"HDL cholesterol\",\n      \"value\": \"61.1\",\n      \"unit\": \"mg/dL\",\n      \"reference_range\": null,\n      \"date\": null,\n      \"evidence\": \"HDL cholesterol: 61.1 mg/dL\"\n    }\n  ],\n  \"medications\": [\n    {\n      \"name\": null,\n      \"dose\": null,\n      \"frequency\": null,\n      \"status\": \"current\",\n      \"evidence\": null\n    }\n  ],\n  \"follow_up\": [\n    {\n      \"instruction\": null,\n      \"evidence\": null\n    }\n  ]\n}",
+     "latencyMs": 49679,
+     "generatedOn": "2026-11-23",
+     "runtime": "Python, transformers + bitsandbytes on a GTX 1650"
+    },
+    "rules": {
+     "label": "Rule-based lab rows",
+     "description": "Deterministic dictionary + pattern matching. Lab rows and the document date only.",
+     "raw": "{\"document_date\": {\"value\": \"10/14/2026\", \"evidence\": \"Specimen collected 10/13/2026; report issued 10/14/2026\"}, \"labs\": [{\"test\": \"Urea nitrogen (BUN)\", \"value\": \"17.6\", \"unit\": \"mg/dL\", \"reference_range\": \"6 - 24\", \"date\": null, \"evidence\": \"Urea nitrogen (BUN): 17.6 mg/dL (ref 6 - 24)\"}, {\"test\": \"Calcium\", \"value\": \"10.0\", \"unit\": \"mg/dL\", \"reference_range\": \"8.7 - 10.3\", \"date\": null, \"evidence\": \"Calcium: 10.0 mg/dL (ref 8.7 - 10.3)\"}, {\"test\": \"Potassium\", \"value\": \"3.8\", \"unit\": \"mmol/L\", \"reference_range\": \"3.5 - 5.2\", \"date\": null, \"evidence\": \"Potassium: 3.8 mmol/L (ref 3.5 - 5.2)\"}, {\"test\": \"Carbon dioxide (CO2)\", \"value\": \"20.0\", \"unit\": \"mmol/L\", \"reference_range\": \"20 - 29\", \"date\": null, \"evidence\": \"Carbon dioxide (CO2): 20.0 mmol/L (ref 20 - 29)\"}, {\"test\": \"HbA1c\", \"value\": \"6.1\", \"unit\": \"%\", \"reference_range\": \"4.8 - 5.6\", \"date\": null, \"evidence\": \"HbA1c: 6.1 % (ref 4.8 - 5.6)\"}, {\"test\": \"Total cholesterol\", \"value\": \"221.9\", \"unit\": \"mg/dL\", \"reference_range\": \"100 - 199\", \"date\": null, \"evidence\": \"Total cholesterol: 221.9 mg/dL (ref 100 - 199)\"}, {\"test\": \"Triglycerides\", \"value\": \"144.9\", \"unit\": \"mg/dL\", \"reference_range\": \"0 - 149\", \"date\": null, \"evidence\": \"Triglycerides: 144.9 mg/dL (ref 0 - 149)\"}, {\"test\": \"LDL cholesterol\", \"value\": \"131.8\", \"unit\": \"mg/dL\", \"reference_range\": null, \"date\": null, \"evidence\": \"LDL cholesterol: 131.8 mg/dL\"}, {\"test\": \"HDL cholesterol\", \"value\": \"61.1\", \"unit\": \"mg/dL\", \"reference_range\": null, \"date\": null, \"evidence\": \"HDL cholesterol: 61.1 mg/dL\"}], \"medications\": [], \"follow_up\": []}",
+     "latencyMs": 0.62,
+     "generatedOn": "2026-11-23",
+     "runtime": "Python reference implementation"
+    }
+   },
+   "provenance": {
+    "source": "Synthea v4.0.0 synthetic record",
+    "synthea_patient_uuid": "154fd724-1e36-a172-9fe3-87b4bc29243b",
+    "anchor_encounter": "154fd724-1e36-a172-3b14-0e7a12268049",
+    "anchor_date": "2026-10-13",
+    "fictional_lab": "riverside",
+    "generator": "build_demo-v1"
+   }
+  },
+  {
+   "id": "demo-newdoctor-V1-9ea93e09",
+   "journey": "newdoctor",
+   "title": "After-visit summary",
+   "kind": "visit_summary",
+   "family": "V1",
+   "text": "AFTER VISIT SUMMARY\nEastgate Health Centre\nPatient: Donovan Johns   DOB: January 1, 1961\nVisit date: March 22, 2025   Reason: General examination of patient\n\nVital signs: BP 109/73 mmHg, Pulse 90 /min, Weight 87.7 kg, BMI 30.1 kg/m2\n\nResults from this visit:\n  Blood glucose: 70.8 mg/dL (ref 70 to 100)\n  Creatinine: 0.9 mg/dL\n  Potassium: 4.9 mmol/L\n  Carbon dioxide (CO2): 27.6 mmol/L\n\nYour current medications:\n  - lisinopril 10 MG, every day\n  - simvastatin 20 MG, as needed\n  - prasugrel 10 MG\n  - losartan potassium 50 MG Oral Tablet, as needed\n  - metoprolol succinate 25 MG ER\n\nNo longer taking:\n  - nitroglycerin 0.4 MG Sublingual Tablet (stopped June 28, 2024)\n  - ticagrelor 90 MG (stopped June 29, 2024)\n  - Acetaminophen 325 MG Oral Tablet (stopped October 1, 2024)\n\nPrevious prescriptions on file:\n  - December 13, 2022: Ibuprofen 200 MG\n\nPlan:\n  - Diabetic diet\n  - Exercise therapy\n  - Prescribed activity/exercise education\n  - Next appointment: April 5, 2025 (Encounter for check up)\n",
+   "reference": {
+    "document_date": {
+     "value": "March 22, 2025",
+     "evidence": "Visit date: March 22, 2025   Reason: General examination of patient"
+    },
+    "labs": [
+     {
+      "test": "Blood glucose",
+      "value": "70.8",
+      "unit": "mg/dL",
+      "reference_range": "70 to 100",
+      "date": null,
+      "evidence": "Blood glucose: 70.8 mg/dL (ref 70 to 100)"
+     },
+     {
+      "test": "Creatinine",
+      "value": "0.9",
+      "unit": "mg/dL",
+      "reference_range": null,
+      "date": null,
+      "evidence": "Creatinine: 0.9 mg/dL"
+     },
+     {
+      "test": "Potassium",
+      "value": "4.9",
+      "unit": "mmol/L",
+      "reference_range": null,
+      "date": null,
+      "evidence": "Potassium: 4.9 mmol/L"
+     },
+     {
+      "test": "Carbon dioxide (CO2)",
+      "value": "27.6",
+      "unit": "mmol/L",
+      "reference_range": null,
+      "date": null,
+      "evidence": "Carbon dioxide (CO2): 27.6 mmol/L"
+     }
+    ],
+    "medications": [
+     {
+      "name": "lisinopril",
+      "dose": "10 MG",
+      "frequency": "every day",
+      "status": "current",
+      "evidence": "- lisinopril 10 MG, every day"
+     },
+     {
+      "name": "simvastatin",
+      "dose": "20 MG",
+      "frequency": "as needed",
+      "status": "current",
+      "evidence": "- simvastatin 20 MG, as needed"
+     },
+     {
+      "name": "prasugrel",
+      "dose": "10 MG",
+      "frequency": null,
+      "status": "current",
+      "evidence": "- prasugrel 10 MG"
+     },
+     {
+      "name": "losartan potassium",
+      "dose": "50 MG",
+      "frequency": "as needed",
+      "status": "current",
+      "evidence": "- losartan potassium 50 MG Oral Tablet, as needed"
+     },
+     {
+      "name": "metoprolol succinate",
+      "dose": "25 MG",
+      "frequency": null,
+      "status": "current",
+      "evidence": "- metoprolol succinate 25 MG ER"
+     },
+     {
+      "name": "nitroglycerin",
+      "dose": "0.4 MG",
+      "frequency": null,
+      "status": "not_current",
+      "evidence": "- nitroglycerin 0.4 MG Sublingual Tablet (stopped June 28, 2024)"
+     },
+     {
+      "name": "ticagrelor",
+      "dose": "90 MG",
+      "frequency": null,
+      "status": "not_current",
+      "evidence": "- ticagrelor 90 MG (stopped June 29, 2024)"
+     },
+     {
+      "name": "Acetaminophen",
+      "dose": "325 MG",
+      "frequency": null,
+      "status": "not_current",
+      "evidence": "- Acetaminophen 325 MG Oral Tablet (stopped October 1, 2024)"
+     },
+     {
+      "name": "Ibuprofen",
+      "dose": "200 MG",
+      "frequency": null,
+      "status": "unclear",
+      "evidence": "- December 13, 2022: Ibuprofen 200 MG"
+     }
+    ],
+    "follow_up": [
+     {
+      "instruction": "Diabetic diet",
+      "evidence": "- Diabetic diet"
+     },
+     {
+      "instruction": "Exercise therapy",
+      "evidence": "- Exercise therapy"
+     },
+     {
+      "instruction": "Prescribed activity/exercise education",
+      "evidence": "- Prescribed activity/exercise education"
+     },
+     {
+      "instruction": "Next appointment: April 5, 2025 (Encounter for check up)",
+      "evidence": "- Next appointment: April 5, 2025 (Encounter for check up)"
+     }
+    ]
+   },
+   "outputs": {
+    "finetuned": {
+     "label": "Fine-tuned (pilot run)",
+     "description": "QLoRA adapter trained for this task; run in 4-bit (nf4) with the same prompt and greedy decoding as the original. Pilot adapter: 160 training documents, 1 epoch; known to cut some lab lists short.",
+     "raw": "{\"document_date\": {\"value\": \"March 22, 2025\", \"evidence\": \"Visit date: March 22, 2025   Reason: General examination of patient\"}, \"labs\": [{\"test\": \"Blood glucose\", \"value\": \"70.8\", \"unit\": \"mg/dL\", \"reference_range\": \"70 to 100\", \"date\": null, \"evidence\": \"Blood glucose: 70.8 mg/dL (ref 70 to 100)\"}], \"medications\": [{\"name\": \"lisinopril\", \"dose\": \"10 MG\", \"frequency\": \"every day\", \"status\": \"current\", \"evidence\": \"- lisinopril 10 MG, every day\"}, {\"name\": \"simvastatin\", \"dose\": \"20 MG\", \"frequency\": \"as needed\", \"status\": \"current\", \"evidence\": \"- simvastatin 20 MG, as needed\"}, {\"name\": \"prasugrel\", \"dose\": \"10 MG\", \"frequency\": null, \"status\": \"unclear\", \"evidence\": \"- prasugrel 10 MG\"}, {\"name\": \"losartan potassium\", \"dose\": \"50 MG\", \"frequency\": \"as needed\", \"status\": \"current\", \"evidence\": \"- losartan potassium 50 MG Oral Tablet, as needed\"}, {\"name\": \"metoprolol succinate\", \"dose\": \"25 MG\", \"frequency\": \"ER\", \"status\": \"current\", \"evidence\": \"- metoprolol succinate 25 MG ER\"}], \"follow_up\": [{\"instruction\": \"Diabetic diet\", \"evidence\": \"- Diabetic diet\"}, {\"instruction\": \"Exercise therapy\", \"evidence\": \"- Exercise therapy\"}, {\"instruction\": \"Prescribed activity/exercise education\", \"evidence\": \"- Prescribed activity/exercise education\"}, {\"instruction\": \"Next appointment: April 5, 2025\", \"evidence\": \"- Next appointment: April 5, 2025 (Encounter for check up)\"}]}",
+     "latencyMs": 34072,
+     "generatedOn": "2026-11-23",
+     "runtime": "Python, transformers + bitsandbytes on a GTX 1650"
+    },
+    "original": {
+     "label": "Original Qwen3-1.7B",
+     "description": "The original model with the extraction prompt; 4-bit (nf4), greedy decoding.",
+     "raw": "{\n  \"document_date\": \"March 22, 2025\",\n  \"labs\": [\n    {\n      \"test\": \"Blood glucose\",\n      \"value\": \"70.8 mg/dL\",\n      \"unit\": \"mg/dL\",\n      \"reference_range\": \"70 to 100\",\n      \"date\": null,\n      \"evidence\": \"Blood glucose: 70.8 mg/dL (ref 70 to 100)\"\n    },\n    {\n      \"test\": \"Creatinine\",\n      \"value\": \"0.9 mg/dL\",\n      \"unit\": \"mg/dL\",\n      \"reference_range\": null,\n      \"date\": null,\n      \"evidence\": \"Creatinine: 0.9 mg/dL\"\n    },\n    {\n      \"test\": \"Potassium\",\n      \"value\": \"4.9 mmol/L\",\n      \"unit\": \"mmol/L\",\n      \"reference_range\": null,\n      \"date\": null,\n      \"evidence\": \"Potassium: 4.9 mmol/L\"\n    },\n    {\n      \"test\": \"Carbon dioxide (CO2)\",\n      \"value\": \"27.6 mmol/L\",\n      \"unit\": \"mmol/L\",\n      \"reference_range\": null,\n      \"date\": null,\n      \"evidence\": \"Carbon dioxide (CO2): 27.6 mmol/L\"\n    }\n  ],\n  \"medications\": [\n    {\n      \"name\": \"lisinopril\",\n      \"dose\": \"10 MG\",\n      \"frequency\": \"every day\",\n      \"status\": \"current\",\n      \"evidence\": \"lisinopril 10 MG, every day\"\n    },\n    {\n      \"name\": \"simvastatin\",\n      \"dose\": \"20 MG\",\n      \"frequency\": \"as needed\",\n      \"status\": \"current\",\n      \"evidence\": \"simvastatin 20 MG, as needed\"\n    },\n    {\n      \"name\": \"prasugrel\",\n      \"dose\": \"10 MG\",\n      \"frequency\": \"as needed\",\n      \"status\": \"current\",\n      \"evidence\": \"prasugrel 10 MG\"\n    },\n    {\n      \"name\": \"losartan potassium\",\n      \"dose\": \"50 MG\",\n      \"frequency\": \"as needed\",\n      \"status\": \"current\",\n      \"evidence\": \"losartan potassium 50 MG Oral Tablet, as needed\"\n    },\n    {\n      \"name\": \"metoprolol succinate\",\n      \"dose\": \"25 MG\",\n      \"frequency\": \"ER\",\n      \"status\": \"current\",\n      \"evidence\": \"metoprolol succinate 25 MG ER\"\n    }\n  ],\n  \"follow_up\": [\n    {\n      \"instruction\": \"Next appointment: April 5, 2025 (Encounter for check up)\",\n      \"evidence\": \"Next appointment: April 5, 2025 (Encounter for check up)\"\n    }\n  ]\n}",
+     "latencyMs": 49679,
+     "generatedOn": "2026-11-23",
+     "runtime": "Python, transformers + bitsandbytes on a GTX 1650"
+    },
+    "rules": {
+     "label": "Rule-based lab rows",
+     "description": "Deterministic dictionary + pattern matching. Lab rows and the document date only.",
+     "raw": "{\"document_date\": {\"value\": \"March 22, 2025\", \"evidence\": \"Visit date: March 22, 2025   Reason: General examination of patient\"}, \"labs\": [{\"test\": \"Blood glucose\", \"value\": \"70.8\", \"unit\": \"mg/dL\", \"reference_range\": \"70 to 100\", \"date\": null, \"evidence\": \"Blood glucose: 70.8 mg/dL (ref 70 to 100)\"}, {\"test\": \"Creatinine\", \"value\": \"0.9\", \"unit\": \"mg/dL\", \"reference_range\": null, \"date\": null, \"evidence\": \"Creatinine: 0.9 mg/dL\"}, {\"test\": \"Potassium\", \"value\": \"4.9\", \"unit\": \"mmol/L\", \"reference_range\": null, \"date\": null, \"evidence\": \"Potassium: 4.9 mmol/L\"}, {\"test\": \"Carbon dioxide (CO2)\", \"value\": \"27.6\", \"unit\": \"mmol/L\", \"reference_range\": null, \"date\": null, \"evidence\": \"Carbon dioxide (CO2): 27.6 mmol/L\"}], \"medications\": [], \"follow_up\": []}",
+     "latencyMs": 0.481,
+     "generatedOn": "2026-11-23",
+     "runtime": "Python reference implementation"
+    }
+   },
+   "provenance": {
+    "source": "Synthea v4.0.0 synthetic record",
+    "synthea_patient_uuid": "5f6e84a8-d7d3-0bc3-697f-f00fa7744e4c",
+    "anchor_encounter": "5f6e84a8-d7d3-0bc3-dcaa-81d9270465e8",
+    "anchor_date": "2025-03-22",
+    "fictional_lab": "harborview",
+    "generator": "build_demo-v1"
+   }
+  },
+  {
+   "id": "demo-newdoctor-V2-03af7202",
+   "journey": "newdoctor",
+   "title": "Letter from the clinic",
+   "kind": "visit_summary",
+   "family": "V2",
+   "text": "Old Mill Community Clinic\nDate: March 27, 2025\n\nRe: Donovan Johns, DOB January 1, 1961\n\nDear colleague,\n\nI saw Donovan on March 22, 2025 for general examination of patient.\nHe continues on simvastatin 20 mg PRN (as needed).\nHe is currently taking metoprolol succinate 25 mg ER as needed.\nHe is currently taking lisinopril 10 mg once a day.\nHe is currently taking prasugrel 10 mg.\nHe is no longer taking nitroglycerin 0.4 mg.\nHe is no longer taking ticagrelor 90 mg.\nThere is an older prescription for ibuprofen 200 mg from 2022 in the record.\nResults today: blood glucose 70.8 mg/dL, urea nitrogen (BUN) 8.1 mg/dL, calcium 9.7 mg/dL.\nWe discussed the care plan: diabetic diet.\nWe discussed the care plan: exercise therapy.\nWe will see him again on April 5, 2025.\n\nKind regards,\nDr. L. Fournier\n",
+   "reference": {
+    "document_date": {
+     "value": "March 27, 2025",
+     "evidence": "Date: March 27, 2025"
+    },
+    "labs": [
+     {
+      "test": "blood glucose",
+      "value": "70.8",
+      "unit": "mg/dL",
+      "reference_range": null,
+      "date": null,
+      "evidence": "Results today: blood glucose 70.8 mg/dL, urea nitrogen (BUN) 8.1 mg/dL, calcium 9.7 mg/dL."
+     },
+     {
+      "test": "urea nitrogen (BUN)",
+      "value": "8.1",
+      "unit": "mg/dL",
+      "reference_range": null,
+      "date": null,
+      "evidence": "Results today: blood glucose 70.8 mg/dL, urea nitrogen (BUN) 8.1 mg/dL, calcium 9.7 mg/dL."
+     },
+     {
+      "test": "calcium",
+      "value": "9.7",
+      "unit": "mg/dL",
+      "reference_range": null,
+      "date": null,
+      "evidence": "Results today: blood glucose 70.8 mg/dL, urea nitrogen (BUN) 8.1 mg/dL, calcium 9.7 mg/dL."
+     }
+    ],
+    "medications": [
+     {
+      "name": "simvastatin",
+      "dose": "20 mg",
+      "frequency": "PRN (as needed)",
+      "status": "current",
+      "evidence": "He continues on simvastatin 20 mg PRN (as needed)."
+     },
+     {
+      "name": "metoprolol succinate",
+      "dose": "25 mg",
+      "frequency": "as needed",
+      "status": "current",
+      "evidence": "He is currently taking metoprolol succinate 25 mg ER as needed."
+     },
+     {
+      "name": "lisinopril",
+      "dose": "10 mg",
+      "frequency": "once a day",
+      "status": "current",
+      "evidence": "He is currently taking lisinopril 10 mg once a day."
+     },
+     {
+      "name": "prasugrel",
+      "dose": "10 mg",
+      "frequency": null,
+      "status": "current",
+      "evidence": "He is currently taking prasugrel 10 mg."
+     },
+     {
+      "name": "nitroglycerin",
+      "dose": "0.4 mg",
+      "frequency": null,
+      "status": "not_current",
+      "evidence": "He is no longer taking nitroglycerin 0.4 mg."
+     },
+     {
+      "name": "ticagrelor",
+      "dose": "90 mg",
+      "frequency": null,
+      "status": "not_current",
+      "evidence": "He is no longer taking ticagrelor 90 mg."
+     },
+     {
+      "name": "ibuprofen",
+      "dose": "200 mg",
+      "frequency": null,
+      "status": "unclear",
+      "evidence": "There is an older prescription for ibuprofen 200 mg from 2022 in the record."
+     }
+    ],
+    "follow_up": [
+     {
+      "instruction": "diabetic diet",
+      "evidence": "We discussed the care plan: diabetic diet."
+     },
+     {
+      "instruction": "exercise therapy",
+      "evidence": "We discussed the care plan: exercise therapy."
+     },
+     {
+      "instruction": "We will see him again on April 5, 2025",
+      "evidence": "We will see him again on April 5, 2025."
+     }
+    ]
+   },
+   "outputs": {
+    "finetuned": {
+     "label": "Fine-tuned (pilot run)",
+     "description": "QLoRA adapter trained for this task; run in 4-bit (nf4) with the same prompt and greedy decoding as the original. Pilot adapter: 160 training documents, 1 epoch; known to cut some lab lists short.",
+     "raw": "{\"document_date\": {\"value\": \"March 27, 2025\", \"evidence\": \"Date: March 27, 2025\"}, \"labs\": [{\"test\": \"blood glucose\", \"value\": \"70.8\", \"unit\": \"mg/dL\", \"reference_range\": null, \"date\": null, \"evidence\": \"Results today: blood glucose 70.8 mg/dL, urea nitrogen (BUN) 8.1 mg/dL, calcium 9.7 mg/dL.\"}], \"medications\": [{\"name\": \"simvastatin\", \"dose\": \"20 mg\", \"frequency\": \"PRN (as needed)\", \"status\": \"current\", \"evidence\": \"He continues on simvastatin 20 mg PRN (as needed).\"}, {\"name\": \"metoprolol succinate\", \"dose\": \"25 mg\", \"frequency\": null, \"status\": \"current\", \"evidence\": \"He is currently taking metoprolol succinate 25 mg ER as needed.\"}, {\"name\": \"lisinopril\", \"dose\": \"10 mg\", \"frequency\": \"once a day\", \"status\": \"current\", \"evidence\": \"He is currently taking lisinopril 10 mg once a day.\"}, {\"name\": \"prasugrel\", \"dose\": \"10 mg\", \"frequency\": null, \"status\": \"current\", \"evidence\": \"He is currently taking prasugrel 10 mg.\"}, {\"name\": \"nitroglycerin\", \"dose\": \"0.4 mg\", \"frequency\": null, \"status\": \"not_current\", \"evidence\": \"He is no longer taking nitroglycerin 0.4 mg.\"}, {\"name\": \"ticagrelor\", \"dose\": \"90 mg\", \"frequency\": null, \"status\": \"not_current\", \"evidence\": \"He is no longer taking ticagrelor 90 mg.\"}, {\"name\": \"ibuprofen\", \"dose\": \"200 mg\", \"frequency\": null, \"status\": \"unclear\", \"evidence\": \"There is an older prescription for ibuprofen 200 mg from 2022 in the record.\"}], \"follow_up\": [{\"instruction\": \"diabetic diet\", \"evidence\": \"We discussed the care plan: diabetic diet.\"}, {\"instruction\": \"exercise therapy\", \"evidence\": \"We discussed the care plan: exercise therapy.\"}, {\"instruction\": \"We will see him again on April 5, 2025\", \"evidence\": \"We will see him again on April 5, 2025.\"}]}",
+     "latencyMs": 34072,
+     "generatedOn": "2026-11-23",
+     "runtime": "Python, transformers + bitsandbytes on a GTX 1650"
+    },
+    "original": {
+     "label": "Original Qwen3-1.7B",
+     "description": "The original model with the extraction prompt; 4-bit (nf4), greedy decoding.",
+     "raw": "{\n  \"document_date\": {\"value\": \"March 27, 2025\", \"evidence\": \"Date: March 27, 2025\"},\n  \"labs\": [\n    {\n      \"test\": \"blood glucose\",\n      \"value\": \"70.8\",\n      \"unit\": \"mg/dL\",\n      \"reference_range\": null,\n      \"date\": null,\n      \"evidence\": \"Results today: blood glucose 70.8 mg/dL\"\n    },\n    {\n      \"test\": \"urea nitrogen (BUN)\",\n      \"value\": \"8.1\",\n      \"unit\": \"mg/dL\",\n      \"reference_range\": null,\n      \"date\": null,\n      \"evidence\": \"Results today: blood glucose 70.8 mg/dL, urea nitrogen (BUN) 8.1 mg/dL\"\n    },\n    {\n      \"test\": \"calcium\",\n      \"value\": \"9.7\",\n      \"unit\": \"mg/dL\",\n      \"reference_range\": null,\n      \"date\": null,\n      \"evidence\": \"Results today: blood glucose 70.8 mg/dL, urea nitrogen (BUN) 8.1 mg/dL, calcium 9.7 mg/dL\"\n    }\n  ],\n  \"medications\": [\n    {\n      \"name\": \"simvastatin\",\n      \"dose\": \"20 mg\",\n      \"frequency\": \"PRN (as needed)\",\n      \"status\": \"current\",\n      \"evidence\": \"He continues on simvastatin 20 mg PRN (as needed).\"\n    },\n    {\n      \"name\": \"metoprolol succinate\",\n      \"dose\": \"25 mg\",\n      \"frequency\": \"as needed\",\n      \"status\": \"current\",\n      \"evidence\": \"He is currently taking metoprolol succinate 25 mg ER as needed.\"\n    },\n    {\n      \"name\": \"lisinopril\",\n      \"dose\": \"10 mg\",\n      \"frequency\": \"once a day\",\n      \"status\": \"current\",\n      \"evidence\": \"He is currently taking lisinopril 10 mg once a day.\"\n    },\n    {\n      \"name\": \"prasugrel\",\n      \"dose\": \"10 mg\",\n      \"frequency\": \"nil\",\n      \"status\": \"current\",\n      \"evidence\": \"He is currently taking prasugrel 10 mg.\"\n    },\n    {\n      \"name\": \"ibuprofen\",\n      \"dose\": \"200 mg\",\n      \"frequency\": \"nil\",\n      \"status\": \"not_current\",\n      \"evidence\": \"There is an older prescription for ibuprofen 200 mg from 2022 in the record.\"\n    }\n  ],\n  \"follow_up\": [\n    {\n      \"instruction\": \"We will see him again on April 5, 2025.\",\n      \"evidence\": \"We will see him again on April 5, 2025.\"\n    }\n  ]\n}",
+     "latencyMs": 49679,
+     "generatedOn": "2026-11-23",
+     "runtime": "Python, transformers + bitsandbytes on a GTX 1650"
+    },
+    "rules": {
+     "label": "Rule-based lab rows",
+     "description": "Deterministic dictionary + pattern matching. Lab rows and the document date only.",
+     "raw": "{\"document_date\": {\"value\": \"March 27, 2025\", \"evidence\": \"Date: March 27, 2025\"}, \"labs\": [{\"test\": \"blood glucose\", \"value\": \"70.8\", \"unit\": \"mg/dL\", \"reference_range\": null, \"date\": null, \"evidence\": \"Results today: blood glucose 70.8 mg/dL, urea nitrogen (BUN) 8.1 mg/dL, calcium 9.7 mg/dL.\"}, {\"test\": \"urea nitrogen (BUN)\", \"value\": \"8.1\", \"unit\": \"mg/dL\", \"reference_range\": null, \"date\": null, \"evidence\": \"Results today: blood glucose 70.8 mg/dL, urea nitrogen (BUN) 8.1 mg/dL, calcium 9.7 mg/dL.\"}, {\"test\": \"calcium\", \"value\": \"9.7\", \"unit\": \"mg/dL\", \"reference_range\": null, \"date\": null, \"evidence\": \"Results today: blood glucose 70.8 mg/dL, urea nitrogen (BUN) 8.1 mg/dL, calcium 9.7 mg/dL.\"}], \"medications\": [], \"follow_up\": []}",
+     "latencyMs": 0.279,
+     "generatedOn": "2026-11-23",
+     "runtime": "Python reference implementation"
+    }
+   },
+   "provenance": {
+    "source": "Synthea v4.0.0 synthetic record",
+    "synthea_patient_uuid": "5f6e84a8-d7d3-0bc3-697f-f00fa7744e4c",
+    "anchor_encounter": "5f6e84a8-d7d3-0bc3-dcaa-81d9270465e8",
+    "anchor_date": "2025-03-22",
+    "fictional_lab": "northbrook",
+    "generator": "build_demo-v1"
+   }
+  },
+  {
+   "id": "demo-newdoctor-L2-b2e4f228",
+   "journey": "newdoctor",
+   "title": "Most recent lab report",
+   "kind": "lab_report",
+   "family": "L2",
+   "text": "Harbor View Diagnostics - Laboratory Report\nName: Johns, Donovan   Date of birth: January 1, 1961\nSpecimen collected March 22, 2025; report issued March 22, 2025\n\n  Glucose, fasting: 70.8 mg/dL (normal range 70 to 100)\n  Urea nitrogen (BUN): 8.1 mg/dL\n  Creatinine: 0.9 mg/dL (normal range 0.5 to 1.2)\n  Calcium: 9.7 mg/dL\n  Sodium: 139.4 mmol/L (normal range 136 to 145)\n  Potassium: 4.9 mmol/L (normal range 3.6 to 5.0)\n  Chloride: 106.2 mmol/L\n  Carbon dioxide (CO2): 27.6 mmol/L\n  Hemoglobin A1c: 5.9 % (normal range 4.0 to 5.7)\n  LDL cholesterol: not performed\n",
+   "reference": {
+    "document_date": {
+     "value": "March 22, 2025",
+     "evidence": "Specimen collected March 22, 2025; report issued March 22, 2025"
+    },
+    "labs": [
+     {
+      "test": "Glucose, fasting",
+      "value": "70.8",
+      "unit": "mg/dL",
+      "reference_range": "70 to 100",
+      "date": null,
+      "evidence": "Glucose, fasting: 70.8 mg/dL (normal range 70 to 100)"
+     },
+     {
+      "test": "Urea nitrogen (BUN)",
+      "value": "8.1",
+      "unit": "mg/dL",
+      "reference_range": null,
+      "date": null,
+      "evidence": "Urea nitrogen (BUN): 8.1 mg/dL"
+     },
+     {
+      "test": "Creatinine",
+      "value": "0.9",
+      "unit": "mg/dL",
+      "reference_range": "0.5 to 1.2",
+      "date": null,
+      "evidence": "Creatinine: 0.9 mg/dL (normal range 0.5 to 1.2)"
+     },
+     {
+      "test": "Calcium",
+      "value": "9.7",
+      "unit": "mg/dL",
+      "reference_range": null,
+      "date": null,
+      "evidence": "Calcium: 9.7 mg/dL"
+     },
+     {
+      "test": "Sodium",
+      "value": "139.4",
+      "unit": "mmol/L",
+      "reference_range": "136 to 145",
+      "date": null,
+      "evidence": "Sodium: 139.4 mmol/L (normal range 136 to 145)"
+     },
+     {
+      "test": "Potassium",
+      "value": "4.9",
+      "unit": "mmol/L",
+      "reference_range": "3.6 to 5.0",
+      "date": null,
+      "evidence": "Potassium: 4.9 mmol/L (normal range 3.6 to 5.0)"
+     },
+     {
+      "test": "Chloride",
+      "value": "106.2",
+      "unit": "mmol/L",
+      "reference_range": null,
+      "date": null,
+      "evidence": "Chloride: 106.2 mmol/L"
+     },
+     {
+      "test": "Carbon dioxide (CO2)",
+      "value": "27.6",
+      "unit": "mmol/L",
+      "reference_range": null,
+      "date": null,
+      "evidence": "Carbon dioxide (CO2): 27.6 mmol/L"
+     },
+     {
+      "test": "Hemoglobin A1c",
+      "value": "5.9",
+      "unit": "%",
+      "reference_range": "4.0 to 5.7",
+      "date": null,
+      "evidence": "Hemoglobin A1c: 5.9 % (normal range 4.0 to 5.7)"
+     }
+    ],
+    "medications": [],
+    "follow_up": []
+   },
+   "outputs": {
+    "finetuned": {
+     "label": "Fine-tuned (pilot run)",
+     "description": "QLoRA adapter trained for this task; run in 4-bit (nf4) with the same prompt and greedy decoding as the original. Pilot adapter: 160 training documents, 1 epoch; known to cut some lab lists short.",
+     "raw": "{\"document_date\": {\"value\": \"March 22, 2025\", \"evidence\": \"Specimen collected March 22, 2025; report issued March 22, 2025\"}, \"labs\": [{\"test\": \"Glucose, fasting\", \"value\": \"70.8\", \"unit\": \"mg/dL\", \"reference_range\": \"70 to 100\", \"date\": null, \"evidence\": \"Glucose, fasting: 70.8 mg/dL (normal range 70 to 100)\"}], \"medications\": [], \"follow_up\": []}",
+     "latencyMs": 34072,
+     "generatedOn": "2026-11-23",
+     "runtime": "Python, transformers + bitsandbytes on a GTX 1650"
+    },
+    "original": {
+     "label": "Original Qwen3-1.7B",
+     "description": "The original model with the extraction prompt; 4-bit (nf4), greedy decoding.",
+     "raw": "{\n  \"document_date\": null,\n  \"labs\": [\n    {\n      \"test\": \"Glucose, fasting\",\n      \"value\": \"70.8\",\n      \"unit\": \"mg/dL\",\n      \"reference_range\": \"70 to 100\",\n      \"date\": null,\n      \"evidence\": \"Glucose, fasting: 70.8 mg/dL (normal range 70 to 100)\"\n    },\n    {\n      \"test\": \"Urea nitrogen (BUN)\",\n      \"value\": \"8.1\",\n      \"unit\": \"mg/dL\",\n      \"reference_range\": null,\n      \"date\": null,\n      \"evidence\": \"Urea nitrogen (BUN): 8.1 mg/dL\"\n    },\n    {\n      \"test\": \"Creatinine\",\n      \"value\": \"0.9\",\n      \"unit\": \"mg/dL\",\n      \"reference_range\": \"0.5 to 1.2\",\n      \"date\": null,\n      \"evidence\": \"Creatinine: 0.9 mg/dL (normal range 0.5 to 1.2)\"\n    },\n    {\n      \"test\": \"Calcium\",\n      \"value\": \"9.7\",\n      \"unit\": \"mg/dL\",\n      \"reference_range\": null,\n      \"date\": null,\n      \"evidence\": \"Calcium: 9.7 mg/dL\"\n    },\n    {\n      \"test\": \"Sodium\",\n      \"value\": \"139.4\",\n      \"unit\": \"mmol/L\",\n      \"reference_range\": \"136 to 145\",\n      \"date\": null,\n      \"evidence\": \"Sodium: 139.4 mmol/L (normal range 136 to 145)\"\n    },\n    {\n      \"test\": \"Potassium\",\n      \"value\": \"4.9\",\n      \"unit\": \"mmol/L\",\n      \"reference_range\": \"3.6 to 5.0\",\n      \"date\": null,\n      \"evidence\": \"Potassium: 4.9 mmol/L (normal range 3.6 to 5.0)\"\n    },\n    {\n      \"test\": \"Chloride\",\n      \"value\": \"106.2\",\n      \"unit\": \"mmol/L\",\n      \"reference_range\": null,\n      \"date\": null,\n      \"evidence\": \"Chloride: 106.2 mmol/L\"\n    },\n    {\n      \"test\": \"Carbon dioxide (CO2)\",\n      \"value\": \"27.6\",\n      \"unit\": \"mmol/L\",\n      \"reference_range\": null,\n      \"date\": null,\n      \"evidence\": \"Carbon dioxide (CO2): 27.6 mmol/L\"\n    },\n    {\n      \"test\": \"Hemoglobin A1c\",\n      \"value\": \"5.9\",\n      \"unit\": \"%\",\n      \"reference_range\": \"4.0 to 5.7\",\n      \"date\": null,\n      \"evidence\": \"Hemoglobin A1c: 5.9 % (normal range 4.0 to 5.7)\"\n    },\n    {\n      \"test\": \"LDL cholesterol\",\n      \"value\": \"not performed\",\n      \"unit\": null,\n      \"reference_range\": null,\n      \"date\": null,\n      \"evidence\": \"LDL cholesterol: not performed\"\n    }\n  ],\n  \"medications\": [\n    {\n      \"name\": null,\n      \"dose\": null,\n      \"frequency\": null,\n      \"status\": \"unclear\",\n      \"evidence\": null\n    }\n  ],\n  \"follow_up\": [\n    {\n      \"instruction\": null,\n      \"evidence\": null\n    }\n  ]\n}",
+     "latencyMs": 49679,
+     "generatedOn": "2026-11-23",
+     "runtime": "Python, transformers + bitsandbytes on a GTX 1650"
+    },
+    "rules": {
+     "label": "Rule-based lab rows",
+     "description": "Deterministic dictionary + pattern matching. Lab rows and the document date only.",
+     "raw": "{\"document_date\": {\"value\": \"March 22, 2025\", \"evidence\": \"Specimen collected March 22, 2025; report issued March 22, 2025\"}, \"labs\": [{\"test\": \"Glucose, fasting\", \"value\": \"70.8\", \"unit\": \"mg/dL\", \"reference_range\": \"70 to 100\", \"date\": null, \"evidence\": \"Glucose, fasting: 70.8 mg/dL (normal range 70 to 100)\"}, {\"test\": \"Urea nitrogen (BUN)\", \"value\": \"8.1\", \"unit\": \"mg/dL\", \"reference_range\": null, \"date\": null, \"evidence\": \"Urea nitrogen (BUN): 8.1 mg/dL\"}, {\"test\": \"Creatinine\", \"value\": \"0.9\", \"unit\": \"mg/dL\", \"reference_range\": \"0.5 to 1.2\", \"date\": null, \"evidence\": \"Creatinine: 0.9 mg/dL (normal range 0.5 to 1.2)\"}, {\"test\": \"Calcium\", \"value\": \"9.7\", \"unit\": \"mg/dL\", \"reference_range\": null, \"date\": null, \"evidence\": \"Calcium: 9.7 mg/dL\"}, {\"test\": \"Sodium\", \"value\": \"139.4\", \"unit\": \"mmol/L\", \"reference_range\": \"136 to 145\", \"date\": null, \"evidence\": \"Sodium: 139.4 mmol/L (normal range 136 to 145)\"}, {\"test\": \"Potassium\", \"value\": \"4.9\", \"unit\": \"mmol/L\", \"reference_range\": \"3.6 to 5.0\", \"date\": null, \"evidence\": \"Potassium: 4.9 mmol/L (normal range 3.6 to 5.0)\"}, {\"test\": \"Chloride\", \"value\": \"106.2\", \"unit\": \"mmol/L\", \"reference_range\": null, \"date\": null, \"evidence\": \"Chloride: 106.2 mmol/L\"}, {\"test\": \"Carbon dioxide (CO2)\", \"value\": \"27.6\", \"unit\": \"mmol/L\", \"reference_range\": null, \"date\": null, \"evidence\": \"Carbon dioxide (CO2): 27.6 mmol/L\"}, {\"test\": \"Hemoglobin A1c\", \"value\": \"5.9\", \"unit\": \"%\", \"reference_range\": \"4.0 to 5.7\", \"date\": null, \"evidence\": \"Hemoglobin A1c: 5.9 % (normal range 4.0 to 5.7)\"}], \"medications\": [], \"follow_up\": []}",
+     "latencyMs": 0.444,
+     "generatedOn": "2026-11-23",
+     "runtime": "Python reference implementation"
+    }
+   },
+   "provenance": {
+    "source": "Synthea v4.0.0 synthetic record",
+    "synthea_patient_uuid": "5f6e84a8-d7d3-0bc3-697f-f00fa7744e4c",
+    "anchor_encounter": "5f6e84a8-d7d3-0bc3-dcaa-81d9270465e8",
+    "anchor_date": "2025-03-22",
+    "fictional_lab": "harborview",
+    "generator": "build_demo-v1"
+   }
+  },
+  {
+   "id": "demo-parent-L4-2e846889",
+   "journey": "parent",
+   "title": "Results trend printout",
+   "kind": "lab_report",
+   "family": "L4",
+   "text": "Northbrook Community Laboratory - results trend\nPatient: Santo O'Connell (DOB August 13, 1957)\nPrinted November 26, 2025\n\n  November 13, 2023   Blood glucose   68.9 mg/dL\n  November 18, 2024   Blood glucose   85.6 mg/dL\n  November 24, 2025   Blood glucose   86.1 mg/dL\n\n  November 13, 2023   HbA1c   5.9 %\n  November 18, 2024   HbA1c   6.3 %\n  November 24, 2025   HbA1c   6.3 %\n",
+   "reference": {
+    "document_date": {
+     "value": "November 26, 2025",
+     "evidence": "Printed November 26, 2025"
+    },
+    "labs": [
+     {
+      "test": "Blood glucose",
+      "value": "68.9",
+      "unit": "mg/dL",
+      "reference_range": null,
+      "date": "November 13, 2023",
+      "evidence": "November 13, 2023   Blood glucose   68.9 mg/dL"
+     },
+     {
+      "test": "Blood glucose",
+      "value": "85.6",
+      "unit": "mg/dL",
+      "reference_range": null,
+      "date": "November 18, 2024",
+      "evidence": "November 18, 2024   Blood glucose   85.6 mg/dL"
+     },
+     {
+      "test": "Blood glucose",
+      "value": "86.1",
+      "unit": "mg/dL",
+      "reference_range": null,
+      "date": "November 24, 2025",
+      "evidence": "November 24, 2025   Blood glucose   86.1 mg/dL"
+     },
+     {
+      "test": "HbA1c",
+      "value": "5.9",
+      "unit": "%",
+      "reference_range": null,
+      "date": "November 13, 2023",
+      "evidence": "November 13, 2023   HbA1c   5.9 %"
+     },
+     {
+      "test": "HbA1c",
+      "value": "6.3",
+      "unit": "%",
+      "reference_range": null,
+      "date": "November 18, 2024",
+      "evidence": "November 18, 2024   HbA1c   6.3 %"
+     },
+     {
+      "test": "HbA1c",
+      "value": "6.3",
+      "unit": "%",
+      "reference_range": null,
+      "date": "November 24, 2025",
+      "evidence": "November 24, 2025   HbA1c   6.3 %"
+     }
+    ],
+    "medications": [],
+    "follow_up": []
+   },
+   "outputs": {
+    "finetuned": {
+     "label": "Fine-tuned (pilot run)",
+     "description": "QLoRA adapter trained for this task; run in 4-bit (nf4) with the same prompt and greedy decoding as the original. Pilot adapter: 160 training documents, 1 epoch; known to cut some lab lists short.",
+     "raw": "{\"document_date\": {\"value\": \"November 26, 2025\", \"evidence\": \"Printed November 26, 2025\"}, \"labs\": [{\"test\": \"Blood glucose\", \"value\": \"68.9 mg/dL\", \"unit\": \"mg/dL\", \"reference_range\": null, \"date\": \"November 13, 2023\", \"evidence\": \"November 13, 2023   Blood glucose   68.9 mg/dL\"}, {\"test\": \"Blood glucose\", \"value\": \"85.6 mg/dL\", \"unit\": \"mg/dL\", \"reference_range\": null, \"date\": \"November 18, 2024\", \"evidence\": \"November 18, 2024   Blood glucose   85.6 mg/dL\"}, {\"test\": \"Blood glucose\", \"value\": \"86.1 mg/dL\", \"unit\": \"mg/dL\", \"reference_range\": null, \"date\": \"November 24, 2025\", \"evidence\": \"November 24, 2025   Blood glucose   86.1 mg/dL\"}, {\"test\": \"HbA1c\", \"value\": \"5.9 %\", \"unit\": \"%\", \"reference_range\": null, \"date\": \"November 13, 2023\", \"evidence\": \"November 13, 2023   HbA1c   5.9 %\"}, {\"test\": \"HbA1c\", \"value\": \"6.3 %\", \"unit\": \"%\", \"reference_range\": null, \"date\": \"November 18, 2024\", \"evidence\": \"November 18, 2024   HbA1c   6.3 %\"}, {\"test\": \"HbA1c\", \"value\": \"6.3 %\", \"unit\": \"%\", \"reference_range\": null, \"date\": \"November 24, 2025\", \"evidence\": \"November 24, 2025   HbA1c   6.3 %\"}], \"medications\": [], \"follow_up\": []}",
+     "latencyMs": 34072,
+     "generatedOn": "2026-11-23",
+     "runtime": "Python, transformers + bitsandbytes on a GTX 1650"
+    },
+    "original": {
+     "label": "Original Qwen3-1.7B",
+     "description": "The original model with the extraction prompt; 4-bit (nf4), greedy decoding.",
+     "raw": "{\n  \"document_date\": null,\n  \"labs\": [\n    {\n      \"test\": \"Blood glucose\",\n      \"value\": \"68.9 mg/dL\",\n      \"unit\": \"mg/dL\",\n      \"reference_range\": null,\n      \"date\": \"November 13, 2023\",\n      \"evidence\": \"November 13, 2023   Blood glucose   68.9 mg/dL\"\n    },\n    {\n      \"test\": \"Blood glucose\",\n      \"value\": \"85.6 mg/dL\",\n      \"unit\": \"mg/dL\",\n      \"reference_range\": null,\n      \"date\": \"November 18, 2024\",\n      \"evidence\": \"November 18, 2024   Blood glucose   85.6 mg/dL\"\n    },\n    {\n      \"test\": \"Blood glucose\",\n      \"value\": \"86.1 mg/dL\",\n      \"unit\": \"mg/dL\",\n      \"reference_range\": null,\n      \"date\": \"November 24, 2025\",\n      \"evidence\": \"November 24, 2025   Blood glucose   86.1 mg/dL\"\n    },\n    {\n      \"test\": \"HbA1c\",\n      \"value\": \"5.9 %\",\n      \"unit\": \"%\",\n      \"reference_range\": null,\n      \"date\": \"November 13, 2023\",\n      \"evidence\": \"November 13, 2023   HbA1c   5.9 %\"\n    },\n    {\n      \"test\": \"HbA1c\",\n      \"value\": \"6.3 %\",\n      \"unit\": \"%\",\n      \"reference_range\": null,\n      \"date\": \"November 18, 2024\",\n      \"evidence\": \"November 18, 2024   HbA1c   6.3 %\"\n    },\n    {\n      \"test\": \"HbA1c\",\n      \"value\": \"6.3 %\",\n      \"unit\": \"%\",\n      \"reference_range\": null,\n      \"date\": \"November 24, 2025\",\n      \"evidence\": \"November 24, 2025   HbA1c   6.3 %\"\n    }\n  ],\n  \"medications\": null,\n  \"follow_up\": [\n    \"Next appointment\"\n  ]\n}",
+     "latencyMs": 49679,
+     "generatedOn": "2026-11-23",
+     "runtime": "Python, transformers + bitsandbytes on a GTX 1650"
+    },
+    "rules": {
+     "label": "Rule-based lab rows",
+     "description": "Deterministic dictionary + pattern matching. Lab rows and the document date only.",
+     "raw": "{\"document_date\": {\"value\": \"November 26, 2025\", \"evidence\": \"Printed November 26, 2025\"}, \"labs\": [{\"test\": \"Blood glucose\", \"value\": \"68.9\", \"unit\": \"mg/dL\", \"reference_range\": null, \"date\": \"November 13, 2023\", \"evidence\": \"November 13, 2023   Blood glucose   68.9 mg/dL\"}, {\"test\": \"Blood glucose\", \"value\": \"85.6\", \"unit\": \"mg/dL\", \"reference_range\": null, \"date\": \"November 18, 2024\", \"evidence\": \"November 18, 2024   Blood glucose   85.6 mg/dL\"}, {\"test\": \"Blood glucose\", \"value\": \"86.1\", \"unit\": \"mg/dL\", \"reference_range\": null, \"date\": \"November 24, 2025\", \"evidence\": \"November 24, 2025   Blood glucose   86.1 mg/dL\"}, {\"test\": \"HbA1c\", \"value\": \"5.9\", \"unit\": \"%\", \"reference_range\": null, \"date\": \"November 13, 2023\", \"evidence\": \"November 13, 2023   HbA1c   5.9 %\"}, {\"test\": \"HbA1c\", \"value\": \"6.3\", \"unit\": \"%\", \"reference_range\": null, \"date\": \"November 18, 2024\", \"evidence\": \"November 18, 2024   HbA1c   6.3 %\"}, {\"test\": \"HbA1c\", \"value\": \"6.3\", \"unit\": \"%\", \"reference_range\": null, \"date\": \"November 24, 2025\", \"evidence\": \"November 24, 2025   HbA1c   6.3 %\"}], \"medications\": [], \"follow_up\": []}",
+     "latencyMs": 0.361,
+     "generatedOn": "2026-11-23",
+     "runtime": "Python reference implementation"
+    }
+   },
+   "provenance": {
+    "source": "Synthea v4.0.0 synthetic record",
+    "synthea_patient_uuid": "32455348-5402-38c5-3fdf-173782deab43",
+    "anchor_encounter": "32455348-5402-38c5-6405-f559d9c9f144",
+    "anchor_date": "2025-11-24",
+    "fictional_lab": "northbrook",
+    "generator": "build_demo-v1"
+   }
+  },
+  {
+   "id": "demo-parent-L5-6d402a04",
+   "journey": "parent",
+   "title": "Message from the care team",
+   "kind": "lab_report",
+   "family": "L5",
+   "text": "Message from your care team - November 25, 2025\n\nHi Santo,\n\nYour lab results from November 24, 2025 are now available.\nGlucose: 86.1 mg/dL (lab range 70-99).\nUrea nitrogen (BUN): 19.7 mg/dL (lab range 7-20).\nYour carbon dioxide (CO2) was 28.2 mmol/L; the lab's range is 22-29.\nYour cholesterol, total was 140.0 mg/dL.\nLDL cholesterol came back at 90.3 mg/dL.\n\nPlease keep your appointment on December 8, 2025.\nIf you have questions, reply to this message.\nDr. J. Whitcombe\n",
+   "reference": {
+    "document_date": {
+     "value": "November 25, 2025",
+     "evidence": "Message from your care team - November 25, 2025"
+    },
+    "labs": [
+     {
+      "test": "Glucose",
+      "value": "86.1",
+      "unit": "mg/dL",
+      "reference_range": "70-99",
+      "date": null,
+      "evidence": "Glucose: 86.1 mg/dL (lab range 70-99)."
+     },
+     {
+      "test": "Urea nitrogen (BUN)",
+      "value": "19.7",
+      "unit": "mg/dL",
+      "reference_range": "7-20",
+      "date": null,
+      "evidence": "Urea nitrogen (BUN): 19.7 mg/dL (lab range 7-20)."
+     },
+     {
+      "test": "carbon dioxide (CO2)",
+      "value": "28.2",
+      "unit": "mmol/L",
+      "reference_range": "22-29",
+      "date": null,
+      "evidence": "Your carbon dioxide (CO2) was 28.2 mmol/L; the lab's range is 22-29."
+     },
+     {
+      "test": "cholesterol, total",
+      "value": "140.0",
+      "unit": "mg/dL",
+      "reference_range": null,
+      "date": null,
+      "evidence": "Your cholesterol, total was 140.0 mg/dL."
+     },
+     {
+      "test": "LDL cholesterol",
+      "value": "90.3",
+      "unit": "mg/dL",
+      "reference_range": null,
+      "date": null,
+      "evidence": "LDL cholesterol came back at 90.3 mg/dL."
+     }
+    ],
+    "medications": [],
+    "follow_up": [
+     {
+      "instruction": "Please keep your appointment on December 8, 2025",
+      "evidence": "Please keep your appointment on December 8, 2025."
+     }
+    ]
+   },
+   "outputs": {
+    "finetuned": {
+     "label": "Fine-tuned (pilot run)",
+     "description": "QLoRA adapter trained for this task; run in 4-bit (nf4) with the same prompt and greedy decoding as the original. Pilot adapter: 160 training documents, 1 epoch; known to cut some lab lists short.",
+     "raw": "{\"document_date\": {\"value\": \"November 25, 2025\", \"evidence\": \"Message from your care team - November 25, 2025\"}, \"labs\": [{\"test\": \"Glucose\", \"value\": \"86.1\", \"unit\": \"mg/dL\", \"reference_range\": \"70-99\", \"date\": null, \"evidence\": \"Glucose: 86.1 mg/dL (lab range 70-99).\"}, {\"test\": \"Urea nitrogen (BUN)\", \"value\": \"19.7\", \"unit\": \"mg/dL\", \"reference_range\": \"7-20\", \"date\": null, \"evidence\": \"Urea nitrogen (BUN): 19.7 mg/dL (lab range 7-20).\"}, {\"test\": \"carbon dioxide (CO2)\", \"value\": \"28.2\", \"unit\": \"mmol/L\", \"reference_range\": \"22-29\", \"date\": null, \"evidence\": \"Your carbon dioxide (CO2) was 28.2 mmol/L; the lab's range is 22-29.\"}, {\"test\": \"cholesterol, total\", \"value\": \"140.0\", \"unit\": \"mg/dL\", \"reference_range\": null, \"date\": null, \"evidence\": \"Your cholesterol, total was 140.0 mg/dL.\"}, {\"test\": \"LDL cholesterol\", \"value\": \"90.3\", \"unit\": \"mg/dL\", \"reference_range\": null, \"date\": null, \"evidence\": \"LDL cholesterol came back at 90.3 mg/dL.\"}], \"medications\": [], \"follow_up\": [{\"instruction\": \"Please keep your appointment on December 8, 2025\", \"evidence\": \"Please keep your appointment on December 8, 2025.\"}]}",
+     "latencyMs": 34072,
+     "generatedOn": "2026-11-23",
+     "runtime": "Python, transformers + bitsandbytes on a GTX 1650"
+    },
+    "original": {
+     "label": "Original Qwen3-1.7B",
+     "description": "The original model with the extraction prompt; 4-bit (nf4), greedy decoding.",
+     "raw": "{\n  \"document_date\": null,\n  \"labs\": [\n    {\n      \"test\": \"Glucose\",\n      \"value\": \"86.1\",\n      \"unit\": \"mg/dL\",\n      \"reference_range\": \"70-99\",\n      \"date\": \"2025-11-24\",\n      \"evidence\": \"Your lab results from November 24, 2025 are now available.\"\n    },\n    {\n      \"test\": \"Urea nitrogen (BUN)\",\n      \"value\": \"19.7\",\n      \"unit\": \"mg/dL\",\n      \"reference_range\": \"7-20\",\n      \"date\": \"2025-11-24\",\n      \"evidence\": \"Your lab results from November 24, 2025 are now available.\"\n    },\n    {\n      \"test\": \"Carbon dioxide (CO2)\",\n      \"value\": \"28.2\",\n      \"unit\": \"mmol/L\",\n      \"reference_range\": \"22-29\",\n      \"date\": \"2025-11-24\",\n      \"evidence\": \"Your carbon dioxide (CO2) was 28.2 mmol/L; the lab's range is 22-29.\"\n    },\n    {\n      \"test\": \"Cholesterol, total\",\n      \"value\": \"140.0\",\n      \"unit\": \"mg/dL\",\n      \"reference_range\": null,\n      \"date\": \"2025-11-24\",\n      \"evidence\": \"Your cholesterol, total was 140.0 mg/dL.\"\n    },\n    {\n      \"test\": \"LDL cholesterol\",\n      \"value\": \"90.3\",\n      \"unit\": \"mg/dL\",\n      \"reference_range\": null,\n      \"date\": \"2025-11-24\",\n      \"evidence\": \"Your LDL cholesterol came back at 90.3 mg/dL.\"\n    }\n  ],\n  \"medications\": [\n    {\n      \"name\": \"Dr. J. Whitcombe\",\n      \"dose\": null,\n      \"frequency\": null,\n      \"status\": \"current\",\n      \"evidence\": \"Please keep your appointment on December 8, 2025.\"\n    }\n  ],\n  \"follow_up\": [\n    \"If you have questions, reply to this message.\"\n  ]\n}",
+     "latencyMs": 49679,
+     "generatedOn": "2026-11-23",
+     "runtime": "Python, transformers + bitsandbytes on a GTX 1650"
+    },
+    "rules": {
+     "label": "Rule-based lab rows",
+     "description": "Deterministic dictionary + pattern matching. Lab rows and the document date only.",
+     "raw": "{\"document_date\": {\"value\": \"November 25, 2025\", \"evidence\": \"Message from your care team - November 25, 2025\"}, \"labs\": [{\"test\": \"Glucose\", \"value\": \"86.1\", \"unit\": \"mg/dL\", \"reference_range\": \"70-99\", \"date\": null, \"evidence\": \"Glucose: 86.1 mg/dL (lab range 70-99).\"}, {\"test\": \"Urea nitrogen (BUN)\", \"value\": \"19.7\", \"unit\": \"mg/dL\", \"reference_range\": \"7-20\", \"date\": null, \"evidence\": \"Urea nitrogen (BUN): 19.7 mg/dL (lab range 7-20).\"}, {\"test\": \"carbon dioxide (CO2)\", \"value\": \"28.2\", \"unit\": \"mmol/L\", \"reference_range\": \"22-29\", \"date\": null, \"evidence\": \"Your carbon dioxide (CO2) was 28.2 mmol/L; the lab's range is 22-29.\"}, {\"test\": \"cholesterol, total\", \"value\": \"140.0\", \"unit\": \"mg/dL\", \"reference_range\": null, \"date\": null, \"evidence\": \"Your cholesterol, total was 140.0 mg/dL.\"}, {\"test\": \"LDL cholesterol\", \"value\": \"90.3\", \"unit\": \"mg/dL\", \"reference_range\": null, \"date\": null, \"evidence\": \"LDL cholesterol came back at 90.3 mg/dL.\"}], \"medications\": [], \"follow_up\": []}",
+     "latencyMs": 0.483,
+     "generatedOn": "2026-11-23",
+     "runtime": "Python reference implementation"
+    }
+   },
+   "provenance": {
+    "source": "Synthea v4.0.0 synthetic record",
+    "synthea_patient_uuid": "32455348-5402-38c5-3fdf-173782deab43",
+    "anchor_encounter": "32455348-5402-38c5-6405-f559d9c9f144",
+    "anchor_date": "2025-11-24",
+    "fictional_lab": "northbrook",
+    "generator": "build_demo-v1"
+   }
+  },
+  {
+   "id": "demo-parent-V1-66135c14",
+   "journey": "parent",
+   "title": "After-visit summary",
+   "kind": "visit_summary",
+   "family": "V1",
+   "text": "AFTER VISIT SUMMARY\nLakeside Primary Care\nPatient: Santo O'Connell   DOB: August 13, 1957\nVisit date: November 24, 2025   Reason: General examination of patient\n\nVital signs: BP 109/75 mmHg, Pulse 88 /min, Weight 95.3 kg, BMI 27.2 kg/m2\n\nResults from this visit:\n  Blood urea nitrogen: 19.7 mg/dL (ref 7-20)\n  Sodium: 140.8 mmol/L\n  Chloride: 106.9 mmol/L (ref 98-107)\n  HbA1c: 6.3 %\n\nActive medications:\n  - Simvastatin 20 MG\n  - metoprolol succinate 100 MG ER\n  - Clopidogrel 75 MG\n\nWhat happens next:\n  - Diabetic diet\n  - Exercise therapy\n  - Next appointment: December 8, 2025\n",
+   "reference": {
+    "document_date": {
+     "value": "November 24, 2025",
+     "evidence": "Visit date: November 24, 2025   Reason: General examination of patient"
+    },
+    "labs": [
+     {
+      "test": "Blood urea nitrogen",
+      "value": "19.7",
+      "unit": "mg/dL",
+      "reference_range": "7-20",
+      "date": null,
+      "evidence": "Blood urea nitrogen: 19.7 mg/dL (ref 7-20)"
+     },
+     {
+      "test": "Sodium",
+      "value": "140.8",
+      "unit": "mmol/L",
+      "reference_range": null,
+      "date": null,
+      "evidence": "Sodium: 140.8 mmol/L"
+     },
+     {
+      "test": "Chloride",
+      "value": "106.9",
+      "unit": "mmol/L",
+      "reference_range": "98-107",
+      "date": null,
+      "evidence": "Chloride: 106.9 mmol/L (ref 98-107)"
+     },
+     {
+      "test": "HbA1c",
+      "value": "6.3",
+      "unit": "%",
+      "reference_range": null,
+      "date": null,
+      "evidence": "HbA1c: 6.3 %"
+     }
+    ],
+    "medications": [
+     {
+      "name": "Simvastatin",
+      "dose": "20 MG",
+      "frequency": null,
+      "status": "current",
+      "evidence": "- Simvastatin 20 MG"
+     },
+     {
+      "name": "metoprolol succinate",
+      "dose": "100 MG",
+      "frequency": null,
+      "status": "current",
+      "evidence": "- metoprolol succinate 100 MG ER"
+     },
+     {
+      "name": "Clopidogrel",
+      "dose": "75 MG",
+      "frequency": null,
+      "status": "current",
+      "evidence": "- Clopidogrel 75 MG"
+     }
+    ],
+    "follow_up": [
+     {
+      "instruction": "Diabetic diet",
+      "evidence": "- Diabetic diet"
+     },
+     {
+      "instruction": "Exercise therapy",
+      "evidence": "- Exercise therapy"
+     },
+     {
+      "instruction": "Next appointment: December 8, 2025",
+      "evidence": "- Next appointment: December 8, 2025"
+     }
+    ]
+   },
+   "outputs": {
+    "finetuned": {
+     "label": "Fine-tuned (pilot run)",
+     "description": "QLoRA adapter trained for this task; run in 4-bit (nf4) with the same prompt and greedy decoding as the original. Pilot adapter: 160 training documents, 1 epoch; known to cut some lab lists short.",
+     "raw": "{\"document_date\": {\"value\": \"November 24, 2025\", \"evidence\": \"Visit date: November 24, 2025   Reason: General examination of patient\"}, \"labs\": [{\"test\": \"Blood urea nitrogen\", \"value\": \"19.7\", \"unit\": \"mg/dL\", \"reference_range\": \"7-20\", \"date\": null, \"evidence\": \"Blood urea nitrogen: 19.7 mg/dL (ref 7-20)\"}], \"medications\": [{\"name\": \"Simvastatin\", \"dose\": \"20 MG\", \"frequency\": null, \"status\": \"current\", \"evidence\": \"- Simvastatin 20 MG\"}, {\"name\": \"metoprolol succinate\", \"dose\": \"100 MG\", \"frequency\": null, \"status\": \"current\", \"evidence\": \"- metoprolol succinate 100 MG ER\"}, {\"name\": \"Clopidogrel\", \"dose\": \"75 MG\", \"frequency\": null, \"status\": \"current\", \"evidence\": \"- Clopidogrel 75 MG\"}], \"follow_up\": [{\"instruction\": \"Diabetic diet\", \"evidence\": \"- Diabetic diet\"}, {\"instruction\": \"Exercise therapy\", \"evidence\": \"- Exercise therapy\"}, {\"instruction\": \"Next appointment: December 8, 2025\", \"evidence\": \"- Next appointment: December 8, 2025\"}]}",
+     "latencyMs": 34072,
+     "generatedOn": "2026-11-23",
+     "runtime": "Python, transformers + bitsandbytes on a GTX 1650"
+    },
+    "original": {
+     "label": "Original Qwen3-1.7B",
+     "description": "The original model with the extraction prompt; 4-bit (nf4), greedy decoding.",
+     "raw": "```json\n{\n  \"document_date\": {\n    \"value\": \"November 24, 2025\",\n    \"evidence\": \"Visit date: November 24, 2025\"\n  },\n  \"labs\": [\n    {\n      \"test\": \"Blood urea nitrogen\",\n      \"value\": \"19.7\",\n      \"unit\": \"mg/dL\",\n      \"reference_range\": \"7-20\",\n      \"date\": null,\n      \"evidence\": \"Blood urea nitrogen: 19.7 mg/dL (ref 7-20)\"\n    },\n    {\n      \"test\": \"Sodium\",\n      \"value\": \"140.8\",\n      \"unit\": \"mmol/L\",\n      \"reference_range\": null,\n      \"date\": null,\n      \"evidence\": \"Sodium: 140.8 mmol/L\"\n    },\n    {\n      \"test\": \"Chloride\",\n      \"value\": \"106.9\",\n      \"unit\": \"mmol/L\",\n      \"reference_range\": \"98-107\",\n      \"date\": null,\n      \"evidence\": \"Chloride: 106.9 mmol/L (ref 98-107)\"\n    },\n    {\n      \"test\": \"HbA1c\",\n      \"value\": \"6.3\",\n      \"unit\": \"%\",\n      \"reference_range\": null,\n      \"date\": null,\n      \"evidence\": \"HbA1c: 6.3 %\"\n    }\n  ],\n  \"medications\": [\n    {\n      \"name\": \"Simvastatin\",\n      \"dose\": \"20 MG\",\n      \"frequency\": null,\n      \"status\": \"current\",\n      \"evidence\": \"Simvastatin 20 MG\"\n    },\n    {\n      \"name\": \"metoprolol succinate\",\n      \"dose\": \"100 MG\",\n      \"frequency\": \"ER\",\n      \"status\": \"current\",\n      \"evidence\": \"metoprolol succinate 100 MG\"\n    },\n    {\n      \"name\": \"Clopidogrel\",\n      \"dose\": \"75 MG\",\n      \"frequency\": null,\n      \"status\": \"current\",\n      \"evidence\": \"Clopidogrel 75 MG\"\n    }\n  ],\n  \"follow_up\": [\n    \"Diabetic diet\",\n    \"Exercise therapy\",\n    \"Next appointment: December 8, 2025\"\n  ]\n}\n```",
+     "latencyMs": 49679,
+     "generatedOn": "2026-11-23",
+     "runtime": "Python, transformers + bitsandbytes on a GTX 1650"
+    },
+    "rules": {
+     "label": "Rule-based lab rows",
+     "description": "Deterministic dictionary + pattern matching. Lab rows and the document date only.",
+     "raw": "{\"document_date\": {\"value\": \"November 24, 2025\", \"evidence\": \"Visit date: November 24, 2025   Reason: General examination of patient\"}, \"labs\": [{\"test\": \"Blood urea nitrogen\", \"value\": \"19.7\", \"unit\": \"mg/dL\", \"reference_range\": \"7-20\", \"date\": null, \"evidence\": \"Blood urea nitrogen: 19.7 mg/dL (ref 7-20)\"}, {\"test\": \"Sodium\", \"value\": \"140.8\", \"unit\": \"mmol/L\", \"reference_range\": null, \"date\": null, \"evidence\": \"Sodium: 140.8 mmol/L\"}, {\"test\": \"Chloride\", \"value\": \"106.9\", \"unit\": \"mmol/L\", \"reference_range\": \"98-107\", \"date\": null, \"evidence\": \"Chloride: 106.9 mmol/L (ref 98-107)\"}, {\"test\": \"HbA1c\", \"value\": \"6.3\", \"unit\": \"%\", \"reference_range\": null, \"date\": null, \"evidence\": \"HbA1c: 6.3 %\"}], \"medications\": [], \"follow_up\": []}",
+     "latencyMs": 0.405,
+     "generatedOn": "2026-11-23",
+     "runtime": "Python reference implementation"
+    }
+   },
+   "provenance": {
+    "source": "Synthea v4.0.0 synthetic record",
+    "synthea_patient_uuid": "32455348-5402-38c5-3fdf-173782deab43",
+    "anchor_encounter": "32455348-5402-38c5-6405-f559d9c9f144",
+    "anchor_date": "2025-11-24",
+    "fictional_lab": "northbrook",
+    "generator": "build_demo-v1"
+   }
+  }
+ ],
+ "evaluation": {}
+}

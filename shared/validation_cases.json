@@ -1,0 +1,16 @@
+{
+  "_about": "Shared cases for the evidence checks. model/test_common.py and app/src/lib/validate.test.ts both run them, so the Python scorer and the in-browser checks agree. 'verified' means: the quote is in the document (whitespace-insensitive) and every printed field occurs inside the quote.",
+  "source": "NORTHBROOK LAB\nCollected: 2024-03-14    Reported: 2024-03-15\nGlucose                   104      mg/dL          70-99\nHemoglobin A1c: 5.9 % (ref 4.0-5.6)\nShe continues on lisinopril 10 mg once daily.\nRepeat fasting glucose in 3 months.\nPotassium 14 mmol/L\n",
+  "cases": [
+    {"name": "table row, padding collapsed", "section": "labs", "item": {"test": "Glucose", "value": "104", "unit": "mg/dL", "reference_range": "70-99", "date": null, "evidence": "Glucose 104 mg/dL 70-99"}, "evidence_found": true, "verified": true},
+    {"name": "exact key-value line", "section": "labs", "item": {"test": "Hemoglobin A1c", "value": "5.9", "unit": "%", "reference_range": "4.0-5.6", "date": null, "evidence": "Hemoglobin A1c: 5.9 % (ref 4.0-5.6)"}, "evidence_found": true, "verified": true},
+    {"name": "value altered", "section": "labs", "item": {"test": "Glucose", "value": "140", "unit": "mg/dL", "reference_range": "70-99", "date": null, "evidence": "Glucose 104 mg/dL 70-99"}, "evidence_found": true, "verified": false},
+    {"name": "unit converted", "section": "labs", "item": {"test": "Glucose", "value": "104", "unit": "mmol/L", "reference_range": null, "date": null, "evidence": "Glucose 104 mg/dL 70-99"}, "evidence_found": true, "verified": false},
+    {"name": "invented quote", "section": "labs", "item": {"test": "Glucose", "value": "104", "unit": "mg/dL", "reference_range": null, "date": null, "evidence": "Glucose was 104 mg/dL"}, "evidence_found": false, "verified": false},
+    {"name": "number inside a longer number is not support", "section": "labs", "item": {"test": "Potassium", "value": "4", "unit": "mmol/L", "reference_range": null, "date": null, "evidence": "Potassium 14 mmol/L"}, "evidence_found": true, "verified": false},
+    {"name": "medication, case-insensitive name", "section": "medications", "item": {"name": "Lisinopril", "dose": "10 mg", "frequency": "once daily", "status": "current", "evidence": "She continues on lisinopril 10 mg once daily."}, "evidence_found": true, "verified": true},
+    {"name": "medication dose not in quote", "section": "medications", "item": {"name": "lisinopril", "dose": "20 mg", "frequency": null, "status": "current", "evidence": "She continues on lisinopril 10 mg once daily."}, "evidence_found": true, "verified": false},
+    {"name": "follow-up", "section": "follow_up", "item": {"instruction": "Repeat fasting glucose in 3 months", "evidence": "Repeat fasting glucose in 3 months."}, "evidence_found": true, "verified": true},
+    {"name": "missing quote", "section": "follow_up", "item": {"instruction": "Repeat fasting glucose in 3 months", "evidence": null}, "evidence_found": false, "verified": false}
+  ]
+}

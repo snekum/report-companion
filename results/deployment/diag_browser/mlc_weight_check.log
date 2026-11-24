@@ -1,0 +1,15 @@
+unpack check, relative error: median 0.0987 worst 0.1073 model.layers.20.self_attn.v_proj.weight
+size of the LoRA change in model.layers.0.self_attn.q_proj.weight: 0.00397; 4-bit rounding error there: 0.1015
+LoRA change kept after rounding (cosine, model.layers.0.self_attn.q_proj.weight): 0.120
+docs: ['test-V3-db5b06ddbf', 'test-V3-743a86bd7a', 'test-V3-00924544c1', 'test-L3-e9665c9451']
+merged fp16 (reference)    loss per doc [0.00388, 0.00796, 0.0026, 0.0182]  mean 0.00816
+final MLC unpacked         loss per doc [0.02636, 0.01613, 0.02978, 0.08786]  mean 0.04003
+original MLC unpacked      loss per doc [0.5375, 0.36471, 0.3919, 0.17539]  mean 0.36737
+generated test-V3-db5b06ddbf 113 tokens
+generated test-V3-743a86bd7a 157 tokens
+generated test-V3-00924544c1 144 tokens
+generated test-L3-e9665c9451 1024 tokens
+generated test-V1-daec4732ba 151 tokens
+generated test-V3-eca3e58e44 232 tokens
+generated test-L4-83c60ed71d 322 tokens
+generated test-V2-cbf0362bdc 164 tokens

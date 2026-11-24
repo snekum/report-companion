@@ -1,0 +1,128 @@
+train examples 951 (dropped 0 over 2048 tokens); length median 1100 max 1806; completion tokens mean 419
+Loading weights:   0%|          | 0/311 [00:00<?, ?it/s]Loading weights:   0%|          | 1/311 [00:00<03:55,  1.32it/s]Loading weights:   1%|          | 2/311 [00:01<03:53,  1.33it/s]Loading weights:   1%|▏         | 4/311 [00:01<01:38,  3.12it/s]Loading weights:   5%|▌         | 16/311 [00:01<00:17, 17.12it/s]Loading weights:   9%|▉         | 28/311 [00:01<00:08, 31.94it/s]Loading weights:  14%|█▍        | 45/311 [00:01<00:04, 55.27it/s]Loading weights:  19%|█▉        | 59/311 [00:02<00:03, 71.22it/s]Loading weights:  23%|██▎       | 71/311 [00:02<00:02, 81.78it/s]Loading weights:  28%|██▊       | 87/311 [00:02<00:02, 99.48it/s]Loading weights:  33%|███▎      | 103/311 [00:02<00:01, 113.29it/s]Loading weights:  38%|███▊      | 117/311 [00:02<00:01, 117.48it/s]Loading weights:  44%|████▎     | 136/311 [00:02<00:01, 133.78it/s]Loading weights:  49%|████▊     | 151/311 [00:02<00:01, 133.31it/s]Loading weights:  54%|█████▎    | 167/311 [00:02<00:01, 140.48it/s]Loading weights:  59%|█████▊    | 182/311 [00:02<00:00, 132.61it/s]Loading weights:  65%|██████▍   | 202/311 [00:03<00:00, 145.37it/s]Loading weights:  70%|███████   | 218/311 [00:03<00:00, 148.92it/s]Loading weights:  76%|███████▌  | 236/311 [00:03<00:00, 153.08it/s]Loading weights:  82%|████████▏ | 256/311 [00:03<00:00, 166.11it/s]Loading weights:  88%|████████▊ | 273/311 [00:03<00:00, 159.48it/s]Loading weights:  94%|█████████▎| 291/311 [00:03<00:00, 158.94it/s]Loading weights: 100%|█████████▉| 310/311 [00:03<00:00, 167.35it/s]Loading weights: 100%|██████████| 311/311 [00:03<00:00, 84.23it/s] 
+/usr/local/lib/python3.13/dist-packages/transformers/modeling_utils.py:3204: FutureWarning: `gradient_checkpointing_enable` is deprecated and will be removed in v6. Use `activation_checkpointing_enable` instead.
+  warnings.warn(
+trainable params 17,432,576 of 1,033,364,480
+val loss before training: 0.1230
+step 1/119 loss 0.0887 gn 1.141 0.546 ex/s peak 2838MB eta 28.8 min
+step 2/119 loss 0.2398 gn 1.445 0.603 ex/s peak 2838MB eta 25.9 min
+step 3/119 loss 0.216 gn 1.546 0.63 ex/s peak 2838MB eta 24.5 min
+step 4/119 loss 0.0613 gn 0.923 0.597 ex/s peak 2925MB eta 25.7 min
+step 5/119 loss 0.0559 gn 1.296 0.586 ex/s peak 2925MB eta 25.9 min
+step 6/119 loss 0.0579 gn 0.82 0.583 ex/s peak 3005MB eta 25.8 min
+step 7/119 loss 0.0398 gn 0.517 0.594 ex/s peak 3005MB eta 25.1 min
+step 8/119 loss 0.0408 gn 0.515 0.59 ex/s peak 3005MB eta 25.1 min
+step 9/119 loss 0.0144 gn 0.295 0.599 ex/s peak 3005MB eta 24.5 min
+step 10/119 loss 0.0164 gn 0.255 0.594 ex/s peak 3005MB eta 24.5 min
+step 11/119 loss 0.0094 gn 0.171 0.586 ex/s peak 3005MB eta 24.6 min
+step 12/119 loss 0.0201 gn 0.251 0.587 ex/s peak 3005MB eta 24.3 min
+step 13/119 loss 0.0228 gn 0.27 0.585 ex/s peak 3372MB eta 24.1 min
+step 14/119 loss 0.0168 gn 0.193 0.592 ex/s peak 3372MB eta 23.7 min
+step 15/119 loss 0.013 gn 0.146 0.59 ex/s peak 3372MB eta 23.5 min
+step 16/119 loss 0.0336 gn 0.611 0.592 ex/s peak 3372MB eta 23.2 min
+step 17/119 loss 0.0131 gn 0.149 0.588 ex/s peak 3372MB eta 23.1 min
+step 18/119 loss 0.0048 gn 0.102 0.585 ex/s peak 3372MB eta 23.0 min
+step 19/119 loss 0.0057 gn 0.092 0.588 ex/s peak 3372MB eta 22.7 min
+step 20/119 loss 0.0128 gn 0.153 0.59 ex/s peak 3372MB eta 22.4 min
+step 21/119 loss 0.0076 gn 0.127 0.589 ex/s peak 3372MB eta 22.2 min
+step 22/119 loss 0.005 gn 0.106 0.591 ex/s peak 3372MB eta 21.9 min
+step 23/119 loss 0.0029 gn 0.061 0.591 ex/s peak 3372MB eta 21.7 min
+step 24/119 loss 0.0048 gn 0.11 0.597 ex/s peak 3372MB eta 21.2 min
+step 25/119 loss 0.002 gn 0.043 0.596 ex/s peak 3372MB eta 21.0 min
+step 26/119 loss 0.0029 gn 0.106 0.596 ex/s peak 3372MB eta 20.8 min
+step 27/119 loss 0.0017 gn 0.054 0.597 ex/s peak 3372MB eta 20.5 min
+step 28/119 loss 0.0015 gn 0.062 0.598 ex/s peak 3372MB eta 20.3 min
+step 29/119 loss 0.0017 gn 0.085 0.597 ex/s peak 3372MB eta 20.1 min
+step 30/119 loss 0.004 gn 0.091 0.601 ex/s peak 3372MB eta 19.7 min
+step 31/119 loss 0.0047 gn 0.15 0.601 ex/s peak 3372MB eta 19.5 min
+step 32/119 loss 0.0026 gn 0.08 0.601 ex/s peak 3372MB eta 19.3 min
+step 33/119 loss 0.0036 gn 0.111 0.599 ex/s peak 3372MB eta 19.1 min
+step 34/119 loss 0.0058 gn 0.069 0.596 ex/s peak 3372MB eta 19.0 min
+step 35/119 loss 0.0033 gn 0.139 0.596 ex/s peak 3372MB eta 18.8 min
+step 36/119 loss 0.0022 gn 0.095 0.599 ex/s peak 3372MB eta 18.5 min
+step 37/119 loss 0.0077 gn 0.17 0.601 ex/s peak 3372MB eta 18.2 min
+step 38/119 loss 0.0014 gn 0.08 0.6 ex/s peak 3372MB eta 18.0 min
+step 39/119 loss 0.0028 gn 0.122 0.597 ex/s peak 3372MB eta 17.9 min
+step 40/119 loss 0.0041 gn 0.065 0.594 ex/s peak 3372MB eta 17.7 min
+step 41/119 loss 0.0019 gn 0.032 0.595 ex/s peak 3372MB eta 17.5 min
+step 42/119 loss 0.0013 gn 0.072 0.596 ex/s peak 3372MB eta 17.2 min
+step 43/119 loss 0.0008 gn 0.04 0.597 ex/s peak 3372MB eta 17.0 min
+step 44/119 loss 0.0003 gn 0.021 0.597 ex/s peak 3372MB eta 16.8 min
+step 45/119 loss 0.0003 gn 0.023 0.596 ex/s peak 3372MB eta 16.5 min
+step 46/119 loss 0.0011 gn 0.059 0.596 ex/s peak 3372MB eta 16.3 min
+step 47/119 loss 0.0003 gn 0.025 0.598 ex/s peak 3372MB eta 16.1 min
+step 48/119 loss 0.0003 gn 0.019 0.599 ex/s peak 3372MB eta 15.8 min
+step 49/119 loss 0.0021 gn 0.107 0.599 ex/s peak 3372MB eta 15.6 min
+step 50/119 loss 0.0005 gn 0.046 0.599 ex/s peak 3372MB eta 15.4 min
+step 51/119 loss 0.0002 gn 0.012 0.599 ex/s peak 3372MB eta 15.1 min
+step 52/119 loss 0.0081 gn 0.125 0.6 ex/s peak 3372MB eta 14.9 min
+step 53/119 loss 0.0022 gn 0.118 0.598 ex/s peak 3372MB eta 14.7 min
+step 54/119 loss 0.0004 gn 0.041 0.597 ex/s peak 3372MB eta 14.5 min
+step 55/119 loss 0.0008 gn 0.044 0.598 ex/s peak 3372MB eta 14.3 min
+step 56/119 loss 0.0049 gn 0.111 0.598 ex/s peak 3372MB eta 14.0 min
+step 57/119 loss 0.0003 gn 0.034 0.598 ex/s peak 3372MB eta 13.8 min
+step 58/119 loss 0.0015 gn 0.061 0.598 ex/s peak 3372MB eta 13.6 min
+step 59/119 loss 0.0014 gn 0.094 0.6 ex/s peak 3372MB eta 13.3 min
+step 60/119 loss 0.0035 gn 0.142 0.599 ex/s peak 3372MB eta 13.1 min
+step 61/119 loss 0.0011 gn 0.045 0.6 ex/s peak 3372MB eta 12.9 min
+step 62/119 loss 0.0005 gn 0.054 0.6 ex/s peak 3372MB eta 12.7 min
+step 63/119 loss 0.0005 gn 0.039 0.601 ex/s peak 3372MB eta 12.4 min
+step 64/119 loss 0.0004 gn 0.022 0.6 ex/s peak 3372MB eta 12.2 min
+step 65/119 loss 0.0018 gn 0.064 0.6 ex/s peak 3372MB eta 12.0 min
+step 66/119 loss 0.0002 gn 0.007 0.6 ex/s peak 3372MB eta 11.8 min
+step 67/119 loss 0.0017 gn 0.032 0.6 ex/s peak 3372MB eta 11.6 min
+step 68/119 loss 0.0005 gn 0.047 0.599 ex/s peak 3372MB eta 11.4 min
+step 69/119 loss 0.0002 gn 0.022 0.599 ex/s peak 3372MB eta 11.1 min
+step 70/119 loss 0.0007 gn 0.033 0.598 ex/s peak 3372MB eta 10.9 min
+step 71/119 loss 0.0006 gn 0.047 0.598 ex/s peak 3372MB eta 10.7 min
+step 72/119 loss 0.0005 gn 0.028 0.597 ex/s peak 3372MB eta 10.5 min
+step 73/119 loss 0.0002 gn 0.008 0.597 ex/s peak 3372MB eta 10.3 min
+step 74/119 loss 0.0003 gn 0.02 0.598 ex/s peak 3372MB eta 10.0 min
+step 75/119 loss 0.0002 gn 0.01 0.598 ex/s peak 3372MB eta 9.8 min
+step 76/119 loss 0.0017 gn 0.081 0.598 ex/s peak 3372MB eta 9.6 min
+step 77/119 loss 0.0004 gn 0.033 0.598 ex/s peak 3372MB eta 9.4 min
+step 78/119 loss 0.0047 gn 0.219 0.597 ex/s peak 3372MB eta 9.2 min
+step 79/119 loss 0.0032 gn 0.497 0.597 ex/s peak 3372MB eta 8.9 min
+step 80/119 loss 0.0005 gn 0.038 0.598 ex/s peak 3372MB eta 8.7 min
+step 81/119 loss 0.0008 gn 0.043 0.598 ex/s peak 3372MB eta 8.5 min
+step 82/119 loss 0.0022 gn 0.095 0.598 ex/s peak 3372MB eta 8.3 min
+step 83/119 loss 0.001 gn 0.064 0.598 ex/s peak 3372MB eta 8.0 min
+step 84/119 loss 0.0002 gn 0.031 0.599 ex/s peak 3372MB eta 7.8 min
+step 85/119 loss 0.0013 gn 0.071 0.599 ex/s peak 3372MB eta 7.6 min
+step 86/119 loss 0.0001 gn 0.01 0.6 ex/s peak 3372MB eta 7.3 min
+step 87/119 loss 0.0005 gn 0.054 0.6 ex/s peak 3372MB eta 7.1 min
+step 88/119 loss 0.0002 gn 0.013 0.6 ex/s peak 3372MB eta 6.9 min
+step 89/119 loss 0.0002 gn 0.02 0.599 ex/s peak 3372MB eta 6.7 min
+step 90/119 loss 0.0001 gn 0.004 0.6 ex/s peak 3372MB eta 6.4 min
+step 91/119 loss 0.0002 gn 0.01 0.6 ex/s peak 3372MB eta 6.2 min
+step 92/119 loss 0.0001 gn 0.004 0.6 ex/s peak 3372MB eta 6.0 min
+step 93/119 loss 0.0011 gn 0.092 0.6 ex/s peak 3372MB eta 5.8 min
+step 94/119 loss 0.0017 gn 0.301 0.6 ex/s peak 3372MB eta 5.6 min
+step 95/119 loss 0.0004 gn 0.038 0.6 ex/s peak 3372MB eta 5.3 min
+step 96/119 loss 0.0006 gn 0.05 0.601 ex/s peak 3372MB eta 5.1 min
+step 97/119 loss 0.0006 gn 0.065 0.601 ex/s peak 3372MB eta 4.9 min
+step 98/119 loss 0.0001 gn 0.006 0.601 ex/s peak 3372MB eta 4.7 min
+step 99/119 loss 0.0018 gn 0.058 0.6 ex/s peak 3372MB eta 4.4 min
+step 100/119 loss 0.0004 gn 0.03 0.601 ex/s peak 3372MB eta 4.2 min
+step 101/119 loss 0.0016 gn 0.043 0.602 ex/s peak 3372MB eta 4.0 min
+step 102/119 loss 0.0005 gn 0.031 0.602 ex/s peak 3372MB eta 3.8 min
+step 103/119 loss 0.0089 gn 0.315 0.603 ex/s peak 3372MB eta 3.5 min
+step 104/119 loss 0.0001 gn 0.01 0.603 ex/s peak 3372MB eta 3.3 min
+step 105/119 loss 0.0002 gn 0.007 0.603 ex/s peak 3372MB eta 3.1 min
+step 106/119 loss 0.0001 gn 0.005 0.603 ex/s peak 3372MB eta 2.9 min
+step 107/119 loss 0.0002 gn 0.015 0.604 ex/s peak 3372MB eta 2.6 min
+step 108/119 loss 0.0007 gn 0.061 0.603 ex/s peak 3372MB eta 2.4 min
+step 109/119 loss 0.0001 gn 0.004 0.603 ex/s peak 3372MB eta 2.2 min
+step 110/119 loss 0.0001 gn 0.005 0.602 ex/s peak 3372MB eta 2.0 min
+step 111/119 loss 0.0004 gn 0.024 0.603 ex/s peak 3372MB eta 1.8 min
+step 112/119 loss 0.0001 gn 0.004 0.603 ex/s peak 3372MB eta 1.5 min
+step 113/119 loss 0.0005 gn 0.028 0.602 ex/s peak 3372MB eta 1.3 min
+step 114/119 loss 0.0001 gn 0.006 0.602 ex/s peak 3372MB eta 1.1 min
+step 115/119 loss 0.0003 gn 0.023 0.602 ex/s peak 3372MB eta 0.9 min
+step 116/119 loss 0.0002 gn 0.008 0.602 ex/s peak 3372MB eta 0.7 min
+step 117/119 loss 0.0002 gn 0.012 0.601 ex/s peak 3372MB eta 0.4 min
+step 118/119 loss 0.0002 gn 0.015 0.602 ex/s peak 3372MB eta 0.2 min
+step 119/119 loss 0.0006 gn 0.028 0.602 ex/s peak 3372MB eta 0.0 min
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+  val loss 0.0001
+{'steps': 119, 'elapsed_min': 26.7, 'peak_mem_mb': 3372, 'examples_per_s': 0.595, 'val_loss_before': 0.12298433872698242}

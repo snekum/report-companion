@@ -1,0 +1,39 @@
+{
+  "_about": "Supported lab tests. 'loinc' lists the Synthea LOINC codes mapped to each test. 'names' are display spellings used by the renderer (index 0 = default). 'abbrev' is used by the compact template family. Authored for this project.",
+  "tests": {
+    "glucose": { "loinc": ["2339-0", "2345-7"], "names": ["Glucose", "Glucose, fasting", "Blood glucose"], "abbrev": "GLU", "unit": "mg/dL" },
+    "bun": { "loinc": ["6299-2", "3094-0"], "names": ["Urea nitrogen (BUN)", "Blood urea nitrogen", "BUN"], "abbrev": "BUN", "unit": "mg/dL" },
+    "creatinine": { "loinc": ["38483-4", "2160-0"], "names": ["Creatinine", "Creatinine, serum"], "abbrev": "CREAT", "unit": "mg/dL" },
+    "calcium": { "loinc": ["49765-1", "17861-6"], "names": ["Calcium", "Calcium, total"], "abbrev": "CA", "unit": "mg/dL" },
+    "sodium": { "loinc": ["2947-0", "2951-2"], "names": ["Sodium"], "abbrev": "NA", "unit": "mmol/L" },
+    "potassium": { "loinc": ["6298-4", "2823-3"], "names": ["Potassium"], "abbrev": "K", "unit": "mmol/L" },
+    "chloride": { "loinc": ["2069-3", "2075-0"], "names": ["Chloride"], "abbrev": "CL", "unit": "mmol/L" },
+    "co2": { "loinc": ["20565-8", "2028-9"], "names": ["Carbon dioxide (CO2)", "Bicarbonate (total CO2)"], "abbrev": "CO2", "unit": "mmol/L" },
+    "egfr": { "loinc": ["33914-3"], "names": ["eGFR", "Estimated GFR"], "abbrev": "EGFR", "unit": "mL/min/{1.73_m2}" },
+    "hba1c": { "loinc": ["4548-4"], "names": ["Hemoglobin A1c", "HbA1c"], "abbrev": "A1C", "unit": "%" },
+    "cholesterol": { "loinc": ["2093-3"], "names": ["Total cholesterol", "Cholesterol, total"], "abbrev": "CHOL", "unit": "mg/dL" },
+    "triglycerides": { "loinc": ["2571-8"], "names": ["Triglycerides"], "abbrev": "TRIG", "unit": "mg/dL" },
+    "ldl": { "loinc": ["18262-6"], "names": ["LDL cholesterol", "LDL-C (direct)"], "abbrev": "LDL", "unit": "mg/dL" },
+    "hdl": { "loinc": ["2085-9"], "names": ["HDL cholesterol", "HDL-C"], "abbrev": "HDL", "unit": "mg/dL" },
+    "hemoglobin": { "loinc": ["718-7"], "names": ["Hemoglobin", "Haemoglobin"], "abbrev": "HGB", "unit": "g/dL" },
+    "wbc": { "loinc": ["6690-2"], "names": ["White blood cell count", "WBC"], "abbrev": "WBC", "unit": "10*3/uL" },
+    "rbc": { "loinc": ["789-8"], "names": ["Red blood cell count", "RBC"], "abbrev": "RBC", "unit": "10*6/uL" },
+    "hematocrit": { "loinc": ["4544-3"], "names": ["Hematocrit", "Haematocrit"], "abbrev": "HCT", "unit": "%" },
+    "mcv": { "loinc": ["787-2"], "names": ["MCV"], "abbrev": "MCV", "unit": "fL" },
+    "mch": { "loinc": ["785-6"], "names": ["MCH"], "abbrev": "MCH", "unit": "pg" },
+    "mchc": { "loinc": ["786-4"], "names": ["MCHC"], "abbrev": "MCHC", "unit": "g/dL" },
+    "platelets": { "loinc": ["777-3"], "names": ["Platelet count", "Platelets"], "abbrev": "PLT", "unit": "10*3/uL" },
+    "protein": { "loinc": ["2885-2"], "names": ["Total protein", "Protein, total"], "abbrev": "TP", "unit": "g/dL" },
+    "albumin": { "loinc": ["1751-7"], "names": ["Albumin"], "abbrev": "ALB", "unit": "g/dL" },
+    "bilirubin": { "loinc": ["1975-2"], "names": ["Bilirubin, total", "Total bilirubin"], "abbrev": "TBIL", "unit": "mg/dL" },
+    "alp": { "loinc": ["6768-6"], "names": ["Alkaline phosphatase", "ALP"], "abbrev": "ALP", "unit": "U/L" },
+    "alt": { "loinc": ["1742-6"], "names": ["ALT", "Alanine aminotransferase (ALT)"], "abbrev": "ALT", "unit": "U/L" },
+    "ast": { "loinc": ["1920-8"], "names": ["AST", "Aspartate aminotransferase (AST)"], "abbrev": "AST", "unit": "U/L" }
+  },
+  "unit_display": {
+    "_about": "How each fictional lab prints Synthea's UCUM units. Style index matches labs[].unit_style.",
+    "mL/min/{1.73_m2}": ["mL/min/1.73m2", "mL/min/1.73 m2"],
+    "10*3/uL": ["10^3/uL", "x10^3/uL"],
+    "10*6/uL": ["10^6/uL", "x10^6/uL"]
+  }
+}

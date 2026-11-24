@@ -1,0 +1,9 @@
+4-bit layers + fp16 embedding/output: loss per doc [0.01603, 0.01695, 0.02272, 0.09148] mean 0.0368
+generated test-V3-db5b06ddbf 113 tokens
+generated test-V3-743a86bd7a 156 tokens
+generated test-V3-00924544c1 144 tokens
+generated test-L3-e9665c9451 478 tokens
+generated test-V1-daec4732ba 152 tokens
+generated test-V3-eca3e58e44 231 tokens
+generated test-L4-83c60ed71d 322 tokens
+generated test-V2-cbf0362bdc 164 tokens

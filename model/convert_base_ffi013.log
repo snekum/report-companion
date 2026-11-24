@@ -1,0 +1,9 @@
+[notice] To update, run: pip install --upgrade pip
+[2026-11-23 12:15:22] INFO stats.py:77: [92mTime usage[0m: HF loading: 1.928 sec; Pre-quantization mapping: 77.462 sec; Quantization: 108.805 sec
+[2026-11-23 12:15:22] INFO stats.py:88: [92mRAM usage[0m: Peak RAM: 3.205 GB. Total bytes loaded from disk: 3.205 GB
+[2026-11-23 12:15:23] INFO convert_weight.py:200: [92mParameter size[0m after quantization: 0.902 GB
+[2026-11-23 12:15:23] INFO convert_weight.py:205: [92mTotal parameters[0m: 1,720,574,976
+[2026-11-23 12:15:23] INFO convert_weight.py:206: [92mBits per parameter[0m: 4.501
+[2026-11-23 12:15:23] INFO convert_weight.py:211: Saved to directory: [1m/out[0m
+
+All finished, 30 total shards committed, record saved to /out/tensor-cache.json

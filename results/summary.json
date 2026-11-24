@@ -1,0 +1,474 @@
+{
+  "generatedOn": "2026-11-24",
+  "testSet": {
+    "docs": 204,
+    "patients": 107,
+    "heldOutFamilies": [
+      "L3 (compact codes)",
+      "V3 (medication list printout)"
+    ]
+  },
+  "challengeSet": {
+    "docs": 20
+  },
+  "groups": {
+    "test": {
+      "rules": {
+        "all_f1": null,
+        "labs_f1": 1.0,
+        "labs_precision": 1.0,
+        "labs_recall": 1.0,
+        "unit_exact": 0.9988,
+        "range_exact": 1.0,
+        "lab_date_exact": 1.0,
+        "value_altered": 0,
+        "meds_f1": null,
+        "meds_precision": null,
+        "meds_recall": null,
+        "meds_status_acc": null,
+        "false_current": null,
+        "dose_exact": null,
+        "frequency_exact": null,
+        "follow_up_f1": null,
+        "date_acc": 1.0,
+        "schema_valid": 1.0,
+        "evidence_valid": 1.0,
+        "fields_in_evidence": 1.0,
+        "unsupported_rate": 0.0,
+        "unsupported_items": 0,
+        "docs": 204,
+        "latency_median_ms": 0,
+        "peak_mem_mb": null,
+        "new_tokens_mean": null
+      },
+      "original": {
+        "all_f1": 0.8197,
+        "labs_f1": 0.9001,
+        "labs_precision": 0.8911,
+        "labs_recall": 0.9092,
+        "unit_exact": 1.0,
+        "range_exact": 0.9677,
+        "lab_date_exact": 0.9317,
+        "value_altered": 41,
+        "meds_f1": 0.8141,
+        "meds_precision": 0.7324,
+        "meds_recall": 0.9163,
+        "meds_status_acc": 0.8365,
+        "false_current": 11,
+        "dose_exact": 0.8798,
+        "frequency_exact": 0.7981,
+        "follow_up_f1": 0.3673,
+        "date_acc": 0.3088,
+        "schema_valid": 0.2157,
+        "evidence_valid": 0.7468,
+        "fields_in_evidence": 0.2875,
+        "unsupported_rate": 0.0395,
+        "unsupported_items": 52,
+        "docs": 204,
+        "latency_median_ms": 3090,
+        "peak_mem_mb": 4431,
+        "new_tokens_mean": 434.0
+      },
+      "finetuned": {
+        "all_f1": 0.9923,
+        "labs_f1": 0.9922,
+        "labs_precision": 1.0,
+        "labs_recall": 0.9845,
+        "unit_exact": 1.0,
+        "range_exact": 1.0,
+        "lab_date_exact": 1.0,
+        "value_altered": 0,
+        "meds_f1": 0.9866,
+        "meds_precision": 1.0,
+        "meds_recall": 0.9736,
+        "meds_status_acc": 0.9955,
+        "false_current": 1,
+        "dose_exact": 1.0,
+        "frequency_exact": 0.9457,
+        "follow_up_f1": 1.0,
+        "date_acc": 0.8725,
+        "schema_valid": 0.9951,
+        "evidence_valid": 0.9873,
+        "fields_in_evidence": 0.9873,
+        "unsupported_rate": 0.0,
+        "unsupported_items": 0,
+        "docs": 204,
+        "latency_median_ms": 4287,
+        "peak_mem_mb": 4231,
+        "new_tokens_mean": 413.8
+      }
+    },
+    "test_seen": {
+      "rules": {
+        "all_f1": null,
+        "labs_f1": 1.0,
+        "labs_precision": 1.0,
+        "labs_recall": 1.0,
+        "unit_exact": 0.998,
+        "range_exact": 1.0,
+        "lab_date_exact": 1.0,
+        "value_altered": 0,
+        "meds_f1": null,
+        "meds_precision": null,
+        "meds_recall": null,
+        "meds_status_acc": null,
+        "false_current": null,
+        "dose_exact": null,
+        "frequency_exact": null,
+        "follow_up_f1": null,
+        "date_acc": 1.0,
+        "schema_valid": 1.0,
+        "evidence_valid": 1.0,
+        "fields_in_evidence": 1.0,
+        "unsupported_rate": 0.0,
+        "unsupported_items": 0,
+        "docs": 128
+      },
+      "original": {
+        "all_f1": 0.7855,
+        "labs_f1": 0.8711,
+        "labs_precision": 0.8566,
+        "labs_recall": 0.8862,
+        "unit_exact": 1.0,
+        "range_exact": 0.9673,
+        "lab_date_exact": 0.8807,
+        "value_altered": 41,
+        "meds_f1": 0.8266,
+        "meds_precision": 0.7607,
+        "meds_recall": 0.9051,
+        "meds_status_acc": 0.9113,
+        "false_current": 6,
+        "dose_exact": 0.8145,
+        "frequency_exact": 0.8468,
+        "follow_up_f1": 0.3887,
+        "date_acc": 0.4844,
+        "schema_valid": 0.2344,
+        "evidence_valid": 0.6618,
+        "fields_in_evidence": 0.4161,
+        "unsupported_rate": 0.0499,
+        "unsupported_items": 41,
+        "docs": 128
+      },
+      "finetuned": {
+        "all_f1": 0.9974,
+        "labs_f1": 0.9959,
+        "labs_precision": 1.0,
+        "labs_recall": 0.9919,
+        "unit_exact": 1.0,
+        "range_exact": 1.0,
+        "lab_date_exact": 1.0,
+        "value_altered": 0,
+        "meds_f1": 1.0,
+        "meds_precision": 1.0,
+        "meds_recall": 1.0,
+        "meds_status_acc": 1.0,
+        "false_current": 0,
+        "dose_exact": 1.0,
+        "frequency_exact": 1.0,
+        "follow_up_f1": 1.0,
+        "date_acc": 1.0,
+        "schema_valid": 1.0,
+        "evidence_valid": 1.0,
+        "fields_in_evidence": 1.0,
+        "unsupported_rate": 0.0,
+        "unsupported_items": 0,
+        "docs": 128
+      }
+    },
+    "test_held_out": {
+      "rules": {
+        "all_f1": null,
+        "labs_f1": 1.0,
+        "labs_precision": 1.0,
+        "labs_recall": 1.0,
+        "unit_exact": 1.0,
+        "range_exact": 1.0,
+        "lab_date_exact": 1.0,
+        "value_altered": 0,
+        "meds_f1": null,
+        "meds_precision": null,
+        "meds_recall": null,
+        "meds_status_acc": null,
+        "false_current": null,
+        "dose_exact": null,
+        "frequency_exact": null,
+        "follow_up_f1": null,
+        "date_acc": 1.0,
+        "schema_valid": 1.0,
+        "evidence_valid": 1.0,
+        "fields_in_evidence": 1.0,
+        "unsupported_rate": 0.0,
+        "unsupported_items": 0,
+        "docs": 76
+      },
+      "original": {
+        "all_f1": 0.8755,
+        "labs_f1": 0.942,
+        "labs_precision": 0.942,
+        "labs_recall": 0.942,
+        "unit_exact": 1.0,
+        "range_exact": 0.9682,
+        "lab_date_exact": 1.0,
+        "value_altered": 0,
+        "meds_f1": 0.7962,
+        "meds_precision": 0.6942,
+        "meds_recall": 0.9333,
+        "meds_status_acc": 0.7262,
+        "false_current": 5,
+        "dose_exact": 0.9762,
+        "frequency_exact": 0.7262,
+        "follow_up_f1": 0.2553,
+        "date_acc": 0.0132,
+        "schema_valid": 0.1842,
+        "evidence_valid": 0.8884,
+        "fields_in_evidence": 0.073,
+        "unsupported_rate": 0.0223,
+        "unsupported_items": 11,
+        "docs": 76
+      },
+      "finetuned": {
+        "all_f1": 0.9833,
+        "labs_f1": 0.9868,
+        "labs_precision": 1.0,
+        "labs_recall": 0.9739,
+        "unit_exact": 1.0,
+        "range_exact": 1.0,
+        "lab_date_exact": 1.0,
+        "value_altered": 0,
+        "meds_f1": 0.9655,
+        "meds_precision": 1.0,
+        "meds_recall": 0.9333,
+        "meds_status_acc": 0.9881,
+        "false_current": 1,
+        "dose_exact": 1.0,
+        "frequency_exact": 0.8571,
+        "follow_up_f1": 1.0,
+        "date_acc": 0.6579,
+        "schema_valid": 0.9868,
+        "evidence_valid": 0.965,
+        "fields_in_evidence": 0.965,
+        "unsupported_rate": 0.0,
+        "unsupported_items": 0,
+        "docs": 76
+      }
+    },
+    "challenge": {
+      "rules": {
+        "all_f1": null,
+        "labs_f1": 0.6429,
+        "labs_precision": 0.8182,
+        "labs_recall": 0.5294,
+        "unit_exact": 0.7778,
+        "range_exact": 0.5714,
+        "lab_date_exact": 1.0,
+        "value_altered": 1,
+        "meds_f1": null,
+        "meds_precision": null,
+        "meds_recall": null,
+        "meds_status_acc": null,
+        "false_current": null,
+        "dose_exact": null,
+        "frequency_exact": null,
+        "follow_up_f1": null,
+        "date_acc": 0.15,
+        "schema_valid": 1.0,
+        "evidence_valid": 1.0,
+        "fields_in_evidence": 1.0,
+        "unsupported_rate": 0.0,
+        "unsupported_items": 0,
+        "docs": 20,
+        "latency_median_ms": 0,
+        "peak_mem_mb": null,
+        "new_tokens_mean": null
+      },
+      "original": {
+        "all_f1": 0.6133,
+        "labs_f1": 0.5714,
+        "labs_precision": 0.5556,
+        "labs_recall": 0.5882,
+        "unit_exact": 0.9,
+        "range_exact": 1.0,
+        "lab_date_exact": 1.0,
+        "value_altered": 7,
+        "meds_f1": 0.88,
+        "meds_precision": 0.9167,
+        "meds_recall": 0.8462,
+        "meds_status_acc": 0.9091,
+        "false_current": 1,
+        "dose_exact": 1.0,
+        "frequency_exact": 1.0,
+        "follow_up_f1": 0.2666,
+        "date_acc": 0.85,
+        "schema_valid": 0.3,
+        "evidence_valid": 0.9107,
+        "fields_in_evidence": 0.6964,
+        "unsupported_rate": 0.125,
+        "unsupported_items": 7,
+        "docs": 20,
+        "latency_median_ms": 1305,
+        "peak_mem_mb": 2906,
+        "new_tokens_mean": 177.3
+      },
+      "finetuned": {
+        "all_f1": 0.9296,
+        "labs_f1": 0.9714,
+        "labs_precision": 0.9444,
+        "labs_recall": 1.0,
+        "unit_exact": 0.9412,
+        "range_exact": 1.0,
+        "lab_date_exact": 1.0,
+        "value_altered": 0,
+        "meds_f1": 0.9167,
+        "meds_precision": 1.0,
+        "meds_recall": 0.8462,
+        "meds_status_acc": 0.8182,
+        "false_current": 1,
+        "dose_exact": 1.0,
+        "frequency_exact": 1.0,
+        "follow_up_f1": 0.8333,
+        "date_acc": 0.95,
+        "schema_valid": 0.95,
+        "evidence_valid": 1.0,
+        "fields_in_evidence": 0.9818,
+        "unsupported_rate": 0.0182,
+        "unsupported_items": 1,
+        "docs": 20,
+        "latency_median_ms": 2143,
+        "peak_mem_mb": 3278,
+        "new_tokens_mean": 150.6
+      }
+    }
+  },
+  "comparisons": {
+    "test: fine-tuned minus original, all-facts F1": {
+      "difference": 0.1726,
+      "ci95": [
+        0.1465,
+        0.2015
+      ],
+      "docs": 204
+    },
+    "test: fine-tuned minus original, labs F1": {
+      "difference": 0.0921,
+      "ci95": [
+        0.0571,
+        0.1348
+      ],
+      "docs": 204
+    },
+    "test: fine-tuned minus original, medications F1": {
+      "difference": 0.1725,
+      "ci95": [
+        0.1325,
+        0.2255
+      ],
+      "docs": 204
+    },
+    "test: fine-tuned minus original, follow_up F1": {
+      "difference": 0.6327,
+      "ci95": [
+        0.5556,
+        0.7133
+      ],
+      "docs": 204
+    },
+    "test: fine-tuned minus rules, labs F1": {
+      "difference": -0.0078,
+      "ci95": [
+        -0.0195,
+        -0.0011
+      ],
+      "docs": 204
+    },
+    "challenge: fine-tuned minus original, all-facts F1": {
+      "difference": 0.3162,
+      "ci95": [
+        0.1587,
+        0.4851
+      ],
+      "docs": 20
+    },
+    "challenge: fine-tuned minus original, labs F1": {
+      "difference": 0.4,
+      "ci95": [
+        0.1111,
+        0.7027
+      ],
+      "docs": 20
+    },
+    "challenge: fine-tuned minus original, medications F1": {
+      "difference": 0.0367,
+      "ci95": [
+        0.0,
+        0.1579
+      ],
+      "docs": 20
+    },
+    "challenge: fine-tuned minus original, follow_up F1": {
+      "difference": 0.5667,
+      "ci95": [
+        0.3007,
+        0.8333
+      ],
+      "docs": 20
+    },
+    "challenge: fine-tuned minus rules, labs F1": {
+      "difference": 0.3286,
+      "ci95": [
+        0.0565,
+        0.6518
+      ],
+      "docs": 20
+    }
+  },
+  "training": {
+    "config": {
+      "run": "final",
+      "n_train": 951,
+      "epochs": 1.0,
+      "lr": 0.0002,
+      "lora_r": 16,
+      "lora_alpha": 32,
+      "lora_dropout": 0.05,
+      "grad_accum": 8,
+      "max_len": 2048,
+      "warmup_steps": 5,
+      "n_val_loss": 30,
+      "seed": 1234,
+      "max_steps": null,
+      "base_model": "Qwen/Qwen3-1.7B",
+      "quant": "bnb nf4, double quant, fp16 compute",
+      "target_modules": [
+        "down_proj",
+        "gate_proj",
+        "k_proj",
+        "o_proj",
+        "q_proj",
+        "up_proj",
+        "v_proj"
+      ],
+      "train_examples": 951,
+      "dropped_too_long": [],
+      "total_steps": 119,
+      "effective_batch": 8,
+      "loss": "cross-entropy on completion tokens only (JSON answer + <|im_end|>)",
+      "trainable_params": 17432576,
+      "torch": "2.11.0+cu130",
+      "gpu": "Tesla T4"
+    },
+    "summary": {
+      "steps": 119,
+      "elapsed_min": 26.7,
+      "peak_mem_mb": 3372,
+      "examples_per_s": 0.595,
+      "val_loss_before": 0.12298433872698242
+    }
+  },
+  "browser": null,
+  "missing": [],
+  "notes": [
+    "Rules only attempt lab rows and the document date, so they have no all-facts, medicine or follow-up score.",
+    "The rules' test-name dictionary is the same list the synthetic templates use, which flatters them on this data.",
+    "Original and fine-tuned models were both run in 4-bit (nf4) with the same prompt, greedy decoding and a 1,024-token limit."
+  ]
+}

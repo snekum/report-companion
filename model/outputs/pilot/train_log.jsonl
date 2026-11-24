@@ -1,0 +1,22 @@
+{"step": 0, "val_loss": 0.12289045165030502}
+{"step": 1, "epoch": 0.05, "loss": 0.2032, "grad_norm": 1.108, "lr": 4e-05, "elapsed_s": 258, "examples_per_s": 0.031, "tokens_per_s": 34, "peak_mem_mb": 2702}
+{"step": 2, "epoch": 0.1, "loss": 0.1531, "grad_norm": 2.226, "lr": 8e-05, "elapsed_s": 526, "examples_per_s": 0.03, "tokens_per_s": 33, "peak_mem_mb": 2798}
+{"step": 3, "epoch": 0.15, "loss": 0.0527, "grad_norm": 0.669, "lr": 0.00012, "elapsed_s": 859, "examples_per_s": 0.028, "tokens_per_s": 33, "peak_mem_mb": 2996}
+{"step": 4, "epoch": 0.2, "loss": 0.1339, "grad_norm": 0.962, "lr": 0.00016, "elapsed_s": 1143, "examples_per_s": 0.028, "tokens_per_s": 32, "peak_mem_mb": 2996}
+{"step": 5, "epoch": 0.25, "loss": 0.0598, "grad_norm": 0.861, "lr": 0.0002, "elapsed_s": 1444, "examples_per_s": 0.028, "tokens_per_s": 31, "peak_mem_mb": 3018}
+{"step": 6, "epoch": 0.3, "loss": 0.0473, "grad_norm": 0.535, "lr": 0.00019781476007338058, "elapsed_s": 1767, "examples_per_s": 0.027, "tokens_per_s": 31, "peak_mem_mb": 3018}
+{"step": 7, "epoch": 0.35, "loss": 0.0373, "grad_norm": 0.729, "lr": 0.0001913545457642601, "elapsed_s": 2074, "examples_per_s": 0.027, "tokens_per_s": 30, "peak_mem_mb": 3018}
+{"step": 8, "epoch": 0.4, "loss": 0.0309, "grad_norm": 0.667, "lr": 0.00018090169943749476, "elapsed_s": 2357, "examples_per_s": 0.027, "tokens_per_s": 30, "peak_mem_mb": 3034}
+{"step": 9, "epoch": 0.45, "loss": 0.0254, "grad_norm": 0.439, "lr": 0.00016691306063588583, "elapsed_s": 2693, "examples_per_s": 0.027, "tokens_per_s": 30, "peak_mem_mb": 3034}
+{"step": 10, "epoch": 0.5, "loss": 0.0223, "grad_norm": 0.391, "lr": 0.00015000000000000001, "elapsed_s": 2950, "examples_per_s": 0.027, "tokens_per_s": 29, "peak_mem_mb": 3034}
+{"step": 11, "epoch": 0.55, "loss": 0.0136, "grad_norm": 0.226, "lr": 0.00013090169943749476, "elapsed_s": 3204, "examples_per_s": 0.027, "tokens_per_s": 29, "peak_mem_mb": 3034}
+{"step": 12, "epoch": 0.6, "loss": 0.0108, "grad_norm": 0.167, "lr": 0.00011045284632676536, "elapsed_s": 4903, "examples_per_s": 0.02, "tokens_per_s": 21, "peak_mem_mb": 3034}
+{"step": 13, "epoch": 0.65, "loss": 0.0156, "grad_norm": 0.176, "lr": 8.954715367323468e-05, "elapsed_s": 5151, "examples_per_s": 0.02, "tokens_per_s": 22, "peak_mem_mb": 3034}
+{"step": 14, "epoch": 0.7, "loss": 0.0136, "grad_norm": 0.19, "lr": 6.909830056250527e-05, "elapsed_s": 5428, "examples_per_s": 0.021, "tokens_per_s": 22, "peak_mem_mb": 3034}
+{"step": 15, "epoch": 0.75, "loss": 0.0116, "grad_norm": 0.145, "lr": 5.000000000000002e-05, "elapsed_s": 5711, "examples_per_s": 0.021, "tokens_per_s": 23, "peak_mem_mb": 3034}
+{"step": 16, "epoch": 0.8, "loss": 0.0082, "grad_norm": 0.086, "lr": 3.308693936411421e-05, "elapsed_s": 6058, "examples_per_s": 0.021, "tokens_per_s": 23, "peak_mem_mb": 3163}
+{"step": 17, "epoch": 0.85, "loss": 0.0061, "grad_norm": 0.087, "lr": 1.9098300562505266e-05, "elapsed_s": 6403, "examples_per_s": 0.021, "tokens_per_s": 24, "peak_mem_mb": 3163}
+{"step": 18, "epoch": 0.9, "loss": 0.0134, "grad_norm": 0.209, "lr": 8.645454235739903e-06, "elapsed_s": 6688, "examples_per_s": 0.022, "tokens_per_s": 24, "peak_mem_mb": 3163}
+{"step": 19, "epoch": 0.95, "loss": 0.006, "grad_norm": 0.104, "lr": 2.1852399266194314e-06, "elapsed_s": 6989, "examples_per_s": 0.022, "tokens_per_s": 24, "peak_mem_mb": 3163}
+{"step": 20, "epoch": 1.0, "loss": 0.0087, "grad_norm": 0.164, "lr": 0.0, "elapsed_s": 7289, "examples_per_s": 0.022, "tokens_per_s": 24, "peak_mem_mb": 3163}
+{"step": 20, "val_loss": 0.007477566204690877}

@@ -1,0 +1,10 @@
+ref: adapter loss per doc [0.00975, 0.01647, 0.01487, 0.0047] mean 0.01145
+q4: adapter loss per doc [0.04057, 0.01563, 0.05352, 0.06623] mean 0.04399
+generated test-V3-db5b06ddbf 113 tokens
+generated test-V3-743a86bd7a 168 tokens
+generated test-V3-00924544c1 133 tokens
+generated test-L3-e9665c9451 319 tokens
+generated test-V1-daec4732ba 151 tokens
+generated test-V3-eca3e58e44 595 tokens
+generated test-L4-83c60ed71d 322 tokens
+generated test-V2-cbf0362bdc 161 tokens

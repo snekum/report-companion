@@ -1,0 +1,20 @@
+{
+  "checkedOn": "2026-11-23",
+  "question": "Do weights converted with our pipeline (model/convert_mlc.sh) run with WebLLM's prebuilt Qwen3-1.7B q4f16_1 WebGPU library and behave like the official prebuilt weights?",
+  "toolchain": [
+    "mlc-llm-nightly-cpu==0.26.dev6",
+    "mlc-ai-nightly-cpu==0.26.dev246",
+    "apache-tvm-ffi==0.1.13 (0.1.16 segfaults)",
+    "numpy==2.2.6 (2.5 rejects TVM dtypes)",
+    "torch==2.9.1+cpu",
+    "see model/Dockerfile.mlc"
+  ],
+  "byte_level": "0 of 30 shards byte-identical; identical tensor names, shapes, dtypes and total size (968,001,536 bytes). In shard 1: ~37% of fp16 group scales differ by one fp16 ulp (max relative 9.7e-4), 0.47% of 4-bit values differ by one step; unquantised layernorm weights identical.",
+  "behaviour": "3 demo documents, WebLLM 0.2.89 in Chrome on the Intel UHD 630, greedy: 2 outputs identical character for character (1,020 and 619 tokens); 1 differs in a single token ('\"medications\": null' vs '[]', 707 vs 706 tokens).",
+  "conclusion": "The self-converted weights load with the prebuilt WebGPU library and behave like the official build, with occasional single-token differences from rounding. The browser model still needs its own evaluation rather than assuming the Python results.",
+  "files": [
+    "results/deployment/conv-check_prebuilt.jsonl",
+    "results/deployment/conv-check_selfconverted.jsonl",
+    "results/deployment/conv-check.log"
+  ]
+}

@@ -1,0 +1,22 @@
+pilot finished: {"steps":20,"elapsed_min":128.0,"peak_mem_mb":3163,"examples_per_s":0.021,"val_loss_before":0.12289045165030502}
+  24/40  1968.4s/batch  eta 26.0 min
+  32/40  574.3s/batch  eta 12.1 min
+  40/40  2498.0s/batch  eta 0.0 min
+  24/40  269.5s/batch  eta 5.7 min
+  32/40  247.2s/batch  eta 3.2 min
+  40/40  293.9s/batch  eta 0.0 min
+results/predictions/base_val40.jsonl: docs=40 schema_valid=0.2 all_items_F1=0.8372 CI=[0.7933, 0.8721]
+  labs: P=0.9721 R=0.9886 F1=0.9803
+  medications: P=0.6444 R=0.9355 F1=0.7631
+  follow_up: P=0.4194 R=0.2407 F1=0.3059
+  date_acc=0.3 evidence_valid=0.7052 unsupported_rate=0.0336
+  -> results/predictions/base_val40.metrics.json
+results/predictions/ft-pilot_val40.jsonl: docs=40 schema_valid=0.875 all_items_F1=0.8072 CI=[0.7018, 0.8937]
+  labs: P=0.9804 R=0.5682 F1=0.7194
+  medications: P=0.9 R=0.871 F1=0.8853
+  follow_up: P=1.0 R=0.9815 F1=0.9907
+  date_acc=1.0 evidence_valid=0.9956 unsupported_rate=0.0178
+  -> results/predictions/ft-pilot_val40.metrics.json
+8 to do (0 already in D:\portfolio\report-companion\results\predictions\base_demo_journeys.jsonl)
+8 to do (0 already in D:\portfolio\report-companion\results\predictions\ft-pilot_demo_journeys.jsonl)
+QUEUE DONE

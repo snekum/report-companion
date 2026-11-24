@@ -1,0 +1,313 @@
+{
+  "predictions": "results\\predictions\\regex_val.jsonl",
+  "split": "data\\processed\\val.jsonl",
+  "sections": [
+    "document_date",
+    "labs"
+  ],
+  "missing_predictions": 0,
+  "overall": {
+    "docs": 121,
+    "parse_rate": 1.0,
+    "schema_valid_rate": 1.0,
+    "labs": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "tp": 522,
+      "pred": 522,
+      "gold": 522,
+      "test_name_exact": 1.0,
+      "unit_exact": 0.9981,
+      "reference_range_exact": 1.0,
+      "reference_range_exact_when_printed": 1.0,
+      "date_exact": 1.0,
+      "value_altered": 0
+    },
+    "all_items": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    "document_date_accuracy": 1.0,
+    "evidence_valid_rate": 1.0,
+    "fields_in_evidence_rate": 1.0,
+    "unsupported_item_rate": 0.0,
+    "unsupported_items": 0
+  },
+  "all_items_f1_95ci": [
+    1.0,
+    1.0
+  ],
+  "groups": {
+    "family:L1": {
+      "docs": 22,
+      "parse_rate": 1.0,
+      "schema_valid_rate": 1.0,
+      "labs": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "tp": 181,
+        "pred": 181,
+        "gold": 181,
+        "test_name_exact": 1.0,
+        "unit_exact": 1.0,
+        "reference_range_exact": 1.0,
+        "reference_range_exact_when_printed": 1.0,
+        "date_exact": 1.0,
+        "value_altered": 0
+      },
+      "all_items": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "document_date_accuracy": 1.0,
+      "evidence_valid_rate": 1.0,
+      "fields_in_evidence_rate": 1.0,
+      "unsupported_item_rate": 0.0,
+      "unsupported_items": 0
+    },
+    "family:L2": {
+      "docs": 24,
+      "parse_rate": 1.0,
+      "schema_valid_rate": 1.0,
+      "labs": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "tp": 201,
+        "pred": 201,
+        "gold": 201,
+        "test_name_exact": 1.0,
+        "unit_exact": 1.0,
+        "reference_range_exact": 1.0,
+        "reference_range_exact_when_printed": 1.0,
+        "date_exact": 1.0,
+        "value_altered": 0
+      },
+      "all_items": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "document_date_accuracy": 1.0,
+      "evidence_valid_rate": 1.0,
+      "fields_in_evidence_rate": 1.0,
+      "unsupported_item_rate": 0.0,
+      "unsupported_items": 0
+    },
+    "family:L4": {
+      "docs": 3,
+      "parse_rate": 1.0,
+      "schema_valid_rate": 1.0,
+      "labs": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "tp": 24,
+        "pred": 24,
+        "gold": 24,
+        "test_name_exact": 1.0,
+        "unit_exact": 1.0,
+        "reference_range_exact": 1.0,
+        "reference_range_exact_when_printed": null,
+        "date_exact": 1.0,
+        "value_altered": 0
+      },
+      "all_items": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "document_date_accuracy": 1.0,
+      "evidence_valid_rate": 1.0,
+      "fields_in_evidence_rate": 1.0,
+      "unsupported_item_rate": 0.0,
+      "unsupported_items": 0
+    },
+    "family:L5": {
+      "docs": 13,
+      "parse_rate": 1.0,
+      "schema_valid_rate": 1.0,
+      "labs": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "tp": 62,
+        "pred": 62,
+        "gold": 62,
+        "test_name_exact": 1.0,
+        "unit_exact": 1.0,
+        "reference_range_exact": 1.0,
+        "reference_range_exact_when_printed": 1.0,
+        "date_exact": 1.0,
+        "value_altered": 0
+      },
+      "all_items": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "document_date_accuracy": 1.0,
+      "evidence_valid_rate": 1.0,
+      "fields_in_evidence_rate": 1.0,
+      "unsupported_item_rate": 0.0,
+      "unsupported_items": 0
+    },
+    "family:V1": {
+      "docs": 33,
+      "parse_rate": 1.0,
+      "schema_valid_rate": 1.0,
+      "labs": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "tp": 21,
+        "pred": 21,
+        "gold": 21,
+        "test_name_exact": 1.0,
+        "unit_exact": 1.0,
+        "reference_range_exact": 1.0,
+        "reference_range_exact_when_printed": 1.0,
+        "date_exact": 1.0,
+        "value_altered": 0
+      },
+      "all_items": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "document_date_accuracy": 1.0,
+      "evidence_valid_rate": 1.0,
+      "fields_in_evidence_rate": 1.0,
+      "unsupported_item_rate": 0.0,
+      "unsupported_items": 0
+    },
+    "family:V2": {
+      "docs": 26,
+      "parse_rate": 1.0,
+      "schema_valid_rate": 1.0,
+      "labs": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "tp": 33,
+        "pred": 33,
+        "gold": 33,
+        "test_name_exact": 1.0,
+        "unit_exact": 0.9697,
+        "reference_range_exact": 1.0,
+        "reference_range_exact_when_printed": null,
+        "date_exact": 1.0,
+        "value_altered": 0
+      },
+      "all_items": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "document_date_accuracy": 1.0,
+      "evidence_valid_rate": 1.0,
+      "fields_in_evidence_rate": 1.0,
+      "unsupported_item_rate": 0.0,
+      "unsupported_items": 0
+    },
+    "family:seen": {
+      "docs": 121,
+      "parse_rate": 1.0,
+      "schema_valid_rate": 1.0,
+      "labs": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "tp": 522,
+        "pred": 522,
+        "gold": 522,
+        "test_name_exact": 1.0,
+        "unit_exact": 0.9981,
+        "reference_range_exact": 1.0,
+        "reference_range_exact_when_printed": 1.0,
+        "date_exact": 1.0,
+        "value_altered": 0
+      },
+      "all_items": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "document_date_accuracy": 1.0,
+      "evidence_valid_rate": 1.0,
+      "fields_in_evidence_rate": 1.0,
+      "unsupported_item_rate": 0.0,
+      "unsupported_items": 0
+    },
+    "kind:lab_report": {
+      "docs": 62,
+      "parse_rate": 1.0,
+      "schema_valid_rate": 1.0,
+      "labs": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "tp": 468,
+        "pred": 468,
+        "gold": 468,
+        "test_name_exact": 1.0,
+        "unit_exact": 1.0,
+        "reference_range_exact": 1.0,
+        "reference_range_exact_when_printed": 1.0,
+        "date_exact": 1.0,
+        "value_altered": 0
+      },
+      "all_items": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "document_date_accuracy": 1.0,
+      "evidence_valid_rate": 1.0,
+      "fields_in_evidence_rate": 1.0,
+      "unsupported_item_rate": 0.0,
+      "unsupported_items": 0
+    },
+    "kind:visit_summary": {
+      "docs": 59,
+      "parse_rate": 1.0,
+      "schema_valid_rate": 1.0,
+      "labs": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "tp": 54,
+        "pred": 54,
+        "gold": 54,
+        "test_name_exact": 1.0,
+        "unit_exact": 0.9815,
+        "reference_range_exact": 1.0,
+        "reference_range_exact_when_printed": 1.0,
+        "date_exact": 1.0,
+        "value_altered": 0
+      },
+      "all_items": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "document_date_accuracy": 1.0,
+      "evidence_valid_rate": 1.0,
+      "fields_in_evidence_rate": 1.0,
+      "unsupported_item_rate": 0.0,
+      "unsupported_items": 0
+    }
+  },
+  "latency_ms": {
+    "mean": 0,
+    "median": 0,
+    "p90": 1
+  },
+  "new_tokens_mean": null,
+  "peak_mem_mb": null,
+  "schema_failures_sample": []
+}

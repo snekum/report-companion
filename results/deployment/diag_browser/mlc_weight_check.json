@@ -1,0 +1,30 @@
+{
+  "docs": [
+    "test-V3-db5b06ddbf",
+    "test-V3-743a86bd7a",
+    "test-V3-00924544c1",
+    "test-L3-e9665c9451"
+  ],
+  "loss": {
+    "merged fp16 (reference)": [
+      0.00388,
+      0.00796,
+      0.0026,
+      0.0182
+    ],
+    "final MLC unpacked": [
+      0.02636,
+      0.01613,
+      0.02978,
+      0.08786
+    ],
+    "original MLC unpacked": [
+      0.5375,
+      0.36471,
+      0.3919,
+      0.17539
+    ]
+  },
+  "unpack_rel_err_worst": 0.10728386044502258,
+  "compute": "cuda torch.float16"
+}

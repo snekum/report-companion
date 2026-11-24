@@ -1,0 +1,7 @@
+{
+  "steps": 3,
+  "elapsed_min": 13.3,
+  "peak_mem_mb": 2863,
+  "examples_per_s": 0.03,
+  "val_loss_before": 0.14842087929957004
+}
