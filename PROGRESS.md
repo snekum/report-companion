@@ -116,7 +116,7 @@ Newest entries at the bottom of each section. "Done" means it actually ran.
 ## Blocked / needs the owner
 
 - **Hosting the converted fine-tuned weights** (~1 GB, e.g. a Hugging Face model repo) still needs the owner's approval, and only once a browser build works. Until then the app shows the fine-tuned model as prepared results only.
-- Pushing the repo (public, github.com/snekum/report-companion) and GitHub Pages were approved on 2026-11-24.
+- Pushing the repo and GitHub Pages were approved on 2026-11-24 and done: https://github.com/snekum/report-companion (public, commits as snekum with the GitHub no-reply email, set in this repo only), app at https://snekum.github.io/report-companion/ (workflow `pages.yml`, first deploy passed).
 
 ## Next steps
 
