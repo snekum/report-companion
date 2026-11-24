@@ -6,8 +6,8 @@ Newest entries at the bottom of each section. "Done" means it actually ran.
 
 - The fine-tuned model (`final`: QLoRA, 951 docs x 1 epoch on a Kaggle T4) works in Python: test all-facts F1 0.992 vs 0.820 for the original model, challenge set 0.930 vs 0.613. Tables in `results/RESULTS.md`.
 - Its browser build (WebLLM, q4f16_1) was broken: the adapter didn't survive the browser's 4-bit rounding. Diagnosis under "Done" and in `results/deployment/diag_browser/`.
-- Fixed by retraining on a base rounded exactly like the browser's (`q4grid`, `--base-grid q4f16_1`). Its browser build works: test40 in Chrome 92.5% valid format, all-facts F1 0.996, matching the same model in Python. This is the shipped model. Weights not yet hosted.
-- The app shows `q4grid`'s prepared outputs and runs the original model live.
+- Fixed by retraining on a base rounded exactly like the browser's (`q4grid`, `--base-grid q4f16_1`). Its browser build works: test40 in Chrome 92.5% valid format, all-facts F1 0.996, matching the same model in Python. This is the shipped model, hosted on Hugging Face.
+- The app runs both models live (WebGPU) and also shows `q4grid`'s prepared outputs.
 
 **Gotchas:**
 - Windows MLC wheels lack `SPIRV-Tools.dll`, so conversion runs in Docker (`model/Dockerfile.mlc`, with apache-tvm-ffi 0.1.13 and numpy 2.2.6 pinned).
@@ -124,12 +124,13 @@ Newest entries at the bottom of each section. "Done" means it actually ran.
 - **Shipped `q4grid` (owner's call, 2026-11-24: ship as is rather than retrain for the challenge loss).** `tools/make_results.sh` rebuilds RESULTS.md / summary.json: app columns rules / original (nf4, the stronger baseline) / fine-tuned (`q4grid`); RESULTS.md adds "original, browser rounding" and `final`, plus plain-language notes and the browser check (`results/deployment/browser_eval_q4grid.json`). `summarize.py` got `--extra` and `--note`. `build_prepared.py` defaults to `ft-q4grid` and labels each prepared output with its real runtime. README results section, MODEL_CARD results, WALKTHROUGH sections 6 (the browser failure and fix) and 8 filled in. App: 83 tests, 17/17 UI checks, build OK.
 - **Framing (owner, 2026-11-24):** "Independent prototype exploring an approach for MedARC's AMFV project." AMFV = Agentic Medical Fact Verifier (github.com/MedARC-AI/amfv: claim decomposer, fact verifier, search agent; claims scored on a five-level scale against a curated corpus). Its README doesn't mention medical records, so the README links the two by the shared idea (split into individual facts, check each against evidence) and says it isn't an official MedARC project. No logos or branding.
 
+- **Weights hosted (2026-11-24, owner approved).** Public HF model repo `snekum/ReportCompanion-q4grid-Qwen3-1.7B-q4f16_1-MLC` with a model card (synthetic data only, not diagnostic, not an official MedARC model). Check: all 39 files at the right sizes, 2 shards + tensor-cache + config downloaded back byte-identical, CORS allows the Pages origin. Chrome loading from HF: first try crashed the tab during the 984 MB download (laptop commit charge 35 of 42 GB); after stopping a leftover test-Chrome helper it loaded in 6.5 min and gave answers identical to the local-server run on 5/5 docs. Repository variable `FINETUNED_MODEL_URL` set; `config.ts` model id renamed to the q4grid build, download size 984 MB, and `||` instead of `??` so an empty variable means "not hosted".
+
 ## Blocked / needs the owner
 
-- **Hosting the converted fine-tuned weights** (~1 GB, e.g. a Hugging Face model repo) still needs the owner's approval, and only once a browser build works. Until then the app shows the fine-tuned model as prepared results only.
+- Hosting the converted fine-tuned weights was approved on 2026-11-24 and done: https://huggingface.co/snekum/ReportCompanion-q4grid-Qwen3-1.7B-q4f16_1-MLC (public, uploaded with a fine-grained write token named `report-companion-upload`; the owner may delete it on the HF site).
 - Pushing the repo and GitHub Pages were approved on 2026-11-24 and done: https://github.com/snekum/report-companion (public, commits as snekum with the GitHub no-reply email, set in this repo only), app at https://snekum.github.io/report-companion/ (workflow `pages.yml`, first deploy passed).
 
 ## Next steps
 
-1. Owner to decide: commit and push (updates the live site).
-2. Owner to decide: hosting the converted `q4grid` weights (~1 GB) so the app can run the fine-tuned model live.
+1. Optional: bump the Pages workflow's actions (GitHub warns they target Node 20).

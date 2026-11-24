@@ -28,7 +28,7 @@ jobs:
       - run: npm test && npm run build
         working-directory: app
         env:
-          # Set after the converted fine-tuned weights are hosted (owner approval needed).
+          # Hugging Face repo with the converted fine-tuned weights (repository variable).
           VITE_FINETUNED_MODEL_URL: ${{ vars.FINETUNED_MODEL_URL }}
       - uses: actions/upload-pages-artifact@v3
         with:

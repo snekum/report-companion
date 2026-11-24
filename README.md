@@ -31,7 +31,7 @@ Getting it into the browser took a second training run. The browser stores weigh
 
 Full tables, including both fine-tunes and both roundings of the original model: [results/RESULTS.md](results/RESULTS.md).
 
-**State of the app:** it runs the original model live in your browser. The fine-tuned model's answers are shown as prepared results, because its converted weights (about 1 GB) aren't hosted yet.
+**State of the app:** both models run live in your browser, on your own GPU. The fine-tuned weights (about 1 GB, downloaded once and then kept by the browser) are hosted at [huggingface.co/snekum/ReportCompanion-q4grid-Qwen3-1.7B-q4f16_1-MLC](https://huggingface.co/snekum/ReportCompanion-q4grid-Qwen3-1.7B-q4f16_1-MLC). Prepared answers from both models are there too, for browsers without WebGPU.
 
 Live demo: [snekum.github.io/report-companion](https://snekum.github.io/report-companion/) (needs a browser with WebGPU, such as recent Chrome or Edge, to run the model; the prepared examples work anywhere) · Results: [results/RESULTS.md](results/RESULTS.md) · Model card: [docs/MODEL_CARD.md](docs/MODEL_CARD.md) · Walkthrough: [docs/WALKTHROUGH.md](docs/WALKTHROUGH.md) · Progress log: [PROGRESS.md](PROGRESS.md)
 
@@ -97,7 +97,7 @@ bash model/convert_mlc.sh model/merged/q4grid ReportCompanion-q4grid-Qwen3-1.7B-
 .venv-train/Scripts/python.exe results/deployment/diag_browser/mlc_q4grid_check.py   # unpack the browser weights, check them in Python
 ```
 
-The converted folder (~1 GB) is what gets hosted for the app (for example as a Hugging Face model repo). Nothing is uploaded by these scripts.
+The converted folder (~1 GB) is what the app downloads. It's hosted as a [Hugging Face model repo](https://huggingface.co/snekum/ReportCompanion-q4grid-Qwen3-1.7B-q4f16_1-MLC), and the Pages build reads its URL from the repository variable `FINETUNED_MODEL_URL`. Nothing is uploaded by these scripts.
 
 ### 5. App
 
