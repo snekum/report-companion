@@ -1,7 +1,12 @@
 """Collect evaluation metrics into results/summary.json (read by the app) and
 results/RESULTS.md (read by people).
 
-  python model/summarize.py --ft-tag ft-final [--base-tag base] [--browser results/deployment/browser_eval.json]
+  python model/summarize.py --ft-tag ft-q4grid --train-run q4grid
+      --extra "Original, browser rounding=base-q4grid" --extra "Fine-tuned, nf4 (final)=ft-final"
+      --browser results/deployment/browser_eval_q4grid.json --note ... (see PROGRESS.md for the exact call)
+
+The app shows rules / original / fine-tuned. --extra adds columns to
+RESULTS.md only (stored in summary.json under "extra").
 
 Expects <tag>_<split>.metrics.json files written by model/evaluate.py.
 Missing files are reported, never filled in.
@@ -84,9 +89,14 @@ def main():
     ap.add_argument("--rules-tag", default="regex")
     ap.add_argument("--train-run", default=None, help="model/outputs/<run> to read training config and summary from")
     ap.add_argument("--browser", default=None)
+    ap.add_argument("--extra", action="append", default=[], help='"Column label=tag": extra column in RESULTS.md')
+    ap.add_argument("--note", action="append", default=None, help="replaces the default notes (repeatable)")
     a = ap.parse_args()
     full = ["document_date", "labs", "medications", "follow_up"]
     systems = {"rules": a.rules_tag, "original": a.base_tag, "finetuned": a.ft_tag}
+    extra = dict(reversed(e.split("=", 1)) for e in a.extra)  # tag -> label
+    extra = {f"extra:{tag}": (label, tag) for tag, label in extra.items()}
+    systems.update({k: tag for k, (_, tag) in extra.items()})
     groups, missing, raw = {}, [], {}
     for split in ["test", "challenge"]:
         for key, tag in systems.items():
@@ -113,6 +123,10 @@ def main():
         r = raw.get(("rules", split))
         if r and f:
             comparisons[f"{split}: fine-tuned minus rules, labs F1"] = paired_bootstrap(r["per_doc"], f["per_doc"], ["labs"])
+        for k, (label, _) in extra.items():
+            e = raw.get((k, split))
+            if e and f:
+                comparisons[f"{split}: fine-tuned minus {label}, all-facts F1"] = paired_bootstrap(e["per_doc"], f["per_doc"], full)
     stats = json.load(open(os.path.join(DATA, "stats.json")))
     training = None
     if a.train_run:
@@ -129,7 +143,8 @@ def main():
         "training": training,
         "browser": browser,
         "missing": missing,
-        "notes": [
+        "extra": {k: label for k, (label, _) in extra.items()},
+        "notes": a.note or [
             "Rules only attempt lab rows and the document date, so they have no all-facts, medicine or follow-up score.",
             "The rules' test-name dictionary is the same list the synthetic templates use, which flatters them on this data.",
             "Original and fine-tuned models were both run in 4-bit (nf4) with the same prompt, greedy decoding and a 1,024-token limit.",
@@ -149,10 +164,12 @@ def main():
                      ("test_held_out", "Test set, layouts never seen in training"), ("challenge", "Challenge set (20 hand-written documents)")]:
         if g not in groups:
             continue
-        L += [f"## {title}", "", "| Measure | Rules | Original | Fine-tuned |", "|---|---|---|---|"]
+        cols = ["rules", "original", *extra, "finetuned"]
+        heads = ["Rules", "Original", *(label for label, _ in extra.values()), "Fine-tuned"]
+        L += [f"## {title}", "", "| Measure | " + " | ".join(heads) + " |", "|---" * (len(cols) + 1) + "|"]
         for label, k in rows:
             vals = []
-            for sys_ in ["rules", "original", "finetuned"]:
+            for sys_ in cols:
                 v = (groups[g].get(sys_) or {}).get(k)
                 vals.append("–" if v is None else (f"{v:.3f}" if isinstance(v, float) and v <= 1 and "count" not in label and "ms" not in label and "MB" not in label and "tokens" not in label else f"{v}"))
             L.append(f"| {label} | " + " | ".join(vals) + " |")
@@ -162,6 +179,10 @@ def main():
         for k, v in comparisons.items():
             L.append(f"| {k} | {v['difference']:+.3f} | {v['ci95'][0]:+.3f} to {v['ci95'][1]:+.3f} |")
         L.append("")
+    if summary["notes"]:
+        L += ["## Notes", ""] + [f"- {n}" for n in summary["notes"]] + [""]
+    if browser:
+        L += ["## Browser check", "", "```json", json.dumps(browser, indent=2), "```", ""]
     if missing:
         L += ["Missing (not run): " + ", ".join(missing), ""]
     open(os.path.join(ROOT, "results", "RESULTS.md"), "w", encoding="utf-8").write("\n".join(L))

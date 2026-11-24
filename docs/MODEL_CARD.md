@@ -1,4 +1,6 @@
-# Model card: Report Companion extractor (Qwen3-1.7B + QLoRA)
+# Model card: Report Companion extractor (Qwen3-1.7B + LoRA, `q4grid`)
+
+An independent prototype exploring an approach for MedARC's [AMFV](https://github.com/MedARC-AI/amfv) project; not an official MedARC model.
 
 ## What it does
 
@@ -24,12 +26,13 @@ Code, not the model, decides what is trusted. It checks that each quote occurs i
 | | |
 |---|---|
 | Base model | [Qwen/Qwen3-1.7B](https://huggingface.co/Qwen/Qwen3-1.7B) (Apache-2.0), thinking mode off |
-| Method | QLoRA: base weights frozen in 4-bit nf4 (double quantisation, fp16 compute), LoRA rank 16, alpha 32, dropout 0.05, on all attention and MLP projections (17.4M trainable parameters, about 1% of the model) |
+| Method | LoRA on a frozen base whose weights were first rounded exactly the way the browser format (`q4f16_1`) rounds them: groups of 32 weights share one scale, 4-bit codes ([model/q4grid.py](../model/q4grid.py), checked to give identical codes and scales to the MLC converter on all 113 quantised tensors). The rounded weights are stored in fp16 for training, with fp16 compute. LoRA rank 16, alpha 32, dropout 0.05, on all attention and MLP projections (17.4M trainable parameters, about 1% of the model). An earlier run (`final`) used QLoRA on an nf4 base instead; it scored as well on the test set but broke after browser conversion, see Results |
+| Data and schedule | 951 training documents, 1 epoch, 119 optimiser steps, 27 minutes on one Kaggle T4; validation loss 0.241 before training, 0.0002 after |
 | Loss | Cross-entropy on the answer tokens only (the JSON plus the end-of-turn token); the prompt and document are not trained on |
 | Optimiser | AdamW, learning rate 2e-4, cosine schedule with 5 warm-up steps, gradient clipping at 1.0, effective batch 8 (batch 1 × 8 accumulation), seed 1234 |
 | Sequence length | up to 2,048 tokens (training examples: median about 1,100, longest about 1,650) |
-| Software | transformers 5.24.0, peft 0.22.0, bitsandbytes 0.50.2, torch 2.9.1 (pinned in `model/requirements.txt`) |
-| Browser version | adapter merged into fp16 weights, converted with MLC to `q4f16_1`, run with WebLLM 0.2.89 using the prebuilt Qwen3-1.7B WebGPU library |
+| Software | transformers 5.24.0, peft 0.22.0, bitsandbytes 0.50.2 (pinned in `model/requirements.txt`); torch 2.11.0+cu130 on Kaggle, 2.9.1 locally |
+| Browser version | adapter merged into the original (unrounded) fp16 weights, converted with MLC to `q4f16_1` (939 MB), run with WebLLM 0.2.89 using the prebuilt Qwen3-1.7B WebGPU library |
 
 The exact run configuration is saved next to each adapter in `model/outputs/<run>/train_config.json`, with a per-step log in `train_log.jsonl`.
 
@@ -58,7 +61,32 @@ Full tables: [results/RESULTS.md](../results/RESULTS.md). Headline results: see 
 
 ## Results
 
-_Filled in from `results/RESULTS.md` after the final evaluation run._
+From [results/RESULTS.md](../results/RESULTS.md). Model outputs scored in Python on the rounded weights; the original model at its stronger nf4 setting.
+
+| | Rules | Original | Fine-tuned (`q4grid`) |
+|---|---|---|---|
+| Test (204 docs): all facts F1 | – | 0.820 | 0.994 |
+| Test: lab results F1 | 1.000 | 0.900 | 0.995 |
+| Test: medicines F1 | – | 0.814 | 0.984 |
+| Test: follow-up F1 | – | 0.367 | 1.000 |
+| Test: document date correct | 1.000 | 0.309 | 0.814 |
+| Test: valid format | 1.000 | 0.216 | 0.956 |
+| Test: unsupported facts (count) | 0 | 52 | 0 |
+| Test, unseen layouts only: all facts F1 | – | 0.875 | 0.986 |
+| Challenge (20 docs): all facts F1 | – | 0.613 | 0.857 |
+| Challenge: lab results F1 | 0.643 | 0.571 | 0.800 |
+
+The test set was scored twice, once for `final` and once for `q4grid`, because the first fine-tune broke in the browser. Both are reported.
+
+**In the browser.** WebLLM in Chrome on a GTX 1650, 40 test documents (5 per layout): valid format 92.5%, all facts F1 0.996, lab recall 0.989, no unsupported facts, the same as `q4grid` in Python on those documents (36 of 40 answers identical after parsing; the other 4 quote a slightly different stretch of text). About 32 seconds per document. The `final` model converted the same way scored 10% valid format and F1 0.22.
+
+**Why two fine-tunes.** `final` was trained with QLoRA on nf4 weights. The browser format rounds weights differently, and the adapter learned on nf4 didn't carry over: the loss on the correct answer went from 0.008 to 0.040, and one wrong bracket after the date derailed most answers. Training on weights rounded exactly like the browser fixed it. Compared with `final` in Python, `q4grid` scores the same on the test set (0.994 vs 0.992) and lower on the challenge set (0.857 vs 0.930; with 20 documents the 95% interval for the difference, -0.153 to +0.011, crosses zero).
+
+**Known mistakes of the shipped model:**
+- On the unseen medication-list layout it sometimes writes `"inactive"` (copied from the heading) instead of `"not_current"`: 6 test documents.
+- On the unseen compact lab layout it copies a "COLL" prefix into the document date (right on 18% of those documents; `final` 42%).
+- On the challenge set: listed blood pressure and a "repeat lipid panel" as lab results, missed two HbA1c values written in a sentence, and pasted a unit into a value.
+- The original model gets much worse with the browser's rounding (test all facts F1 0.634 instead of 0.820), so the original model running live in the app is weaker than the table shows.
 
 ## Limitations
 
@@ -67,7 +95,8 @@ _Filled in from `results/RESULTS.md` after the final evaluation run._
 - The challenge set is small (20 documents), so its numbers are noisy.
 - A quote can be found in the document and still be attached to the wrong field. The checks catch made-up text, not every misreading.
 - Medication status is only as good as the document's wording. "Unclear" is the correct answer more often than people expect.
-- The browser version is quantised differently from the evaluation setup (q4f16_1 vs nf4) and was re-evaluated separately; see the results.
+- The browser version was checked on 40 test documents, not the whole test set. The full-set numbers come from Python on the same rounded weights.
+- The test set was used for two models (see Results), so its numbers are slightly less clean than a single-use test set.
 
 ## Intended use
 

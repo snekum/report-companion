@@ -1,0 +1,25 @@
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+40 to do (0 already in /kaggle/working/rc/results/predictions/base-q4grid_val40.jsonl)
+Loading weights:   0%|          | 0/311 [00:00<?, ?it/s]Loading weights:   0%|          | 1/311 [00:01<06:49,  1.32s/it]Loading weights:   1%|          | 2/311 [00:01<03:12,  1.61it/s]Loading weights:  46%|████▌     | 142/311 [00:01<00:01, 166.00it/s]Loading weights:  65%|██████▍   | 201/311 [00:01<00:00, 187.34it/s]Loading weights:  79%|███████▉  | 246/311 [00:02<00:00, 183.26it/s]Loading weights:  91%|█████████ | 282/311 [00:02<00:00, 191.30it/s]Loading weights: 100%|██████████| 311/311 [00:02<00:00, 132.42it/s]
+  16/40  38.5s/batch  eta 1.0 min
+  32/40  61.1s/batch  eta 0.4 min
+  40/40  54.2s/batch  eta 0.0 min
+20 to do (0 already in /kaggle/working/rc/results/predictions/base-q4grid_challenge.jsonl)
+Loading weights:   0%|          | 0/311 [00:00<?, ?it/s]Loading weights:   0%|          | 1/311 [00:01<06:22,  1.23s/it]Loading weights:   1%|          | 2/311 [00:01<03:10,  1.62it/s]Loading weights:  48%|████▊     | 148/311 [00:01<00:00, 174.69it/s]Loading weights:  68%|██████▊   | 211/311 [00:01<00:00, 198.46it/s]Loading weights:  83%|████████▎ | 259/311 [00:02<00:00, 193.95it/s]Loading weights:  95%|█████████▌| 297/311 [00:02<00:00, 197.85it/s]Loading weights: 100%|██████████| 311/311 [00:02<00:00, 136.86it/s]
+  16/20  20.8s/batch  eta 0.1 min
+  20/20  8.2s/batch  eta 0.0 min
+204 to do (0 already in /kaggle/working/rc/results/predictions/base-q4grid_test.jsonl)
+Loading weights:   0%|          | 0/311 [00:00<?, ?it/s]Loading weights:   0%|          | 1/311 [00:01<06:07,  1.19s/it]Loading weights:   1%|          | 2/311 [00:01<03:00,  1.71it/s]Loading weights:  46%|████▋     | 144/311 [00:01<00:00, 179.87it/s]Loading weights:  67%|██████▋   | 209/311 [00:01<00:00, 190.50it/s]Loading weights:  83%|████████▎ | 257/311 [00:02<00:00, 190.87it/s]Loading weights:  95%|█████████▍| 295/311 [00:02<00:00, 194.90it/s]Loading weights: 100%|██████████| 311/311 [00:02<00:00, 138.50it/s]
+  16/204  8.4s/batch  eta 1.7 min
+  32/204  22.2s/batch  eta 2.7 min
+  48/204  42.8s/batch  eta 4.0 min
+  64/204  38.2s/batch  eta 4.1 min
+  80/204  45.1s/batch  eta 4.1 min
+  96/204  38.0s/batch  eta 3.7 min
+  112/204  43.3s/batch  eta 3.3 min
+  128/204  52.8s/batch  eta 2.9 min
+  144/204  48.4s/batch  eta 2.4 min
+  160/204  50.8s/batch  eta 1.8 min
+  176/204  63.1s/batch  eta 1.2 min
+  192/204  56.1s/batch  eta 0.5 min
+  204/204  50.2s/batch  eta 0.0 min

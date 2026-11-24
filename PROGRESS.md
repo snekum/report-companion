@@ -5,9 +5,9 @@ Newest entries at the bottom of each section. "Done" means it actually ran.
 ## Current state (2026-11-24)
 
 - The fine-tuned model (`final`: QLoRA, 951 docs x 1 epoch on a Kaggle T4) works in Python: test all-facts F1 0.992 vs 0.820 for the original model, challenge set 0.930 vs 0.613. Tables in `results/RESULTS.md`.
-- Its browser build (WebLLM, q4f16_1) is broken: the adapter doesn't survive the browser's 4-bit rounding. Diagnosis under "Done" and in `results/deployment/diag_browser/`.
-- Fix in progress: retraining on a base rounded exactly like the browser's (`q4grid` run, `--base-grid q4f16_1`), then merge, convert and check again before Chrome.
-- The app shows the pilot's prepared outputs and runs the original model live.
+- Its browser build (WebLLM, q4f16_1) was broken: the adapter didn't survive the browser's 4-bit rounding. Diagnosis under "Done" and in `results/deployment/diag_browser/`.
+- Fixed by retraining on a base rounded exactly like the browser's (`q4grid`, `--base-grid q4f16_1`). Its browser build works: test40 in Chrome 92.5% valid format, all-facts F1 0.996, matching the same model in Python. This is the shipped model. Weights not yet hosted.
+- The app shows `q4grid`'s prepared outputs and runs the original model live.
 
 **Gotchas:**
 - Windows MLC wheels lack `SPIRV-Tools.dll`, so conversion runs in Docker (`model/Dockerfile.mlc`, with apache-tvm-ffi 0.1.13 and numpy 2.2.6 pinned).
@@ -111,7 +111,18 @@ Newest entries at the bottom of each section. "Done" means it actually ran.
   - `train.py` / `generate.py` take `--base-grid q4f16_1` (default stays nf4). Smoke tests: generate on 2 diag docs = character-identical to the unpacked-browser-base diagnostic; one training step runs (197 tensors rounded, peak 4.1 GB locally). Val loss of the untrained rounded base 0.309 vs 0.123 on nf4: the browser grid hurts this task much more than nf4.
   - Notebook generator moved to `tools/make_cloud_notebook.py`; notebook set to run `q4grid` (951 x 1 epoch, `--base-grid q4f16_1`), fine-tuned and original predictions both on the rounded base (`ft-q4grid`, `base-q4grid`). Bundle rebuilt with `q4grid.py`.
   - After the run: merge into the fp16 base as before, convert, unpack-and-generate check (diag tools) before Chrome. Gate on val40; disclose second use of the test set.
-- **Next:** after the `q4grid` run: val40 check, merge, convert, unpack-and-generate check, then Chrome on test40. If it works: `build_prepared.py --ft-tag <tag>`, fill README / MODEL_CARD / WALKTHROUGH results, UI checks. If not: option B (8-bit in another browser runtime).
+- **`q4grid` run on Kaggle (2026-11-24).** 951 docs x 1 epoch on the q4f16_1-rounded fp16 base, 119 steps, 27.0 min on a T4, peak 5.4 GB, val loss 0.241 -> 0.0002. All prediction files complete (val40, test, challenge, demo; one row per doc, no empty outputs, quant `q4f16_1-grid-fp16`).
+- **Val40 check: PASSES all three criteria.** Both models on the rounded base: format valid 2.5% -> 100%, document date 0% -> 100%, follow-up F1 0.14 -> 1.0, lab F1 0.34 -> 0.997, unsupported facts 6.2% -> 0%. Fine-tuned numbers identical to `final`. Note the original model on the rounded base is much weaker than on nf4 (lab F1 0.34 vs 0.98): the "original model" running live in the app is this weaker one.
+- **Merge + convert (2026-11-24).** Merged into the unrounded fp16 weights (`model/merged/q4grid`; merging into the rounded weights would let the converter snap small LoRA changes back to the old grid points). Converted to `model/mlc/ReportCompanion-q4grid-Qwen3-1.7B-q4f16_1-MLC` (939 MB, 30 shards). The config/tokenizer download failed once on the network; refetched, all five byte-identical to the earlier copies.
+- **Unpack-and-generate check passes** (`diag_browser/mlc_q4grid_check.py`, the 8 docs the broken build failed): loss on the gold answer, training setup 0.0078, merged fp16 0.0068, unpacked browser weights 0.0153 (first 4 docs: 0.029 vs 0.040 for `final`). Generation: 6/8 valid, every lab/medicine/follow-up item right (F1 1.0, `final` build: 0/8, 0.25). The 2 failures are `"status": "inactive"` on V3 medicine lists; the 1 date miss is the known L3 "COLL ..." case.
+- **Browser build works (2026-11-24).** WebLLM in Chrome (GTX 1650) on test40: valid format 92.5%, all-facts F1 0.996, lab recall 0.989, unsupported facts 0, vs the broken `final` build 10% / 0.223 / 0.137. Matches `q4grid` in Python on the same 40 docs (92.5%, 0.994); 36/40 parsed answers identical, the other 4 differ only in which stretch of text is quoted as evidence. Mean 32 s per document in Chrome. Remaining errors, the same in Python: `"inactive"` status on 2 V3 docs, one malformed null date (V1), 5 L3 date misses (`final` in Python: 0 format failures, 3 L3 date misses, so the rounded base costs a little).
+- **Test + challenge scored for `q4grid` (2026-11-24, owner approved; second use of the test set, after `final`).** Python predictions from Kaggle, rounded base.
+  - Test (204): valid format 95.6% (`final` 99.5%), all-facts F1 0.994 (0.992), labs 0.995, medicines 0.984, follow-up 1.0, document date 81% (87%), unsupported facts 0. The 9 format failures: 6 `"inactive"` status (V3, 81% valid there vs 100% for `final`), 3 malformed null date (V1). Dates: L3 18% (`final` 42%), the "COLL ..." prefix copied into the value.
+  - Original model on the rounded base (`base-q4grid`, what the app runs live): test all-facts F1 0.634 vs 0.820 on nf4, valid format 8.8%.
+  - Challenge (20): all-facts F1 0.857 (`final` 0.930), valid format 100% (95%). Lab F1 0.80 vs 0.97, from 4 docs: blood pressure listed as a lab, both HbA1c values in prose missed, unit pasted into a value ("14 pmol/L"), "Repeat lipid panel / 3 months" listed as a lab. So the rounded base mainly costs robustness on the hand-written tricky cases.
+
+- **Shipped `q4grid` (owner's call, 2026-11-24: ship as is rather than retrain for the challenge loss).** `tools/make_results.sh` rebuilds RESULTS.md / summary.json: app columns rules / original (nf4, the stronger baseline) / fine-tuned (`q4grid`); RESULTS.md adds "original, browser rounding" and `final`, plus plain-language notes and the browser check (`results/deployment/browser_eval_q4grid.json`). `summarize.py` got `--extra` and `--note`. `build_prepared.py` defaults to `ft-q4grid` and labels each prepared output with its real runtime. README results section, MODEL_CARD results, WALKTHROUGH sections 6 (the browser failure and fix) and 8 filled in. App: 83 tests, 17/17 UI checks, build OK.
+- **Framing (owner, 2026-11-24):** "Independent prototype exploring an approach for MedARC's AMFV project." AMFV = Agentic Medical Fact Verifier (github.com/MedARC-AI/amfv: claim decomposer, fact verifier, search agent; claims scored on a five-level scale against a curated corpus). Its README doesn't mention medical records, so the README links the two by the shared idea (split into individual facts, check each against evidence) and says it isn't an official MedARC project. No logos or branding.
 
 ## Blocked / needs the owner
 
@@ -120,6 +131,5 @@ Newest entries at the bottom of each section. "Done" means it actually ran.
 
 ## Next steps
 
-1. `q4grid` run (Kaggle): val40 check, then merge, convert, unpack-and-generate check, then Chrome on `data/processed/test40.jsonl`.
-2. If the browser build works: score test + challenge for `q4grid` (second use of the test set, disclosed), `model/build_prepared.py --ft-tag <tag>`, results into README / MODEL_CARD / WALKTHROUGH, UI checks, then ask about hosting the weights.
-3. If it doesn't: option B, 8-bit in another browser runtime, or ship the original model live with the fine-tuned results as prepared outputs and write up the 4-bit finding.
+1. Owner to decide: commit and push (updates the live site).
+2. Owner to decide: hosting the converted `q4grid` weights (~1 GB) so the app can run the fine-tuned model live.

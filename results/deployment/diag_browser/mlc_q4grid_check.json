@@ -1,0 +1,52 @@
+{
+  "docs": [
+    "test-V3-db5b06ddbf",
+    "test-V3-743a86bd7a",
+    "test-V3-00924544c1",
+    "test-L3-e9665c9451",
+    "test-V1-daec4732ba",
+    "test-V3-eca3e58e44",
+    "test-L4-83c60ed71d",
+    "test-V2-cbf0362bdc"
+  ],
+  "loss": {
+    "training setup (rounded base + adapter)": [
+      0.02373,
+      0.00784,
+      0.0149,
+      0.01333,
+      0.00017,
+      0.00198,
+      0.0005,
+      0.00013
+    ],
+    "merged fp16": [
+      0.01433,
+      0.02905,
+      0.00187,
+      0.00482,
+      0.00115,
+      0.00235,
+      0.00012,
+      0.00093
+    ],
+    "browser weights unpacked": [
+      0.05362,
+      0.01899,
+      0.03266,
+      0.01127,
+      5e-05,
+      0.00481,
+      0.00087,
+      5e-05
+    ]
+  },
+  "mean_loss": {
+    "training setup (rounded base + adapter)": 0.0078225,
+    "merged fp16": 0.0068275,
+    "browser weights unpacked": 0.01529
+  },
+  "lora_change_cosine_model.layers.0.self_attn.q_proj.weight": 0.1139240637421608,
+  "share_of_weights_on_new_grid_point_model.layers.0.self_attn.q_proj.weight": 0.683356761932373,
+  "compute": "cuda float16"
+}

@@ -1,5 +1,5 @@
 {
- "builtOn": "2026-11-23",
+ "builtOn": "2026-11-24",
  "journeys": [
   {
    "id": "checkup",
@@ -147,12 +147,12 @@
    },
    "outputs": {
     "finetuned": {
-     "label": "Fine-tuned (pilot run)",
-     "description": "QLoRA adapter trained for this task; run in 4-bit (nf4) with the same prompt and greedy decoding as the original. Pilot adapter: 160 training documents, 1 epoch; known to cut some lab lists short.",
+     "label": "Fine-tuned Qwen3-1.7B",
+     "description": "LoRA adapter trained for this task on weights rounded to 4 bits the way the browser rounds them; same prompt and greedy decoding as the original. This is the model the browser build is made from.",
      "raw": "{\"document_date\": {\"value\": \"10/08/2025\", \"evidence\": \"Collected: 10/07/2025    Reported: 10/08/2025\"}, \"labs\": [{\"test\": \"Glucose\", \"value\": \"87.6\", \"unit\": \"mg/dL\", \"reference_range\": \"70-99\", \"date\": null, \"evidence\": \"Glucose                   87.6     mg/dL          70-99\"}, {\"test\": \"Urea nitrogen (BUN)\", \"value\": \"7.7\", \"unit\": \"mg/dL\", \"reference_range\": \"7-20\", \"date\": null, \"evidence\": \"Urea nitrogen (BUN)       7.7      mg/dL          7-20\"}, {\"test\": \"Creatinine, serum\", \"value\": \"1.0\", \"unit\": \"mg/dL\", \"reference_range\": \"0.6-1.3\", \"date\": null, \"evidence\": \"Creatinine, serum         1.0      mg/dL          0.6-1.3\"}, {\"test\": \"Calcium\", \"value\": \"8.9\", \"unit\": \"mg/dL\", \"reference_range\": \"8.5-10.2\", \"date\": null, \"evidence\": \"Calcium                   8.9      mg/dL          8.5-10.2\"}, {\"test\": \"Sodium\", \"value\": \"143.2\", \"unit\": \"mmol/L\", \"reference_range\": \"135-145\", \"date\": null, \"evidence\": \"Sodium                    143.2    mmol/L         135-145\"}, {\"test\": \"Potassium\", \"value\": \"4.4\", \"unit\": \"mmol/L\", \"reference_range\": \"3.5-5.1\", \"date\": null, \"evidence\": \"Potassium                 4.4      mmol/L         3.5-5.1\"}, {\"test\": \"Chloride\", \"value\": \"108.5\", \"unit\": \"mmol/L\", \"reference_range\": \"98-107\", \"date\": null, \"evidence\": \"Chloride                  108.5    mmol/L         98-107\"}, {\"test\": \"Carbon dioxide (CO2)\", \"value\": \"24.3\", \"unit\": \"mmol/L\", \"reference_range\": \"22-29\", \"date\": null, \"evidence\": \"Carbon dioxide (CO2)      24.3     mmol/L         22-29\"}, {\"test\": \"HbA1c\", \"value\": \"6.0\", \"unit\": \"%\", \"reference_range\": \"4.0-5.6\", \"date\": null, \"evidence\": \"HbA1c                     6.0      %              4.0-5.6\"}], \"medications\": [], \"follow_up\": []}",
-     "latencyMs": 34072,
-     "generatedOn": "2026-11-23",
-     "runtime": "Python, transformers + bitsandbytes on a GTX 1650"
+     "latencyMs": 9876,
+     "generatedOn": "2026-11-24",
+     "runtime": "Python, transformers on a Kaggle T4, weights rounded to the browser's 4-bit grid"
     },
     "original": {
      "label": "Original Qwen3-1.7B",
@@ -160,7 +160,7 @@
      "raw": "{\n  \"document_date\": null,\n  \"labs\": [\n    {\n      \"test\": \"Glucose\",\n      \"value\": \"87.6\",\n      \"unit\": \"mg/dL\",\n      \"reference_range\": \"70-99\",\n      \"date\": null,\n      \"evidence\": \"\"\n    },\n    {\n      \"test\": \"Urea nitrogen (BUN)\",\n      \"value\": \"7.7\",\n      \"unit\": \"mg/dL\",\n      \"reference_range\": \"7-20\",\n      \"date\": null,\n      \"evidence\": \"\"\n    },\n    {\n      \"test\": \"Creatinine, serum\",\n      \"value\": \"1.0\",\n      \"unit\": \"mg/dL\",\n      \"reference_range\": \"0.6-1.3\",\n      \"date\": null,\n      \"evidence\": \"\"\n    },\n    {\n      \"test\": \"Calcium\",\n      \"value\": \"8.9\",\n      \"unit\": \"mg/dL\",\n      \"reference_range\": \"8.5-10.2\",\n      \"date\": null,\n      \"evidence\": \"\"\n    },\n    {\n      \"test\": \"Sodium\",\n      \"value\": \"143.2\",\n      \"unit\": \"mmol/L\",\n      \"reference_range\": \"135-145\",\n      \"date\": null,\n      \"evidence\": \"\"\n    },\n    {\n      \"test\": \"Potassium\",\n      \"value\": \"4.4\",\n      \"unit\": \"mmol/L\",\n      \"reference_range\": \"3.5-5.1\",\n      \"date\": null,\n      \"evidence\": \"\"\n    },\n    {\n      \"test\": \"Chloride\",\n      \"value\": \"108.5\",\n      \"unit\": \"mmol/L\",\n      \"reference_range\": \"98-107\",\n      \"date\": null,\n      \"evidence\": \"\"\n    },\n    {\n      \"test\": \"Carbon dioxide (CO2)\",\n      \"value\": \"24.3\",\n      \"unit\": \"mmol/L\",\n      \"reference_range\": \"22-29\",\n      \"date\": null,\n      \"evidence\": \"\"\n    },\n    {\n      \"test\": \"HbA1c\",\n      \"value\": \"6.0\",\n      \"unit\": \"%\",\n      \"reference_range\": \"4.0-5.6\",\n      \"date\": null,\n      \"evidence\": \"\"\n    }\n  ],\n  \"medications\": {\n    \"name\": null,\n    \"dose\": null,\n    \"frequency\": null,\n    \"status\": \"current\",\n    \"evidence\": \"\"\n  },\n  \"follow_up\": [\n    {\n      \"instruction\": \"Results reviewed electronically. Ranges are those of this laboratory.\",\n      \"evidence\": \"\"\n    }\n  ]\n}",
      "latencyMs": 49679,
      "generatedOn": "2026-11-23",
-     "runtime": "Python, transformers + bitsandbytes on a GTX 1650"
+     "runtime": "Python, transformers + bitsandbytes (4-bit nf4) on a GTX 1650"
     },
     "rules": {
      "label": "Rule-based lab rows",
@@ -271,12 +271,12 @@
    },
    "outputs": {
     "finetuned": {
-     "label": "Fine-tuned (pilot run)",
-     "description": "QLoRA adapter trained for this task; run in 4-bit (nf4) with the same prompt and greedy decoding as the original. Pilot adapter: 160 training documents, 1 epoch; known to cut some lab lists short.",
-     "raw": "{\"document_date\": {\"value\": \"10/14/2026\", \"evidence\": \"Specimen collected 10/13/2026; report issued 10/14/2026\"}, \"labs\": [{\"test\": \"Urea nitrogen (BUN)\", \"value\": \"17.6\", \"unit\": \"mg/dL\", \"reference_range\": \"6 - 24\", \"date\": null, \"evidence\": \"Urea nitrogen (BUN): 17.6 mg/dL (ref 6 - 24)\"}], \"labs\": [{\"test\": \"Calcium\", \"value\": \"10.0\", \"unit\": \"mg/dL\", \"reference_range\": \"8.7 - 10.3\", \"date\": null, \"evidence\": \"Calcium: 10.0 mg/dL (ref 8.7 - 10.3)\"}], \"labs\": [{\"test\": \"Potassium\", \"value\": \"3.8\", \"unit\": \"mmol/L\", \"reference_range\": \"3.5 - 5.2\", \"date\": null, \"evidence\": \"Potassium: 3.8 mmol/L (ref 3.5 - 5.2)\"}], \"labs\": [{\"test\": \"Carbon dioxide (CO2)\", \"value\": \"20.0\", \"unit\": \"mmol/L\", \"reference_range\": \"20 - 29\", \"date\": null, \"evidence\": \"Carbon dioxide (CO2): 20.0 mmol/L (ref 20 - 29)\"}], \"labs\": [{\"test\": \"HbA1c\", \"value\": \"6.1\", \"unit\": \"%\", \"reference_range\": \"4.8 - 5.6\", \"date\": null, \"evidence\": \"HbA1c: 6.1 % (ref 4.8 - 5.6)\"}], \"labs\": [{\"test\": \"Total cholesterol\", \"value\": \"221.9\", \"unit\": \"mg/dL\", \"reference_range\": \"100 - 199\", \"date\": null, \"evidence\": \"Total cholesterol: 221.9 mg/dL (ref 100 - 199)\"}], \"labs\": [{\"test\": \"Triglycerides\", \"value\": \"144.9\", \"unit\": \"mg/dL\", \"reference_range\": \"0 - 149\", \"date\": null, \"evidence\": \"Triglycerides: 144.9 mg/dL (ref 0 - 149)\"}], \"labs\": [{\"test\": \"LDL cholesterol\", \"value\": \"131.8\", \"unit\": \"mg/dL\", \"reference_range\": null, \"date\": null, \"evidence\": \"LDL cholesterol: 131.8 mg/dL\"}], \"labs\": [{\"test\": \"HDL cholesterol\", \"value\": \"61.1\", \"unit\": \"mg/dL\", \"reference_range\": null, \"date\": null, \"evidence\": \"HDL cholesterol: 61.1 mg/dL\"}], \"medications\": [], \"follow_up\": []}",
-     "latencyMs": 34072,
-     "generatedOn": "2026-11-23",
-     "runtime": "Python, transformers + bitsandbytes on a GTX 1650"
+     "label": "Fine-tuned Qwen3-1.7B",
+     "description": "LoRA adapter trained for this task on weights rounded to 4 bits the way the browser rounds them; same prompt and greedy decoding as the original. This is the model the browser build is made from.",
+     "raw": "{\"document_date\": {\"value\": \"10/14/2026\", \"evidence\": \"Specimen collected 10/13/2026; report issued 10/14/2026\"}, \"labs\": [{\"test\": \"Urea nitrogen (BUN)\", \"value\": \"17.6\", \"unit\": \"mg/dL\", \"reference_range\": \"6 - 24\", \"date\": null, \"evidence\": \"Urea nitrogen (BUN): 17.6 mg/dL (ref 6 - 24)\"}, {\"test\": \"Calcium\", \"value\": \"10.0\", \"unit\": \"mg/dL\", \"reference_range\": \"8.7 - 10.3\", \"date\": null, \"evidence\": \"Calcium: 10.0 mg/dL (ref 8.7 - 10.3)\"}, {\"test\": \"Potassium\", \"value\": \"3.8\", \"unit\": \"mmol/L\", \"reference_range\": \"3.5 - 5.2\", \"date\": null, \"evidence\": \"Potassium: 3.8 mmol/L (ref 3.5 - 5.2)\"}, {\"test\": \"Carbon dioxide (CO2)\", \"value\": \"20.0\", \"unit\": \"mmol/L\", \"reference_range\": \"20 - 29\", \"date\": null, \"evidence\": \"Carbon dioxide (CO2): 20.0 mmol/L (ref 20 - 29)\"}, {\"test\": \"HbA1c\", \"value\": \"6.1\", \"unit\": \"%\", \"reference_range\": \"4.8 - 5.6\", \"date\": null, \"evidence\": \"HbA1c: 6.1 % (ref 4.8 - 5.6)\"}, {\"test\": \"Total cholesterol\", \"value\": \"221.9\", \"unit\": \"mg/dL\", \"reference_range\": \"100 - 199\", \"date\": null, \"evidence\": \"Total cholesterol: 221.9 mg/dL (ref 100 - 199)\"}, {\"test\": \"Triglycerides\", \"value\": \"144.9\", \"unit\": \"mg/dL\", \"reference_range\": \"0 - 149\", \"date\": null, \"evidence\": \"Triglycerides: 144.9 mg/dL (ref 0 - 149)\"}, {\"test\": \"LDL cholesterol\", \"value\": \"131.8\", \"unit\": \"mg/dL\", \"reference_range\": null, \"date\": null, \"evidence\": \"LDL cholesterol: 131.8 mg/dL\"}, {\"test\": \"HDL cholesterol\", \"value\": \"61.1\", \"unit\": \"mg/dL\", \"reference_range\": null, \"date\": null, \"evidence\": \"HDL cholesterol: 61.1 mg/dL\"}], \"medications\": [], \"follow_up\": []}",
+     "latencyMs": 9876,
+     "generatedOn": "2026-11-24",
+     "runtime": "Python, transformers on a Kaggle T4, weights rounded to the browser's 4-bit grid"
     },
     "original": {
      "label": "Original Qwen3-1.7B",
@@ -284,7 +284,7 @@
      "raw": "{\n  \"document_date\": null,\n  \"labs\": [\n    {\n      \"test\": \"Urea nitrogen (BUN)\",\n      \"value\": \"17.6\",\n      \"unit\": \"mg/dL\",\n      \"reference_range\": \"6 - 24\",\n      \"date\": null,\n      \"evidence\": \"Urea nitrogen (BUN): 17.6 mg/dL (ref 6 - 24)\"\n    },\n    {\n      \"test\": \"Calcium\",\n      \"value\": \"10.0\",\n      \"unit\": \"mg/dL\",\n      \"reference_range\": \"8.7 - 10.3\",\n      \"date\": null,\n      \"evidence\": \"Calcium: 10.0 mg/dL (ref 8.7 - 10.3)\"\n    },\n    {\n      \"test\": \"Potassium\",\n      \"value\": \"3.8\",\n      \"unit\": \"mmol/L\",\n      \"reference_range\": \"3.5 - 5.2\",\n      \"date\": null,\n      \"evidence\": \"Potassium: 3.8 mmol/L (ref 3.5 - 5.2)\"\n    },\n    {\n      \"test\": \"Carbon dioxide (CO2)\",\n      \"value\": \"20.0\",\n      \"unit\": \"mmol/L\",\n      \"reference_range\": \"20 - 29\",\n      \"date\": null,\n      \"evidence\": \"Carbon dioxide (CO2): 20.0 mmol/L (ref 20 - 29)\"\n    },\n    {\n      \"test\": \"HbA1c\",\n      \"value\": \"6.1\",\n      \"unit\": \"%\",\n      \"reference_range\": \"4.8 - 5.6\",\n      \"date\": null,\n      \"evidence\": \"HbA1c: 6.1 % (ref 4.8 - 5.6)\"\n    },\n    {\n      \"test\": \"Total cholesterol\",\n      \"value\": \"221.9\",\n      \"unit\": \"mg/dL\",\n      \"reference_range\": \"100 - 199\",\n      \"date\": null,\n      \"evidence\": \"Total cholesterol: 221.9 mg/dL (ref 100 - 199)\"\n    },\n    {\n      \"test\": \"Triglycerides\",\n      \"value\": \"144.9\",\n      \"unit\": \"mg/dL\",\n      \"reference_range\": \"0 - 149\",\n      \"date\": null,\n      \"evidence\": \"Triglycerides: 144.9 mg/dL (ref 0 - 149)\"\n    },\n    {\n      \"test\": \"LDL cholesterol\",\n      \"value\": \"131.8\",\n      \"unit\": \"mg/dL\",\n      \"reference_range\": null,\n      \"date\": null,\n      \"evidence\": \"LDL cholesterol: 131.8 mg/dL\"\n    },\n    {\n      \"test\": \"HDL cholesterol\",\n      \"value\": \"61.1\",\n      \"unit\": \"mg/dL\",\n      \"reference_range\": null,\n      \"date\": null,\n      \"evidence\": \"HDL cholesterol: 61.1 mg/dL\"\n    }\n  ],\n  \"medications\": [\n    {\n      \"name\": null,\n      \"dose\": null,\n      \"frequency\": null,\n      \"status\": \"current\",\n      \"evidence\": null\n    }\n  ],\n  \"follow_up\": [\n    {\n      \"instruction\": null,\n      \"evidence\": null\n    }\n  ]\n}",
      "latencyMs": 49679,
      "generatedOn": "2026-11-23",
-     "runtime": "Python, transformers + bitsandbytes on a GTX 1650"
+     "runtime": "Python, transformers + bitsandbytes (4-bit nf4) on a GTX 1650"
     },
     "rules": {
      "label": "Rule-based lab rows",
@@ -436,12 +436,12 @@
    },
    "outputs": {
     "finetuned": {
-     "label": "Fine-tuned (pilot run)",
-     "description": "QLoRA adapter trained for this task; run in 4-bit (nf4) with the same prompt and greedy decoding as the original. Pilot adapter: 160 training documents, 1 epoch; known to cut some lab lists short.",
-     "raw": "{\"document_date\": {\"value\": \"March 22, 2025\", \"evidence\": \"Visit date: March 22, 2025   Reason: General examination of patient\"}, \"labs\": [{\"test\": \"Blood glucose\", \"value\": \"70.8\", \"unit\": \"mg/dL\", \"reference_range\": \"70 to 100\", \"date\": null, \"evidence\": \"Blood glucose: 70.8 mg/dL (ref 70 to 100)\"}], \"medications\": [{\"name\": \"lisinopril\", \"dose\": \"10 MG\", \"frequency\": \"every day\", \"status\": \"current\", \"evidence\": \"- lisinopril 10 MG, every day\"}, {\"name\": \"simvastatin\", \"dose\": \"20 MG\", \"frequency\": \"as needed\", \"status\": \"current\", \"evidence\": \"- simvastatin 20 MG, as needed\"}, {\"name\": \"prasugrel\", \"dose\": \"10 MG\", \"frequency\": null, \"status\": \"unclear\", \"evidence\": \"- prasugrel 10 MG\"}, {\"name\": \"losartan potassium\", \"dose\": \"50 MG\", \"frequency\": \"as needed\", \"status\": \"current\", \"evidence\": \"- losartan potassium 50 MG Oral Tablet, as needed\"}, {\"name\": \"metoprolol succinate\", \"dose\": \"25 MG\", \"frequency\": \"ER\", \"status\": \"current\", \"evidence\": \"- metoprolol succinate 25 MG ER\"}], \"follow_up\": [{\"instruction\": \"Diabetic diet\", \"evidence\": \"- Diabetic diet\"}, {\"instruction\": \"Exercise therapy\", \"evidence\": \"- Exercise therapy\"}, {\"instruction\": \"Prescribed activity/exercise education\", \"evidence\": \"- Prescribed activity/exercise education\"}, {\"instruction\": \"Next appointment: April 5, 2025\", \"evidence\": \"- Next appointment: April 5, 2025 (Encounter for check up)\"}]}",
-     "latencyMs": 34072,
-     "generatedOn": "2026-11-23",
-     "runtime": "Python, transformers + bitsandbytes on a GTX 1650"
+     "label": "Fine-tuned Qwen3-1.7B",
+     "description": "LoRA adapter trained for this task on weights rounded to 4 bits the way the browser rounds them; same prompt and greedy decoding as the original. This is the model the browser build is made from.",
+     "raw": "{\"document_date\": {\"value\": \"March 22, 2025\", \"evidence\": \"Visit date: March 22, 2025   Reason: General examination of patient\"}, \"labs\": [{\"test\": \"Blood glucose\", \"value\": \"70.8\", \"unit\": \"mg/dL\", \"reference_range\": \"70 to 100\", \"date\": null, \"evidence\": \"Blood glucose: 70.8 mg/dL (ref 70 to 100)\"}, {\"test\": \"Creatinine\", \"value\": \"0.9\", \"unit\": \"mg/dL\", \"reference_range\": null, \"date\": null, \"evidence\": \"Creatinine: 0.9 mg/dL\"}, {\"test\": \"Potassium\", \"value\": \"4.9\", \"unit\": \"mmol/L\", \"reference_range\": null, \"date\": null, \"evidence\": \"Potassium: 4.9 mmol/L\"}, {\"test\": \"Carbon dioxide (CO2)\", \"value\": \"27.6\", \"unit\": \"mmol/L\", \"reference_range\": null, \"date\": null, \"evidence\": \"Carbon dioxide (CO2): 27.6 mmol/L\"}], \"medications\": [{\"name\": \"lisinopril\", \"dose\": \"10 MG\", \"frequency\": \"every day\", \"status\": \"current\", \"evidence\": \"- lisinopril 10 MG, every day\"}, {\"name\": \"simvastatin\", \"dose\": \"20 MG\", \"frequency\": \"as needed\", \"status\": \"current\", \"evidence\": \"- simvastatin 20 MG, as needed\"}, {\"name\": \"prasugrel\", \"dose\": \"10 MG\", \"frequency\": null, \"status\": \"current\", \"evidence\": \"- prasugrel 10 MG\"}, {\"name\": \"losartan potassium\", \"dose\": \"50 MG\", \"frequency\": \"as needed\", \"status\": \"current\", \"evidence\": \"- losartan potassium 50 MG Oral Tablet, as needed\"}, {\"name\": \"metoprolol succinate\", \"dose\": \"25 MG\", \"frequency\": null, \"status\": \"current\", \"evidence\": \"- metoprolol succinate 25 MG ER\"}, {\"name\": \"nitroglycerin\", \"dose\": \"0.4 MG\", \"frequency\": null, \"status\": \"not_current\", \"evidence\": \"- nitroglycerin 0.4 MG Sublingual Tablet (stopped June 28, 2024)\"}, {\"name\": \"ticagrelor\", \"dose\": \"90 MG\", \"frequency\": null, \"status\": \"not_current\", \"evidence\": \"- ticagrelor 90 MG (stopped June 29, 2024)\"}, {\"name\": \"Acetaminophen\", \"dose\": \"325 MG\", \"frequency\": null, \"status\": \"not_current\", \"evidence\": \"- Acetaminophen 325 MG Oral Tablet (stopped October 1, 2024)\"}, {\"name\": \"Ibuprofen\", \"dose\": \"200 MG\", \"frequency\": null, \"status\": \"unclear\", \"evidence\": \"- December 13, 2022: Ibuprofen 200 MG\"}], \"follow_up\": [{\"instruction\": \"Diabetic diet\", \"evidence\": \"- Diabetic diet\"}, {\"instruction\": \"Exercise therapy\", \"evidence\": \"- Exercise therapy\"}, {\"instruction\": \"Prescribed activity/exercise education\", \"evidence\": \"- Prescribed activity/exercise education\"}, {\"instruction\": \"Next appointment: April 5, 2025 (Encounter for check up)\", \"evidence\": \"- Next appointment: April 5, 2025 (Encounter for check up)\"}]}",
+     "latencyMs": 9876,
+     "generatedOn": "2026-11-24",
+     "runtime": "Python, transformers on a Kaggle T4, weights rounded to the browser's 4-bit grid"
     },
     "original": {
      "label": "Original Qwen3-1.7B",
@@ -449,7 +449,7 @@
      "raw": "{\n  \"document_date\": \"March 22, 2025\",\n  \"labs\": [\n    {\n      \"test\": \"Blood glucose\",\n      \"value\": \"70.8 mg/dL\",\n      \"unit\": \"mg/dL\",\n      \"reference_range\": \"70 to 100\",\n      \"date\": null,\n      \"evidence\": \"Blood glucose: 70.8 mg/dL (ref 70 to 100)\"\n    },\n    {\n      \"test\": \"Creatinine\",\n      \"value\": \"0.9 mg/dL\",\n      \"unit\": \"mg/dL\",\n      \"reference_range\": null,\n      \"date\": null,\n      \"evidence\": \"Creatinine: 0.9 mg/dL\"\n    },\n    {\n      \"test\": \"Potassium\",\n      \"value\": \"4.9 mmol/L\",\n      \"unit\": \"mmol/L\",\n      \"reference_range\": null,\n      \"date\": null,\n      \"evidence\": \"Potassium: 4.9 mmol/L\"\n    },\n    {\n      \"test\": \"Carbon dioxide (CO2)\",\n      \"value\": \"27.6 mmol/L\",\n      \"unit\": \"mmol/L\",\n      \"reference_range\": null,\n      \"date\": null,\n      \"evidence\": \"Carbon dioxide (CO2): 27.6 mmol/L\"\n    }\n  ],\n  \"medications\": [\n    {\n      \"name\": \"lisinopril\",\n      \"dose\": \"10 MG\",\n      \"frequency\": \"every day\",\n      \"status\": \"current\",\n      \"evidence\": \"lisinopril 10 MG, every day\"\n    },\n    {\n      \"name\": \"simvastatin\",\n      \"dose\": \"20 MG\",\n      \"frequency\": \"as needed\",\n      \"status\": \"current\",\n      \"evidence\": \"simvastatin 20 MG, as needed\"\n    },\n    {\n      \"name\": \"prasugrel\",\n      \"dose\": \"10 MG\",\n      \"frequency\": \"as needed\",\n      \"status\": \"current\",\n      \"evidence\": \"prasugrel 10 MG\"\n    },\n    {\n      \"name\": \"losartan potassium\",\n      \"dose\": \"50 MG\",\n      \"frequency\": \"as needed\",\n      \"status\": \"current\",\n      \"evidence\": \"losartan potassium 50 MG Oral Tablet, as needed\"\n    },\n    {\n      \"name\": \"metoprolol succinate\",\n      \"dose\": \"25 MG\",\n      \"frequency\": \"ER\",\n      \"status\": \"current\",\n      \"evidence\": \"metoprolol succinate 25 MG ER\"\n    }\n  ],\n  \"follow_up\": [\n    {\n      \"instruction\": \"Next appointment: April 5, 2025 (Encounter for check up)\",\n      \"evidence\": \"Next appointment: April 5, 2025 (Encounter for check up)\"\n    }\n  ]\n}",
      "latencyMs": 49679,
      "generatedOn": "2026-11-23",
-     "runtime": "Python, transformers + bitsandbytes on a GTX 1650"
+     "runtime": "Python, transformers + bitsandbytes (4-bit nf4) on a GTX 1650"
     },
     "rules": {
      "label": "Rule-based lab rows",
@@ -575,12 +575,12 @@
    },
    "outputs": {
     "finetuned": {
-     "label": "Fine-tuned (pilot run)",
-     "description": "QLoRA adapter trained for this task; run in 4-bit (nf4) with the same prompt and greedy decoding as the original. Pilot adapter: 160 training documents, 1 epoch; known to cut some lab lists short.",
-     "raw": "{\"document_date\": {\"value\": \"March 27, 2025\", \"evidence\": \"Date: March 27, 2025\"}, \"labs\": [{\"test\": \"blood glucose\", \"value\": \"70.8\", \"unit\": \"mg/dL\", \"reference_range\": null, \"date\": null, \"evidence\": \"Results today: blood glucose 70.8 mg/dL, urea nitrogen (BUN) 8.1 mg/dL, calcium 9.7 mg/dL.\"}], \"medications\": [{\"name\": \"simvastatin\", \"dose\": \"20 mg\", \"frequency\": \"PRN (as needed)\", \"status\": \"current\", \"evidence\": \"He continues on simvastatin 20 mg PRN (as needed).\"}, {\"name\": \"metoprolol succinate\", \"dose\": \"25 mg\", \"frequency\": null, \"status\": \"current\", \"evidence\": \"He is currently taking metoprolol succinate 25 mg ER as needed.\"}, {\"name\": \"lisinopril\", \"dose\": \"10 mg\", \"frequency\": \"once a day\", \"status\": \"current\", \"evidence\": \"He is currently taking lisinopril 10 mg once a day.\"}, {\"name\": \"prasugrel\", \"dose\": \"10 mg\", \"frequency\": null, \"status\": \"current\", \"evidence\": \"He is currently taking prasugrel 10 mg.\"}, {\"name\": \"nitroglycerin\", \"dose\": \"0.4 mg\", \"frequency\": null, \"status\": \"not_current\", \"evidence\": \"He is no longer taking nitroglycerin 0.4 mg.\"}, {\"name\": \"ticagrelor\", \"dose\": \"90 mg\", \"frequency\": null, \"status\": \"not_current\", \"evidence\": \"He is no longer taking ticagrelor 90 mg.\"}, {\"name\": \"ibuprofen\", \"dose\": \"200 mg\", \"frequency\": null, \"status\": \"unclear\", \"evidence\": \"There is an older prescription for ibuprofen 200 mg from 2022 in the record.\"}], \"follow_up\": [{\"instruction\": \"diabetic diet\", \"evidence\": \"We discussed the care plan: diabetic diet.\"}, {\"instruction\": \"exercise therapy\", \"evidence\": \"We discussed the care plan: exercise therapy.\"}, {\"instruction\": \"We will see him again on April 5, 2025\", \"evidence\": \"We will see him again on April 5, 2025.\"}]}",
-     "latencyMs": 34072,
-     "generatedOn": "2026-11-23",
-     "runtime": "Python, transformers + bitsandbytes on a GTX 1650"
+     "label": "Fine-tuned Qwen3-1.7B",
+     "description": "LoRA adapter trained for this task on weights rounded to 4 bits the way the browser rounds them; same prompt and greedy decoding as the original. This is the model the browser build is made from.",
+     "raw": "{\"document_date\": {\"value\": \"March 27, 2025\", \"evidence\": \"Date: March 27, 2025\"}, \"labs\": [{\"test\": \"blood glucose\", \"value\": \"70.8\", \"unit\": \"mg/dL\", \"reference_range\": null, \"date\": null, \"evidence\": \"Results today: blood glucose 70.8 mg/dL, urea nitrogen (BUN) 8.1 mg/dL, calcium 9.7 mg/dL.\"}, {\"test\": \"urea nitrogen (BUN)\", \"value\": \"8.1\", \"unit\": \"mg/dL\", \"reference_range\": null, \"date\": null, \"evidence\": \"Results today: blood glucose 70.8 mg/dL, urea nitrogen (BUN) 8.1 mg/dL, calcium 9.7 mg/dL.\"}, {\"test\": \"calcium\", \"value\": \"9.7\", \"unit\": \"mg/dL\", \"reference_range\": null, \"date\": null, \"evidence\": \"Results today: blood glucose 70.8 mg/dL, urea nitrogen (BUN) 8.1 mg/dL, calcium 9.7 mg/dL.\"}], \"medications\": [{\"name\": \"simvastatin\", \"dose\": \"20 mg\", \"frequency\": \"PRN (as needed)\", \"status\": \"current\", \"evidence\": \"He continues on simvastatin 20 mg PRN (as needed).\"}, {\"name\": \"metoprolol succinate\", \"dose\": \"25 mg\", \"frequency\": \"as needed\", \"status\": \"current\", \"evidence\": \"He is currently taking metoprolol succinate 25 mg ER as needed.\"}, {\"name\": \"lisinopril\", \"dose\": \"10 mg\", \"frequency\": \"once a day\", \"status\": \"current\", \"evidence\": \"He is currently taking lisinopril 10 mg once a day.\"}, {\"name\": \"prasugrel\", \"dose\": \"10 mg\", \"frequency\": null, \"status\": \"current\", \"evidence\": \"He is currently taking prasugrel 10 mg.\"}, {\"name\": \"nitroglycerin\", \"dose\": \"0.4 mg\", \"frequency\": null, \"status\": \"not_current\", \"evidence\": \"He is no longer taking nitroglycerin 0.4 mg.\"}, {\"name\": \"ticagrelor\", \"dose\": \"90 mg\", \"frequency\": null, \"status\": \"not_current\", \"evidence\": \"He is no longer taking ticagrelor 90 mg.\"}, {\"name\": \"ibuprofen\", \"dose\": \"200 mg\", \"frequency\": null, \"status\": \"unclear\", \"evidence\": \"There is an older prescription for ibuprofen 200 mg from 2022 in the record.\"}], \"follow_up\": [{\"instruction\": \"diabetic diet\", \"evidence\": \"We discussed the care plan: diabetic diet.\"}, {\"instruction\": \"exercise therapy\", \"evidence\": \"We discussed the care plan: exercise therapy.\"}, {\"instruction\": \"We will see him again on April 5, 2025\", \"evidence\": \"We will see him again on April 5, 2025.\"}]}",
+     "latencyMs": 9876,
+     "generatedOn": "2026-11-24",
+     "runtime": "Python, transformers on a Kaggle T4, weights rounded to the browser's 4-bit grid"
     },
     "original": {
      "label": "Original Qwen3-1.7B",
@@ -588,7 +588,7 @@
      "raw": "{\n  \"document_date\": {\"value\": \"March 27, 2025\", \"evidence\": \"Date: March 27, 2025\"},\n  \"labs\": [\n    {\n      \"test\": \"blood glucose\",\n      \"value\": \"70.8\",\n      \"unit\": \"mg/dL\",\n      \"reference_range\": null,\n      \"date\": null,\n      \"evidence\": \"Results today: blood glucose 70.8 mg/dL\"\n    },\n    {\n      \"test\": \"urea nitrogen (BUN)\",\n      \"value\": \"8.1\",\n      \"unit\": \"mg/dL\",\n      \"reference_range\": null,\n      \"date\": null,\n      \"evidence\": \"Results today: blood glucose 70.8 mg/dL, urea nitrogen (BUN) 8.1 mg/dL\"\n    },\n    {\n      \"test\": \"calcium\",\n      \"value\": \"9.7\",\n      \"unit\": \"mg/dL\",\n      \"reference_range\": null,\n      \"date\": null,\n      \"evidence\": \"Results today: blood glucose 70.8 mg/dL, urea nitrogen (BUN) 8.1 mg/dL, calcium 9.7 mg/dL\"\n    }\n  ],\n  \"medications\": [\n    {\n      \"name\": \"simvastatin\",\n      \"dose\": \"20 mg\",\n      \"frequency\": \"PRN (as needed)\",\n      \"status\": \"current\",\n      \"evidence\": \"He continues on simvastatin 20 mg PRN (as needed).\"\n    },\n    {\n      \"name\": \"metoprolol succinate\",\n      \"dose\": \"25 mg\",\n      \"frequency\": \"as needed\",\n      \"status\": \"current\",\n      \"evidence\": \"He is currently taking metoprolol succinate 25 mg ER as needed.\"\n    },\n    {\n      \"name\": \"lisinopril\",\n      \"dose\": \"10 mg\",\n      \"frequency\": \"once a day\",\n      \"status\": \"current\",\n      \"evidence\": \"He is currently taking lisinopril 10 mg once a day.\"\n    },\n    {\n      \"name\": \"prasugrel\",\n      \"dose\": \"10 mg\",\n      \"frequency\": \"nil\",\n      \"status\": \"current\",\n      \"evidence\": \"He is currently taking prasugrel 10 mg.\"\n    },\n    {\n      \"name\": \"ibuprofen\",\n      \"dose\": \"200 mg\",\n      \"frequency\": \"nil\",\n      \"status\": \"not_current\",\n      \"evidence\": \"There is an older prescription for ibuprofen 200 mg from 2022 in the record.\"\n    }\n  ],\n  \"follow_up\": [\n    {\n      \"instruction\": \"We will see him again on April 5, 2025.\",\n      \"evidence\": \"We will see him again on April 5, 2025.\"\n    }\n  ]\n}",
      "latencyMs": 49679,
      "generatedOn": "2026-11-23",
-     "runtime": "Python, transformers + bitsandbytes on a GTX 1650"
+     "runtime": "Python, transformers + bitsandbytes (4-bit nf4) on a GTX 1650"
     },
     "rules": {
      "label": "Rule-based lab rows",
@@ -699,12 +699,12 @@
    },
    "outputs": {
     "finetuned": {
-     "label": "Fine-tuned (pilot run)",
-     "description": "QLoRA adapter trained for this task; run in 4-bit (nf4) with the same prompt and greedy decoding as the original. Pilot adapter: 160 training documents, 1 epoch; known to cut some lab lists short.",
-     "raw": "{\"document_date\": {\"value\": \"March 22, 2025\", \"evidence\": \"Specimen collected March 22, 2025; report issued March 22, 2025\"}, \"labs\": [{\"test\": \"Glucose, fasting\", \"value\": \"70.8\", \"unit\": \"mg/dL\", \"reference_range\": \"70 to 100\", \"date\": null, \"evidence\": \"Glucose, fasting: 70.8 mg/dL (normal range 70 to 100)\"}], \"medications\": [], \"follow_up\": []}",
-     "latencyMs": 34072,
-     "generatedOn": "2026-11-23",
-     "runtime": "Python, transformers + bitsandbytes on a GTX 1650"
+     "label": "Fine-tuned Qwen3-1.7B",
+     "description": "LoRA adapter trained for this task on weights rounded to 4 bits the way the browser rounds them; same prompt and greedy decoding as the original. This is the model the browser build is made from.",
+     "raw": "{\"document_date\": {\"value\": \"March 22, 2025\", \"evidence\": \"Specimen collected March 22, 2025; report issued March 22, 2025\"}, \"labs\": [{\"test\": \"Glucose, fasting\", \"value\": \"70.8\", \"unit\": \"mg/dL\", \"reference_range\": \"70 to 100\", \"date\": null, \"evidence\": \"Glucose, fasting: 70.8 mg/dL (normal range 70 to 100)\"}, {\"test\": \"Urea nitrogen (BUN)\", \"value\": \"8.1\", \"unit\": \"mg/dL\", \"reference_range\": null, \"date\": null, \"evidence\": \"Urea nitrogen (BUN): 8.1 mg/dL\"}, {\"test\": \"Creatinine\", \"value\": \"0.9\", \"unit\": \"mg/dL\", \"reference_range\": \"0.5 to 1.2\", \"date\": null, \"evidence\": \"Creatinine: 0.9 mg/dL (normal range 0.5 to 1.2)\"}, {\"test\": \"Calcium\", \"value\": \"9.7\", \"unit\": \"mg/dL\", \"reference_range\": null, \"date\": null, \"evidence\": \"Calcium: 9.7 mg/dL\"}, {\"test\": \"Sodium\", \"value\": \"139.4\", \"unit\": \"mmol/L\", \"reference_range\": \"136 to 145\", \"date\": null, \"evidence\": \"Sodium: 139.4 mmol/L (normal range 136 to 145)\"}, {\"test\": \"Potassium\", \"value\": \"4.9\", \"unit\": \"mmol/L\", \"reference_range\": \"3.6 to 5.0\", \"date\": null, \"evidence\": \"Potassium: 4.9 mmol/L (normal range 3.6 to 5.0)\"}, {\"test\": \"Chloride\", \"value\": \"106.2\", \"unit\": \"mmol/L\", \"reference_range\": null, \"date\": null, \"evidence\": \"Chloride: 106.2 mmol/L\"}, {\"test\": \"Carbon dioxide (CO2)\", \"value\": \"27.6\", \"unit\": \"mmol/L\", \"reference_range\": null, \"date\": null, \"evidence\": \"Carbon dioxide (CO2): 27.6 mmol/L\"}, {\"test\": \"Hemoglobin A1c\", \"value\": \"5.9\", \"unit\": \"%\", \"reference_range\": \"4.0 to 5.7\", \"date\": null, \"evidence\": \"Hemoglobin A1c: 5.9 % (normal range 4.0 to 5.7)\"}, {\"test\": \"LDL cholesterol\", \"value\": \"not performed\", \"unit\": null, \"reference_range\": null, \"date\": null, \"evidence\": \"LDL cholesterol: not performed\"}], \"medications\": [], \"follow_up\": []}",
+     "latencyMs": 9876,
+     "generatedOn": "2026-11-24",
+     "runtime": "Python, transformers on a Kaggle T4, weights rounded to the browser's 4-bit grid"
     },
     "original": {
      "label": "Original Qwen3-1.7B",
@@ -712,7 +712,7 @@
      "raw": "{\n  \"document_date\": null,\n  \"labs\": [\n    {\n      \"test\": \"Glucose, fasting\",\n      \"value\": \"70.8\",\n      \"unit\": \"mg/dL\",\n      \"reference_range\": \"70 to 100\",\n      \"date\": null,\n      \"evidence\": \"Glucose, fasting: 70.8 mg/dL (normal range 70 to 100)\"\n    },\n    {\n      \"test\": \"Urea nitrogen (BUN)\",\n      \"value\": \"8.1\",\n      \"unit\": \"mg/dL\",\n      \"reference_range\": null,\n      \"date\": null,\n      \"evidence\": \"Urea nitrogen (BUN): 8.1 mg/dL\"\n    },\n    {\n      \"test\": \"Creatinine\",\n      \"value\": \"0.9\",\n      \"unit\": \"mg/dL\",\n      \"reference_range\": \"0.5 to 1.2\",\n      \"date\": null,\n      \"evidence\": \"Creatinine: 0.9 mg/dL (normal range 0.5 to 1.2)\"\n    },\n    {\n      \"test\": \"Calcium\",\n      \"value\": \"9.7\",\n      \"unit\": \"mg/dL\",\n      \"reference_range\": null,\n      \"date\": null,\n      \"evidence\": \"Calcium: 9.7 mg/dL\"\n    },\n    {\n      \"test\": \"Sodium\",\n      \"value\": \"139.4\",\n      \"unit\": \"mmol/L\",\n      \"reference_range\": \"136 to 145\",\n      \"date\": null,\n      \"evidence\": \"Sodium: 139.4 mmol/L (normal range 136 to 145)\"\n    },\n    {\n      \"test\": \"Potassium\",\n      \"value\": \"4.9\",\n      \"unit\": \"mmol/L\",\n      \"reference_range\": \"3.6 to 5.0\",\n      \"date\": null,\n      \"evidence\": \"Potassium: 4.9 mmol/L (normal range 3.6 to 5.0)\"\n    },\n    {\n      \"test\": \"Chloride\",\n      \"value\": \"106.2\",\n      \"unit\": \"mmol/L\",\n      \"reference_range\": null,\n      \"date\": null,\n      \"evidence\": \"Chloride: 106.2 mmol/L\"\n    },\n    {\n      \"test\": \"Carbon dioxide (CO2)\",\n      \"value\": \"27.6\",\n      \"unit\": \"mmol/L\",\n      \"reference_range\": null,\n      \"date\": null,\n      \"evidence\": \"Carbon dioxide (CO2): 27.6 mmol/L\"\n    },\n    {\n      \"test\": \"Hemoglobin A1c\",\n      \"value\": \"5.9\",\n      \"unit\": \"%\",\n      \"reference_range\": \"4.0 to 5.7\",\n      \"date\": null,\n      \"evidence\": \"Hemoglobin A1c: 5.9 % (normal range 4.0 to 5.7)\"\n    },\n    {\n      \"test\": \"LDL cholesterol\",\n      \"value\": \"not performed\",\n      \"unit\": null,\n      \"reference_range\": null,\n      \"date\": null,\n      \"evidence\": \"LDL cholesterol: not performed\"\n    }\n  ],\n  \"medications\": [\n    {\n      \"name\": null,\n      \"dose\": null,\n      \"frequency\": null,\n      \"status\": \"unclear\",\n      \"evidence\": null\n    }\n  ],\n  \"follow_up\": [\n    {\n      \"instruction\": null,\n      \"evidence\": null\n    }\n  ]\n}",
      "latencyMs": 49679,
      "generatedOn": "2026-11-23",
-     "runtime": "Python, transformers + bitsandbytes on a GTX 1650"
+     "runtime": "Python, transformers + bitsandbytes (4-bit nf4) on a GTX 1650"
     },
     "rules": {
      "label": "Rule-based lab rows",
@@ -799,12 +799,12 @@
    },
    "outputs": {
     "finetuned": {
-     "label": "Fine-tuned (pilot run)",
-     "description": "QLoRA adapter trained for this task; run in 4-bit (nf4) with the same prompt and greedy decoding as the original. Pilot adapter: 160 training documents, 1 epoch; known to cut some lab lists short.",
-     "raw": "{\"document_date\": {\"value\": \"November 26, 2025\", \"evidence\": \"Printed November 26, 2025\"}, \"labs\": [{\"test\": \"Blood glucose\", \"value\": \"68.9 mg/dL\", \"unit\": \"mg/dL\", \"reference_range\": null, \"date\": \"November 13, 2023\", \"evidence\": \"November 13, 2023   Blood glucose   68.9 mg/dL\"}, {\"test\": \"Blood glucose\", \"value\": \"85.6 mg/dL\", \"unit\": \"mg/dL\", \"reference_range\": null, \"date\": \"November 18, 2024\", \"evidence\": \"November 18, 2024   Blood glucose   85.6 mg/dL\"}, {\"test\": \"Blood glucose\", \"value\": \"86.1 mg/dL\", \"unit\": \"mg/dL\", \"reference_range\": null, \"date\": \"November 24, 2025\", \"evidence\": \"November 24, 2025   Blood glucose   86.1 mg/dL\"}, {\"test\": \"HbA1c\", \"value\": \"5.9 %\", \"unit\": \"%\", \"reference_range\": null, \"date\": \"November 13, 2023\", \"evidence\": \"November 13, 2023   HbA1c   5.9 %\"}, {\"test\": \"HbA1c\", \"value\": \"6.3 %\", \"unit\": \"%\", \"reference_range\": null, \"date\": \"November 18, 2024\", \"evidence\": \"November 18, 2024   HbA1c   6.3 %\"}, {\"test\": \"HbA1c\", \"value\": \"6.3 %\", \"unit\": \"%\", \"reference_range\": null, \"date\": \"November 24, 2025\", \"evidence\": \"November 24, 2025   HbA1c   6.3 %\"}], \"medications\": [], \"follow_up\": []}",
-     "latencyMs": 34072,
-     "generatedOn": "2026-11-23",
-     "runtime": "Python, transformers + bitsandbytes on a GTX 1650"
+     "label": "Fine-tuned Qwen3-1.7B",
+     "description": "LoRA adapter trained for this task on weights rounded to 4 bits the way the browser rounds them; same prompt and greedy decoding as the original. This is the model the browser build is made from.",
+     "raw": "{\"document_date\": {\"value\": \"November 26, 2025\", \"evidence\": \"Printed November 26, 2025\"}, \"labs\": [{\"test\": \"Blood glucose\", \"value\": \"68.9\", \"unit\": \"mg/dL\", \"reference_range\": null, \"date\": \"November 13, 2023\", \"evidence\": \"November 13, 2023   Blood glucose   68.9 mg/dL\"}, {\"test\": \"Blood glucose\", \"value\": \"85.6\", \"unit\": \"mg/dL\", \"reference_range\": null, \"date\": \"November 18, 2024\", \"evidence\": \"November 18, 2024   Blood glucose   85.6 mg/dL\"}, {\"test\": \"Blood glucose\", \"value\": \"86.1\", \"unit\": \"mg/dL\", \"reference_range\": null, \"date\": \"November 24, 2025\", \"evidence\": \"November 24, 2025   Blood glucose   86.1 mg/dL\"}, {\"test\": \"HbA1c\", \"value\": \"5.9\", \"unit\": \"%\", \"reference_range\": null, \"date\": \"November 13, 2023\", \"evidence\": \"November 13, 2023   HbA1c   5.9 %\"}, {\"test\": \"HbA1c\", \"value\": \"6.3\", \"unit\": \"%\", \"reference_range\": null, \"date\": \"November 18, 2024\", \"evidence\": \"November 18, 2024   HbA1c   6.3 %\"}, {\"test\": \"HbA1c\", \"value\": \"6.3\", \"unit\": \"%\", \"reference_range\": null, \"date\": \"November 24, 2025\", \"evidence\": \"November 24, 2025   HbA1c   6.3 %\"}], \"medications\": [], \"follow_up\": []}",
+     "latencyMs": 9876,
+     "generatedOn": "2026-11-24",
+     "runtime": "Python, transformers on a Kaggle T4, weights rounded to the browser's 4-bit grid"
     },
     "original": {
      "label": "Original Qwen3-1.7B",
@@ -812,7 +812,7 @@
      "raw": "{\n  \"document_date\": null,\n  \"labs\": [\n    {\n      \"test\": \"Blood glucose\",\n      \"value\": \"68.9 mg/dL\",\n      \"unit\": \"mg/dL\",\n      \"reference_range\": null,\n      \"date\": \"November 13, 2023\",\n      \"evidence\": \"November 13, 2023   Blood glucose   68.9 mg/dL\"\n    },\n    {\n      \"test\": \"Blood glucose\",\n      \"value\": \"85.6 mg/dL\",\n      \"unit\": \"mg/dL\",\n      \"reference_range\": null,\n      \"date\": \"November 18, 2024\",\n      \"evidence\": \"November 18, 2024   Blood glucose   85.6 mg/dL\"\n    },\n    {\n      \"test\": \"Blood glucose\",\n      \"value\": \"86.1 mg/dL\",\n      \"unit\": \"mg/dL\",\n      \"reference_range\": null,\n      \"date\": \"November 24, 2025\",\n      \"evidence\": \"November 24, 2025   Blood glucose   86.1 mg/dL\"\n    },\n    {\n      \"test\": \"HbA1c\",\n      \"value\": \"5.9 %\",\n      \"unit\": \"%\",\n      \"reference_range\": null,\n      \"date\": \"November 13, 2023\",\n      \"evidence\": \"November 13, 2023   HbA1c   5.9 %\"\n    },\n    {\n      \"test\": \"HbA1c\",\n      \"value\": \"6.3 %\",\n      \"unit\": \"%\",\n      \"reference_range\": null,\n      \"date\": \"November 18, 2024\",\n      \"evidence\": \"November 18, 2024   HbA1c   6.3 %\"\n    },\n    {\n      \"test\": \"HbA1c\",\n      \"value\": \"6.3 %\",\n      \"unit\": \"%\",\n      \"reference_range\": null,\n      \"date\": \"November 24, 2025\",\n      \"evidence\": \"November 24, 2025   HbA1c   6.3 %\"\n    }\n  ],\n  \"medications\": null,\n  \"follow_up\": [\n    \"Next appointment\"\n  ]\n}",
      "latencyMs": 49679,
      "generatedOn": "2026-11-23",
-     "runtime": "Python, transformers + bitsandbytes on a GTX 1650"
+     "runtime": "Python, transformers + bitsandbytes (4-bit nf4) on a GTX 1650"
     },
     "rules": {
      "label": "Rule-based lab rows",
@@ -896,12 +896,12 @@
    },
    "outputs": {
     "finetuned": {
-     "label": "Fine-tuned (pilot run)",
-     "description": "QLoRA adapter trained for this task; run in 4-bit (nf4) with the same prompt and greedy decoding as the original. Pilot adapter: 160 training documents, 1 epoch; known to cut some lab lists short.",
+     "label": "Fine-tuned Qwen3-1.7B",
+     "description": "LoRA adapter trained for this task on weights rounded to 4 bits the way the browser rounds them; same prompt and greedy decoding as the original. This is the model the browser build is made from.",
      "raw": "{\"document_date\": {\"value\": \"November 25, 2025\", \"evidence\": \"Message from your care team - November 25, 2025\"}, \"labs\": [{\"test\": \"Glucose\", \"value\": \"86.1\", \"unit\": \"mg/dL\", \"reference_range\": \"70-99\", \"date\": null, \"evidence\": \"Glucose: 86.1 mg/dL (lab range 70-99).\"}, {\"test\": \"Urea nitrogen (BUN)\", \"value\": \"19.7\", \"unit\": \"mg/dL\", \"reference_range\": \"7-20\", \"date\": null, \"evidence\": \"Urea nitrogen (BUN): 19.7 mg/dL (lab range 7-20).\"}, {\"test\": \"carbon dioxide (CO2)\", \"value\": \"28.2\", \"unit\": \"mmol/L\", \"reference_range\": \"22-29\", \"date\": null, \"evidence\": \"Your carbon dioxide (CO2) was 28.2 mmol/L; the lab's range is 22-29.\"}, {\"test\": \"cholesterol, total\", \"value\": \"140.0\", \"unit\": \"mg/dL\", \"reference_range\": null, \"date\": null, \"evidence\": \"Your cholesterol, total was 140.0 mg/dL.\"}, {\"test\": \"LDL cholesterol\", \"value\": \"90.3\", \"unit\": \"mg/dL\", \"reference_range\": null, \"date\": null, \"evidence\": \"LDL cholesterol came back at 90.3 mg/dL.\"}], \"medications\": [], \"follow_up\": [{\"instruction\": \"Please keep your appointment on December 8, 2025\", \"evidence\": \"Please keep your appointment on December 8, 2025.\"}]}",
-     "latencyMs": 34072,
-     "generatedOn": "2026-11-23",
-     "runtime": "Python, transformers + bitsandbytes on a GTX 1650"
+     "latencyMs": 9876,
+     "generatedOn": "2026-11-24",
+     "runtime": "Python, transformers on a Kaggle T4, weights rounded to the browser's 4-bit grid"
     },
     "original": {
      "label": "Original Qwen3-1.7B",
@@ -909,7 +909,7 @@
      "raw": "{\n  \"document_date\": null,\n  \"labs\": [\n    {\n      \"test\": \"Glucose\",\n      \"value\": \"86.1\",\n      \"unit\": \"mg/dL\",\n      \"reference_range\": \"70-99\",\n      \"date\": \"2025-11-24\",\n      \"evidence\": \"Your lab results from November 24, 2025 are now available.\"\n    },\n    {\n      \"test\": \"Urea nitrogen (BUN)\",\n      \"value\": \"19.7\",\n      \"unit\": \"mg/dL\",\n      \"reference_range\": \"7-20\",\n      \"date\": \"2025-11-24\",\n      \"evidence\": \"Your lab results from November 24, 2025 are now available.\"\n    },\n    {\n      \"test\": \"Carbon dioxide (CO2)\",\n      \"value\": \"28.2\",\n      \"unit\": \"mmol/L\",\n      \"reference_range\": \"22-29\",\n      \"date\": \"2025-11-24\",\n      \"evidence\": \"Your carbon dioxide (CO2) was 28.2 mmol/L; the lab's range is 22-29.\"\n    },\n    {\n      \"test\": \"Cholesterol, total\",\n      \"value\": \"140.0\",\n      \"unit\": \"mg/dL\",\n      \"reference_range\": null,\n      \"date\": \"2025-11-24\",\n      \"evidence\": \"Your cholesterol, total was 140.0 mg/dL.\"\n    },\n    {\n      \"test\": \"LDL cholesterol\",\n      \"value\": \"90.3\",\n      \"unit\": \"mg/dL\",\n      \"reference_range\": null,\n      \"date\": \"2025-11-24\",\n      \"evidence\": \"Your LDL cholesterol came back at 90.3 mg/dL.\"\n    }\n  ],\n  \"medications\": [\n    {\n      \"name\": \"Dr. J. Whitcombe\",\n      \"dose\": null,\n      \"frequency\": null,\n      \"status\": \"current\",\n      \"evidence\": \"Please keep your appointment on December 8, 2025.\"\n    }\n  ],\n  \"follow_up\": [\n    \"If you have questions, reply to this message.\"\n  ]\n}",
      "latencyMs": 49679,
      "generatedOn": "2026-11-23",
-     "runtime": "Python, transformers + bitsandbytes on a GTX 1650"
+     "runtime": "Python, transformers + bitsandbytes (4-bit nf4) on a GTX 1650"
     },
     "rules": {
      "label": "Rule-based lab rows",
@@ -1015,12 +1015,12 @@
    },
    "outputs": {
     "finetuned": {
-     "label": "Fine-tuned (pilot run)",
-     "description": "QLoRA adapter trained for this task; run in 4-bit (nf4) with the same prompt and greedy decoding as the original. Pilot adapter: 160 training documents, 1 epoch; known to cut some lab lists short.",
-     "raw": "{\"document_date\": {\"value\": \"November 24, 2025\", \"evidence\": \"Visit date: November 24, 2025   Reason: General examination of patient\"}, \"labs\": [{\"test\": \"Blood urea nitrogen\", \"value\": \"19.7\", \"unit\": \"mg/dL\", \"reference_range\": \"7-20\", \"date\": null, \"evidence\": \"Blood urea nitrogen: 19.7 mg/dL (ref 7-20)\"}], \"medications\": [{\"name\": \"Simvastatin\", \"dose\": \"20 MG\", \"frequency\": null, \"status\": \"current\", \"evidence\": \"- Simvastatin 20 MG\"}, {\"name\": \"metoprolol succinate\", \"dose\": \"100 MG\", \"frequency\": null, \"status\": \"current\", \"evidence\": \"- metoprolol succinate 100 MG ER\"}, {\"name\": \"Clopidogrel\", \"dose\": \"75 MG\", \"frequency\": null, \"status\": \"current\", \"evidence\": \"- Clopidogrel 75 MG\"}], \"follow_up\": [{\"instruction\": \"Diabetic diet\", \"evidence\": \"- Diabetic diet\"}, {\"instruction\": \"Exercise therapy\", \"evidence\": \"- Exercise therapy\"}, {\"instruction\": \"Next appointment: December 8, 2025\", \"evidence\": \"- Next appointment: December 8, 2025\"}]}",
-     "latencyMs": 34072,
-     "generatedOn": "2026-11-23",
-     "runtime": "Python, transformers + bitsandbytes on a GTX 1650"
+     "label": "Fine-tuned Qwen3-1.7B",
+     "description": "LoRA adapter trained for this task on weights rounded to 4 bits the way the browser rounds them; same prompt and greedy decoding as the original. This is the model the browser build is made from.",
+     "raw": "{\"document_date\": {\"value\": \"November 24, 2025\", \"evidence\": \"Visit date: November 24, 2025   Reason: General examination of patient\"}, \"labs\": [{\"test\": \"Blood urea nitrogen\", \"value\": \"19.7\", \"unit\": \"mg/dL\", \"reference_range\": \"7-20\", \"date\": null, \"evidence\": \"Blood urea nitrogen: 19.7 mg/dL (ref 7-20)\"}, {\"test\": \"Sodium\", \"value\": \"140.8\", \"unit\": \"mmol/L\", \"reference_range\": null, \"date\": null, \"evidence\": \"Sodium: 140.8 mmol/L\"}, {\"test\": \"Chloride\", \"value\": \"106.9\", \"unit\": \"mmol/L\", \"reference_range\": \"98-107\", \"date\": null, \"evidence\": \"Chloride: 106.9 mmol/L (ref 98-107)\"}, {\"test\": \"HbA1c\", \"value\": \"6.3\", \"unit\": \"%\", \"reference_range\": null, \"date\": null, \"evidence\": \"HbA1c: 6.3 %\"}], \"medications\": [{\"name\": \"Simvastatin\", \"dose\": \"20 MG\", \"frequency\": null, \"status\": \"current\", \"evidence\": \"- Simvastatin 20 MG\"}, {\"name\": \"metoprolol succinate\", \"dose\": \"100 MG\", \"frequency\": null, \"status\": \"current\", \"evidence\": \"- metoprolol succinate 100 MG ER\"}, {\"name\": \"Clopidogrel\", \"dose\": \"75 MG\", \"frequency\": null, \"status\": \"current\", \"evidence\": \"- Clopidogrel 75 MG\"}], \"follow_up\": [{\"instruction\": \"Diabetic diet\", \"evidence\": \"- Diabetic diet\"}, {\"instruction\": \"Exercise therapy\", \"evidence\": \"- Exercise therapy\"}, {\"instruction\": \"Next appointment: December 8, 2025\", \"evidence\": \"- Next appointment: December 8, 2025\"}]}",
+     "latencyMs": 9876,
+     "generatedOn": "2026-11-24",
+     "runtime": "Python, transformers on a Kaggle T4, weights rounded to the browser's 4-bit grid"
     },
     "original": {
      "label": "Original Qwen3-1.7B",
@@ -1028,7 +1028,7 @@
      "raw": "```json\n{\n  \"document_date\": {\n    \"value\": \"November 24, 2025\",\n    \"evidence\": \"Visit date: November 24, 2025\"\n  },\n  \"labs\": [\n    {\n      \"test\": \"Blood urea nitrogen\",\n      \"value\": \"19.7\",\n      \"unit\": \"mg/dL\",\n      \"reference_range\": \"7-20\",\n      \"date\": null,\n      \"evidence\": \"Blood urea nitrogen: 19.7 mg/dL (ref 7-20)\"\n    },\n    {\n      \"test\": \"Sodium\",\n      \"value\": \"140.8\",\n      \"unit\": \"mmol/L\",\n      \"reference_range\": null,\n      \"date\": null,\n      \"evidence\": \"Sodium: 140.8 mmol/L\"\n    },\n    {\n      \"test\": \"Chloride\",\n      \"value\": \"106.9\",\n      \"unit\": \"mmol/L\",\n      \"reference_range\": \"98-107\",\n      \"date\": null,\n      \"evidence\": \"Chloride: 106.9 mmol/L (ref 98-107)\"\n    },\n    {\n      \"test\": \"HbA1c\",\n      \"value\": \"6.3\",\n      \"unit\": \"%\",\n      \"reference_range\": null,\n      \"date\": null,\n      \"evidence\": \"HbA1c: 6.3 %\"\n    }\n  ],\n  \"medications\": [\n    {\n      \"name\": \"Simvastatin\",\n      \"dose\": \"20 MG\",\n      \"frequency\": null,\n      \"status\": \"current\",\n      \"evidence\": \"Simvastatin 20 MG\"\n    },\n    {\n      \"name\": \"metoprolol succinate\",\n      \"dose\": \"100 MG\",\n      \"frequency\": \"ER\",\n      \"status\": \"current\",\n      \"evidence\": \"metoprolol succinate 100 MG\"\n    },\n    {\n      \"name\": \"Clopidogrel\",\n      \"dose\": \"75 MG\",\n      \"frequency\": null,\n      \"status\": \"current\",\n      \"evidence\": \"Clopidogrel 75 MG\"\n    }\n  ],\n  \"follow_up\": [\n    \"Diabetic diet\",\n    \"Exercise therapy\",\n    \"Next appointment: December 8, 2025\"\n  ]\n}\n```",
      "latencyMs": 49679,
      "generatedOn": "2026-11-23",
-     "runtime": "Python, transformers + bitsandbytes on a GTX 1650"
+     "runtime": "Python, transformers + bitsandbytes (4-bit nf4) on a GTX 1650"
     },
     "rules": {
      "label": "Rule-based lab rows",
@@ -1049,5 +1049,761 @@
    }
   }
  ],
- "evaluation": {}
+ "evaluation": {
+  "generatedOn": "2026-11-24",
+  "testSet": {
+   "docs": 204,
+   "patients": 107,
+   "heldOutFamilies": [
+    "L3 (compact codes)",
+    "V3 (medication list printout)"
+   ]
+  },
+  "challengeSet": {
+   "docs": 20
+  },
+  "groups": {
+   "test": {
+    "rules": {
+     "all_f1": null,
+     "labs_f1": 1.0,
+     "labs_precision": 1.0,
+     "labs_recall": 1.0,
+     "unit_exact": 0.9988,
+     "range_exact": 1.0,
+     "lab_date_exact": 1.0,
+     "value_altered": 0,
+     "meds_f1": null,
+     "meds_precision": null,
+     "meds_recall": null,
+     "meds_status_acc": null,
+     "false_current": null,
+     "dose_exact": null,
+     "frequency_exact": null,
+     "follow_up_f1": null,
+     "date_acc": 1.0,
+     "schema_valid": 1.0,
+     "evidence_valid": 1.0,
+     "fields_in_evidence": 1.0,
+     "unsupported_rate": 0.0,
+     "unsupported_items": 0,
+     "docs": 204,
+     "latency_median_ms": 0,
+     "peak_mem_mb": null,
+     "new_tokens_mean": null
+    },
+    "original": {
+     "all_f1": 0.8197,
+     "labs_f1": 0.9001,
+     "labs_precision": 0.8911,
+     "labs_recall": 0.9092,
+     "unit_exact": 1.0,
+     "range_exact": 0.9677,
+     "lab_date_exact": 0.9317,
+     "value_altered": 41,
+     "meds_f1": 0.8141,
+     "meds_precision": 0.7324,
+     "meds_recall": 0.9163,
+     "meds_status_acc": 0.8365,
+     "false_current": 11,
+     "dose_exact": 0.8798,
+     "frequency_exact": 0.7981,
+     "follow_up_f1": 0.3673,
+     "date_acc": 0.3088,
+     "schema_valid": 0.2157,
+     "evidence_valid": 0.7468,
+     "fields_in_evidence": 0.2875,
+     "unsupported_rate": 0.0395,
+     "unsupported_items": 52,
+     "docs": 204,
+     "latency_median_ms": 3090,
+     "peak_mem_mb": 4431,
+     "new_tokens_mean": 434.0
+    },
+    "finetuned": {
+     "all_f1": 0.9935,
+     "labs_f1": 0.9946,
+     "labs_precision": 0.9988,
+     "labs_recall": 0.9904,
+     "unit_exact": 1.0,
+     "range_exact": 1.0,
+     "lab_date_exact": 1.0,
+     "value_altered": 0,
+     "meds_f1": 0.9844,
+     "meds_precision": 1.0,
+     "meds_recall": 0.9692,
+     "meds_status_acc": 0.9591,
+     "false_current": 2,
+     "dose_exact": 1.0,
+     "frequency_exact": 0.9455,
+     "follow_up_f1": 1.0,
+     "date_acc": 0.8137,
+     "schema_valid": 0.9559,
+     "evidence_valid": 0.9986,
+     "fields_in_evidence": 0.9986,
+     "unsupported_rate": 0.0,
+     "unsupported_items": 0,
+     "docs": 204,
+     "latency_median_ms": 3878,
+     "peak_mem_mb": 6225,
+     "new_tokens_mean": 407.6
+    },
+    "extra:base-q4grid": {
+     "all_f1": 0.6337,
+     "labs_f1": 0.6108,
+     "labs_precision": 0.6357,
+     "labs_recall": 0.5878,
+     "unit_exact": 1.0,
+     "range_exact": 0.9554,
+     "lab_date_exact": 0.4817,
+     "value_altered": 251,
+     "meds_f1": 0.9409,
+     "meds_precision": 0.9718,
+     "meds_recall": 0.9119,
+     "meds_status_acc": 0.8841,
+     "false_current": 6,
+     "dose_exact": 0.913,
+     "frequency_exact": 0.4155,
+     "follow_up_f1": 0.1158,
+     "date_acc": 0.0294,
+     "schema_valid": 0.0882,
+     "evidence_valid": 0.5974,
+     "fields_in_evidence": 0.2537,
+     "unsupported_rate": 0.0949,
+     "unsupported_items": 95,
+     "docs": 204,
+     "latency_median_ms": 2819,
+     "peak_mem_mb": 6596,
+     "new_tokens_mean": 409.6
+    },
+    "extra:ft-final": {
+     "all_f1": 0.9923,
+     "labs_f1": 0.9922,
+     "labs_precision": 1.0,
+     "labs_recall": 0.9845,
+     "unit_exact": 1.0,
+     "range_exact": 1.0,
+     "lab_date_exact": 1.0,
+     "value_altered": 0,
+     "meds_f1": 0.9866,
+     "meds_precision": 1.0,
+     "meds_recall": 0.9736,
+     "meds_status_acc": 0.9955,
+     "false_current": 1,
+     "dose_exact": 1.0,
+     "frequency_exact": 0.9457,
+     "follow_up_f1": 1.0,
+     "date_acc": 0.8725,
+     "schema_valid": 0.9951,
+     "evidence_valid": 0.9873,
+     "fields_in_evidence": 0.9873,
+     "unsupported_rate": 0.0,
+     "unsupported_items": 0,
+     "docs": 204,
+     "latency_median_ms": 4287,
+     "peak_mem_mb": 4231,
+     "new_tokens_mean": 413.8
+    }
+   },
+   "test_seen": {
+    "rules": {
+     "all_f1": null,
+     "labs_f1": 1.0,
+     "labs_precision": 1.0,
+     "labs_recall": 1.0,
+     "unit_exact": 0.998,
+     "range_exact": 1.0,
+     "lab_date_exact": 1.0,
+     "value_altered": 0,
+     "meds_f1": null,
+     "meds_precision": null,
+     "meds_recall": null,
+     "meds_status_acc": null,
+     "false_current": null,
+     "dose_exact": null,
+     "frequency_exact": null,
+     "follow_up_f1": null,
+     "date_acc": 1.0,
+     "schema_valid": 1.0,
+     "evidence_valid": 1.0,
+     "fields_in_evidence": 1.0,
+     "unsupported_rate": 0.0,
+     "unsupported_items": 0,
+     "docs": 128
+    },
+    "original": {
+     "all_f1": 0.7855,
+     "labs_f1": 0.8711,
+     "labs_precision": 0.8566,
+     "labs_recall": 0.8862,
+     "unit_exact": 1.0,
+     "range_exact": 0.9673,
+     "lab_date_exact": 0.8807,
+     "value_altered": 41,
+     "meds_f1": 0.8266,
+     "meds_precision": 0.7607,
+     "meds_recall": 0.9051,
+     "meds_status_acc": 0.9113,
+     "false_current": 6,
+     "dose_exact": 0.8145,
+     "frequency_exact": 0.8468,
+     "follow_up_f1": 0.3887,
+     "date_acc": 0.4844,
+     "schema_valid": 0.2344,
+     "evidence_valid": 0.6618,
+     "fields_in_evidence": 0.4161,
+     "unsupported_rate": 0.0499,
+     "unsupported_items": 41,
+     "docs": 128
+    },
+    "finetuned": {
+     "all_f1": 0.998,
+     "labs_f1": 0.9969,
+     "labs_precision": 0.998,
+     "labs_recall": 0.9959,
+     "unit_exact": 1.0,
+     "range_exact": 1.0,
+     "lab_date_exact": 1.0,
+     "value_altered": 0,
+     "meds_f1": 1.0,
+     "meds_precision": 1.0,
+     "meds_recall": 1.0,
+     "meds_status_acc": 0.9927,
+     "false_current": 0,
+     "dose_exact": 1.0,
+     "frequency_exact": 1.0,
+     "follow_up_f1": 1.0,
+     "date_acc": 0.9922,
+     "schema_valid": 0.9766,
+     "evidence_valid": 1.0,
+     "fields_in_evidence": 1.0,
+     "unsupported_rate": 0.0,
+     "unsupported_items": 0,
+     "docs": 128
+    },
+    "extra:base-q4grid": {
+     "all_f1": 0.4793,
+     "labs_f1": 0.4236,
+     "labs_precision": 0.4307,
+     "labs_recall": 0.4167,
+     "unit_exact": 1.0,
+     "range_exact": 0.9727,
+     "lab_date_exact": 0.6098,
+     "value_altered": 251,
+     "meds_f1": 0.916,
+     "meds_precision": 0.96,
+     "meds_recall": 0.8759,
+     "meds_status_acc": 0.9333,
+     "false_current": 4,
+     "dose_exact": 0.9333,
+     "frequency_exact": 0.55,
+     "follow_up_f1": 0.119,
+     "date_acc": 0.0469,
+     "schema_valid": 0.0703,
+     "evidence_valid": 0.6336,
+     "fields_in_evidence": 0.2769,
+     "unsupported_rate": 0.1156,
+     "unsupported_items": 71,
+     "docs": 128
+    },
+    "extra:ft-final": {
+     "all_f1": 0.9974,
+     "labs_f1": 0.9959,
+     "labs_precision": 1.0,
+     "labs_recall": 0.9919,
+     "unit_exact": 1.0,
+     "range_exact": 1.0,
+     "lab_date_exact": 1.0,
+     "value_altered": 0,
+     "meds_f1": 1.0,
+     "meds_precision": 1.0,
+     "meds_recall": 1.0,
+     "meds_status_acc": 1.0,
+     "false_current": 0,
+     "dose_exact": 1.0,
+     "frequency_exact": 1.0,
+     "follow_up_f1": 1.0,
+     "date_acc": 1.0,
+     "schema_valid": 1.0,
+     "evidence_valid": 1.0,
+     "fields_in_evidence": 1.0,
+     "unsupported_rate": 0.0,
+     "unsupported_items": 0,
+     "docs": 128
+    }
+   },
+   "test_held_out": {
+    "rules": {
+     "all_f1": null,
+     "labs_f1": 1.0,
+     "labs_precision": 1.0,
+     "labs_recall": 1.0,
+     "unit_exact": 1.0,
+     "range_exact": 1.0,
+     "lab_date_exact": 1.0,
+     "value_altered": 0,
+     "meds_f1": null,
+     "meds_precision": null,
+     "meds_recall": null,
+     "meds_status_acc": null,
+     "false_current": null,
+     "dose_exact": null,
+     "frequency_exact": null,
+     "follow_up_f1": null,
+     "date_acc": 1.0,
+     "schema_valid": 1.0,
+     "evidence_valid": 1.0,
+     "fields_in_evidence": 1.0,
+     "unsupported_rate": 0.0,
+     "unsupported_items": 0,
+     "docs": 76
+    },
+    "original": {
+     "all_f1": 0.8755,
+     "labs_f1": 0.942,
+     "labs_precision": 0.942,
+     "labs_recall": 0.942,
+     "unit_exact": 1.0,
+     "range_exact": 0.9682,
+     "lab_date_exact": 1.0,
+     "value_altered": 0,
+     "meds_f1": 0.7962,
+     "meds_precision": 0.6942,
+     "meds_recall": 0.9333,
+     "meds_status_acc": 0.7262,
+     "false_current": 5,
+     "dose_exact": 0.9762,
+     "frequency_exact": 0.7262,
+     "follow_up_f1": 0.2553,
+     "date_acc": 0.0132,
+     "schema_valid": 0.1842,
+     "evidence_valid": 0.8884,
+     "fields_in_evidence": 0.073,
+     "unsupported_rate": 0.0223,
+     "unsupported_items": 11,
+     "docs": 76
+    },
+    "finetuned": {
+     "all_f1": 0.9855,
+     "labs_f1": 0.9912,
+     "labs_precision": 1.0,
+     "labs_recall": 0.9826,
+     "unit_exact": 1.0,
+     "range_exact": 1.0,
+     "lab_date_exact": 1.0,
+     "value_altered": 0,
+     "meds_f1": 0.9595,
+     "meds_precision": 1.0,
+     "meds_recall": 0.9222,
+     "meds_status_acc": 0.9036,
+     "false_current": 2,
+     "dose_exact": 1.0,
+     "frequency_exact": 0.8554,
+     "follow_up_f1": 1.0,
+     "date_acc": 0.5132,
+     "schema_valid": 0.9211,
+     "evidence_valid": 0.9961,
+     "fields_in_evidence": 0.9961,
+     "unsupported_rate": 0.0,
+     "unsupported_items": 0,
+     "docs": 76
+    },
+    "extra:base-q4grid": {
+     "all_f1": 0.8897,
+     "labs_f1": 0.8927,
+     "labs_precision": 0.9631,
+     "labs_recall": 0.8319,
+     "unit_exact": 1.0,
+     "range_exact": 0.9461,
+     "lab_date_exact": 0.3902,
+     "value_altered": 0,
+     "meds_f1": 0.9775,
+     "meds_precision": 0.9886,
+     "meds_recall": 0.9667,
+     "meds_status_acc": 0.8161,
+     "false_current": 2,
+     "dose_exact": 0.8851,
+     "frequency_exact": 0.2299,
+     "follow_up_f1": 0.0909,
+     "date_acc": 0.0,
+     "schema_valid": 0.1184,
+     "evidence_valid": 0.5401,
+     "fields_in_evidence": 0.2171,
+     "unsupported_rate": 0.062,
+     "unsupported_items": 24,
+     "docs": 76
+    },
+    "extra:ft-final": {
+     "all_f1": 0.9833,
+     "labs_f1": 0.9868,
+     "labs_precision": 1.0,
+     "labs_recall": 0.9739,
+     "unit_exact": 1.0,
+     "range_exact": 1.0,
+     "lab_date_exact": 1.0,
+     "value_altered": 0,
+     "meds_f1": 0.9655,
+     "meds_precision": 1.0,
+     "meds_recall": 0.9333,
+     "meds_status_acc": 0.9881,
+     "false_current": 1,
+     "dose_exact": 1.0,
+     "frequency_exact": 0.8571,
+     "follow_up_f1": 1.0,
+     "date_acc": 0.6579,
+     "schema_valid": 0.9868,
+     "evidence_valid": 0.965,
+     "fields_in_evidence": 0.965,
+     "unsupported_rate": 0.0,
+     "unsupported_items": 0,
+     "docs": 76
+    }
+   },
+   "challenge": {
+    "rules": {
+     "all_f1": null,
+     "labs_f1": 0.6429,
+     "labs_precision": 0.8182,
+     "labs_recall": 0.5294,
+     "unit_exact": 0.7778,
+     "range_exact": 0.5714,
+     "lab_date_exact": 1.0,
+     "value_altered": 1,
+     "meds_f1": null,
+     "meds_precision": null,
+     "meds_recall": null,
+     "meds_status_acc": null,
+     "false_current": null,
+     "dose_exact": null,
+     "frequency_exact": null,
+     "follow_up_f1": null,
+     "date_acc": 0.15,
+     "schema_valid": 1.0,
+     "evidence_valid": 1.0,
+     "fields_in_evidence": 1.0,
+     "unsupported_rate": 0.0,
+     "unsupported_items": 0,
+     "docs": 20,
+     "latency_median_ms": 0,
+     "peak_mem_mb": null,
+     "new_tokens_mean": null
+    },
+    "original": {
+     "all_f1": 0.6133,
+     "labs_f1": 0.5714,
+     "labs_precision": 0.5556,
+     "labs_recall": 0.5882,
+     "unit_exact": 0.9,
+     "range_exact": 1.0,
+     "lab_date_exact": 1.0,
+     "value_altered": 7,
+     "meds_f1": 0.88,
+     "meds_precision": 0.9167,
+     "meds_recall": 0.8462,
+     "meds_status_acc": 0.9091,
+     "false_current": 1,
+     "dose_exact": 1.0,
+     "frequency_exact": 1.0,
+     "follow_up_f1": 0.2666,
+     "date_acc": 0.85,
+     "schema_valid": 0.3,
+     "evidence_valid": 0.9107,
+     "fields_in_evidence": 0.6964,
+     "unsupported_rate": 0.125,
+     "unsupported_items": 7,
+     "docs": 20,
+     "latency_median_ms": 1305,
+     "peak_mem_mb": 2906,
+     "new_tokens_mean": 177.3
+    },
+    "finetuned": {
+     "all_f1": 0.8571,
+     "labs_f1": 0.8,
+     "labs_precision": 0.7778,
+     "labs_recall": 0.8235,
+     "unit_exact": 0.7857,
+     "range_exact": 1.0,
+     "lab_date_exact": 1.0,
+     "value_altered": 1,
+     "meds_f1": 0.9167,
+     "meds_precision": 1.0,
+     "meds_recall": 0.8462,
+     "meds_status_acc": 0.8182,
+     "false_current": 1,
+     "dose_exact": 1.0,
+     "frequency_exact": 1.0,
+     "follow_up_f1": 0.9091,
+     "date_acc": 0.95,
+     "schema_valid": 1.0,
+     "evidence_valid": 1.0,
+     "fields_in_evidence": 0.9815,
+     "unsupported_rate": 0.0185,
+     "unsupported_items": 1,
+     "docs": 20,
+     "latency_median_ms": 1445,
+     "peak_mem_mb": 5270,
+     "new_tokens_mean": 147.2
+    },
+    "extra:base-q4grid": {
+     "all_f1": 0.5714,
+     "labs_f1": 0.4243,
+     "labs_precision": 0.4375,
+     "labs_recall": 0.4118,
+     "unit_exact": 0.8571,
+     "range_exact": 1.0,
+     "lab_date_exact": 0.0,
+     "value_altered": 8,
+     "meds_f1": 0.8695,
+     "meds_precision": 1.0,
+     "meds_recall": 0.7692,
+     "meds_status_acc": 0.9,
+     "false_current": 1,
+     "dose_exact": 1.0,
+     "frequency_exact": 1.0,
+     "follow_up_f1": 0.2858,
+     "date_acc": 0.15,
+     "schema_valid": 0.4,
+     "evidence_valid": 0.6897,
+     "fields_in_evidence": 0.4828,
+     "unsupported_rate": 0.069,
+     "unsupported_items": 2,
+     "docs": 20,
+     "latency_median_ms": 1299,
+     "peak_mem_mb": 5000,
+     "new_tokens_mean": 133.8
+    },
+    "extra:ft-final": {
+     "all_f1": 0.9296,
+     "labs_f1": 0.9714,
+     "labs_precision": 0.9444,
+     "labs_recall": 1.0,
+     "unit_exact": 0.9412,
+     "range_exact": 1.0,
+     "lab_date_exact": 1.0,
+     "value_altered": 0,
+     "meds_f1": 0.9167,
+     "meds_precision": 1.0,
+     "meds_recall": 0.8462,
+     "meds_status_acc": 0.8182,
+     "false_current": 1,
+     "dose_exact": 1.0,
+     "frequency_exact": 1.0,
+     "follow_up_f1": 0.8333,
+     "date_acc": 0.95,
+     "schema_valid": 0.95,
+     "evidence_valid": 1.0,
+     "fields_in_evidence": 0.9818,
+     "unsupported_rate": 0.0182,
+     "unsupported_items": 1,
+     "docs": 20,
+     "latency_median_ms": 2143,
+     "peak_mem_mb": 3278,
+     "new_tokens_mean": 150.6
+    }
+   }
+  },
+  "comparisons": {
+   "test: fine-tuned minus original, all-facts F1": {
+    "difference": 0.1738,
+    "ci95": [
+     0.1485,
+     0.202
+    ],
+    "docs": 204
+   },
+   "test: fine-tuned minus original, labs F1": {
+    "difference": 0.0945,
+    "ci95": [
+     0.0603,
+     0.1339
+    ],
+    "docs": 204
+   },
+   "test: fine-tuned minus original, medications F1": {
+    "difference": 0.1703,
+    "ci95": [
+     0.1302,
+     0.2227
+    ],
+    "docs": 204
+   },
+   "test: fine-tuned minus original, follow_up F1": {
+    "difference": 0.6327,
+    "ci95": [
+     0.5556,
+     0.7133
+    ],
+    "docs": 204
+   },
+   "test: fine-tuned minus rules, labs F1": {
+    "difference": -0.0054,
+    "ci95": [
+     -0.0103,
+     -0.0012
+    ],
+    "docs": 204
+   },
+   "test: fine-tuned minus Original, browser rounding, all-facts F1": {
+    "difference": 0.3599,
+    "ci95": [
+     0.2992,
+     0.4241
+    ],
+    "docs": 204
+   },
+   "test: fine-tuned minus Fine-tuned, nf4 (final), all-facts F1": {
+    "difference": 0.0012,
+    "ci95": [
+     -0.0043,
+     0.0095
+    ],
+    "docs": 204
+   },
+   "challenge: fine-tuned minus original, all-facts F1": {
+    "difference": 0.2438,
+    "ci95": [
+     0.0921,
+     0.4274
+    ],
+    "docs": 20
+   },
+   "challenge: fine-tuned minus original, labs F1": {
+    "difference": 0.2286,
+    "ci95": [
+     -0.0829,
+     0.5346
+    ],
+    "docs": 20
+   },
+   "challenge: fine-tuned minus original, medications F1": {
+    "difference": 0.0367,
+    "ci95": [
+     0.0,
+     0.1579
+    ],
+    "docs": 20
+   },
+   "challenge: fine-tuned minus original, follow_up F1": {
+    "difference": 0.6424,
+    "ci95": [
+     0.4,
+     1.0
+    ],
+    "docs": 20
+   },
+   "challenge: fine-tuned minus rules, labs F1": {
+    "difference": 0.1571,
+    "ci95": [
+     -0.0769,
+     0.4597
+    ],
+    "docs": 20
+   },
+   "challenge: fine-tuned minus Original, browser rounding, all-facts F1": {
+    "difference": 0.2857,
+    "ci95": [
+     0.11,
+     0.5018
+    ],
+    "docs": 20
+   },
+   "challenge: fine-tuned minus Fine-tuned, nf4 (final), all-facts F1": {
+    "difference": -0.0724,
+    "ci95": [
+     -0.1532,
+     0.0105
+    ],
+    "docs": 20
+   }
+  },
+  "training": {
+   "config": {
+    "run": "q4grid",
+    "n_train": 951,
+    "epochs": 1.0,
+    "lr": 0.0002,
+    "lora_r": 16,
+    "lora_alpha": 32,
+    "lora_dropout": 0.05,
+    "grad_accum": 8,
+    "max_len": 2048,
+    "warmup_steps": 5,
+    "n_val_loss": 30,
+    "seed": 1234,
+    "max_steps": null,
+    "base_grid": "q4f16_1",
+    "base_model": "Qwen/Qwen3-1.7B",
+    "quant": "fp16 weights rounded to the q4f16_1 grid (model/q4grid.py), frozen; fp16 compute",
+    "target_modules": [
+     "down_proj",
+     "gate_proj",
+     "k_proj",
+     "o_proj",
+     "q_proj",
+     "up_proj",
+     "v_proj"
+    ],
+    "train_examples": 951,
+    "dropped_too_long": [],
+    "total_steps": 119,
+    "effective_batch": 8,
+    "loss": "cross-entropy on completion tokens only (JSON answer + <|im_end|>)",
+    "trainable_params": 17432576,
+    "torch": "2.11.0+cu130",
+    "gpu": "Tesla T4"
+   },
+   "summary": {
+    "steps": 119,
+    "elapsed_min": 27.0,
+    "peak_mem_mb": 5367,
+    "examples_per_s": 0.587,
+    "val_loss_before": 0.24082327105312964
+   }
+  },
+  "browser": {
+   "docs": "data/processed/test40.jsonl (first 5 test docs of each layout, 40 docs)",
+   "runtime": "WebLLM 0.2.89 in Chrome, GTX 1650 (WebGPU), q4f16_1",
+   "model": "ReportCompanion-q4grid-Qwen3-1.7B-q4f16_1-MLC (q4grid adapter merged, converted)",
+   "browser": {
+    "valid_format": 0.925,
+    "all_facts_f1": 0.9958,
+    "labs_recall": 0.989,
+    "document_date": 0.875,
+    "unsupported_items": 0
+   },
+   "same_model_in_python": {
+    "valid_format": 0.925,
+    "all_facts_f1": 0.9937,
+    "labs_recall": 0.989,
+    "document_date": 0.875,
+    "unsupported_items": 0
+   },
+   "earlier_broken_build_final": {
+    "valid_format": 0.1,
+    "all_facts_f1": 0.223,
+    "labs_recall": 0.1374,
+    "document_date": 0.9,
+    "unsupported_items": 0
+   },
+   "identical_parsed_answers_browser_vs_python": "36/40",
+   "latency_ms_per_doc": {
+    "mean": 31924,
+    "median": 31308,
+    "p90": 42706
+   }
+  },
+  "missing": [],
+  "extra": {
+   "extra:base-q4grid": "Original, browser rounding",
+   "extra:ft-final": "Fine-tuned, nf4 (final)"
+  },
+  "notes": [
+   "The fine-tuned model is the browser-ready version: it was trained on Qwen3-1.7B weights rounded to 4 bits exactly the way the browser rounds them, and these numbers come from that rounded model run in Python. In Chrome it gives the same answers on 36 of 40 test documents and the same scores.",
+   "The original model is shown at its stronger 4-bit setting (nf4). With the browser's rounding, which is what the app runs live, it does worse: all-facts F1 0.634 on the test set instead of 0.820.",
+   "An earlier fine-tune trained on the nf4 weights (final) scored about the same on the test set (0.992) and better on the challenge set (0.930 vs 0.857, though with 20 documents the 95% interval for the difference crosses zero), but it broke when converted for the browser, so it is not the one shown.",
+   "All models get the same prompt, greedy decoding and a 1,024-token limit.",
+   "Latency and memory are from a Kaggle T4 at batch size 16, not from a browser. The browser-rounded models use more memory here only because Python keeps the rounded weights in 16-bit; the browser stores them in 4-bit (about 0.9 GB). In Chrome on a GTX 1650 the fine-tuned model takes about 32 s per document.",
+   "Rules only attempt lab rows and the document date, so they have no all-facts, medicine or follow-up score. Their test-name dictionary is the same list the synthetic templates use, which flatters them on this data."
+  ]
+ }
 }

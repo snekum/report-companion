@@ -22,9 +22,16 @@ OUT = os.path.join(ROOT, "app", "src", "data", "prepared.json")
 
 SOURCES = {
     # key: (file tag, label, description)
-    "finetuned": ("ft-final", "Fine-tuned Qwen3-1.7B", "QLoRA adapter trained for this task; run in 4-bit (nf4) with the same prompt and greedy decoding as the original."),
+    "finetuned": ("ft-q4grid", "Fine-tuned Qwen3-1.7B", "LoRA adapter trained for this task on weights rounded to 4 bits the way the browser rounds them; same prompt and greedy decoding as the original. This is the model the browser build is made from."),
     "original": ("base", "Original Qwen3-1.7B", "The original model with the extraction prompt; 4-bit (nf4), greedy decoding."),
     "rules": ("regex", "Rule-based lab rows", "Deterministic dictionary + pattern matching. Lab rows and the document date only."),
+}
+
+
+# Where the prepared outputs were generated, by the quantisation recorded in each row.
+RUNTIME = {
+    "bnb-nf4-fp16": "Python, transformers + bitsandbytes (4-bit nf4) on a GTX 1650",
+    "q4f16_1-grid-fp16": "Python, transformers on a Kaggle T4, weights rounded to the browser's 4-bit grid",
 }
 
 
@@ -34,7 +41,7 @@ def mtime(path):
 
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument("--ft-tag", default="ft-final", help="predictions tag of the fine-tuned model to show")
+    ap.add_argument("--ft-tag", default="ft-q4grid", help="predictions tag of the fine-tuned model to show")
     a = ap.parse_args()
     ft_label = "Fine-tuned (pilot run)" if "pilot" in a.ft_tag else SOURCES["finetuned"][1]
     ft_desc = SOURCES["finetuned"][2] + (" Pilot adapter: 160 training documents, 1 epoch; known to cut some lab lists short." if "pilot" in a.ft_tag else "")
@@ -51,7 +58,7 @@ def main():
             outputs.setdefault(r["doc_id"], {})[key] = {
                 "label": label, "description": desc, "raw": r["raw"],
                 "latencyMs": r.get("latency_ms"), "generatedOn": mtime(path),
-                "runtime": "Python, transformers + bitsandbytes on a GTX 1650" if key != "rules" else "Python reference implementation",
+                "runtime": RUNTIME.get(r.get("quant"), "Python reference implementation"),
             }
     out_docs = []
     for d in docs:

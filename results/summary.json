@@ -70,6 +70,62 @@
         "new_tokens_mean": 434.0
       },
       "finetuned": {
+        "all_f1": 0.9935,
+        "labs_f1": 0.9946,
+        "labs_precision": 0.9988,
+        "labs_recall": 0.9904,
+        "unit_exact": 1.0,
+        "range_exact": 1.0,
+        "lab_date_exact": 1.0,
+        "value_altered": 0,
+        "meds_f1": 0.9844,
+        "meds_precision": 1.0,
+        "meds_recall": 0.9692,
+        "meds_status_acc": 0.9591,
+        "false_current": 2,
+        "dose_exact": 1.0,
+        "frequency_exact": 0.9455,
+        "follow_up_f1": 1.0,
+        "date_acc": 0.8137,
+        "schema_valid": 0.9559,
+        "evidence_valid": 0.9986,
+        "fields_in_evidence": 0.9986,
+        "unsupported_rate": 0.0,
+        "unsupported_items": 0,
+        "docs": 204,
+        "latency_median_ms": 3878,
+        "peak_mem_mb": 6225,
+        "new_tokens_mean": 407.6
+      },
+      "extra:base-q4grid": {
+        "all_f1": 0.6337,
+        "labs_f1": 0.6108,
+        "labs_precision": 0.6357,
+        "labs_recall": 0.5878,
+        "unit_exact": 1.0,
+        "range_exact": 0.9554,
+        "lab_date_exact": 0.4817,
+        "value_altered": 251,
+        "meds_f1": 0.9409,
+        "meds_precision": 0.9718,
+        "meds_recall": 0.9119,
+        "meds_status_acc": 0.8841,
+        "false_current": 6,
+        "dose_exact": 0.913,
+        "frequency_exact": 0.4155,
+        "follow_up_f1": 0.1158,
+        "date_acc": 0.0294,
+        "schema_valid": 0.0882,
+        "evidence_valid": 0.5974,
+        "fields_in_evidence": 0.2537,
+        "unsupported_rate": 0.0949,
+        "unsupported_items": 95,
+        "docs": 204,
+        "latency_median_ms": 2819,
+        "peak_mem_mb": 6596,
+        "new_tokens_mean": 409.6
+      },
+      "extra:ft-final": {
         "all_f1": 0.9923,
         "labs_f1": 0.9922,
         "labs_precision": 1.0,
@@ -150,6 +206,56 @@
         "docs": 128
       },
       "finetuned": {
+        "all_f1": 0.998,
+        "labs_f1": 0.9969,
+        "labs_precision": 0.998,
+        "labs_recall": 0.9959,
+        "unit_exact": 1.0,
+        "range_exact": 1.0,
+        "lab_date_exact": 1.0,
+        "value_altered": 0,
+        "meds_f1": 1.0,
+        "meds_precision": 1.0,
+        "meds_recall": 1.0,
+        "meds_status_acc": 0.9927,
+        "false_current": 0,
+        "dose_exact": 1.0,
+        "frequency_exact": 1.0,
+        "follow_up_f1": 1.0,
+        "date_acc": 0.9922,
+        "schema_valid": 0.9766,
+        "evidence_valid": 1.0,
+        "fields_in_evidence": 1.0,
+        "unsupported_rate": 0.0,
+        "unsupported_items": 0,
+        "docs": 128
+      },
+      "extra:base-q4grid": {
+        "all_f1": 0.4793,
+        "labs_f1": 0.4236,
+        "labs_precision": 0.4307,
+        "labs_recall": 0.4167,
+        "unit_exact": 1.0,
+        "range_exact": 0.9727,
+        "lab_date_exact": 0.6098,
+        "value_altered": 251,
+        "meds_f1": 0.916,
+        "meds_precision": 0.96,
+        "meds_recall": 0.8759,
+        "meds_status_acc": 0.9333,
+        "false_current": 4,
+        "dose_exact": 0.9333,
+        "frequency_exact": 0.55,
+        "follow_up_f1": 0.119,
+        "date_acc": 0.0469,
+        "schema_valid": 0.0703,
+        "evidence_valid": 0.6336,
+        "fields_in_evidence": 0.2769,
+        "unsupported_rate": 0.1156,
+        "unsupported_items": 71,
+        "docs": 128
+      },
+      "extra:ft-final": {
         "all_f1": 0.9974,
         "labs_f1": 0.9959,
         "labs_precision": 1.0,
@@ -227,6 +333,56 @@
         "docs": 76
       },
       "finetuned": {
+        "all_f1": 0.9855,
+        "labs_f1": 0.9912,
+        "labs_precision": 1.0,
+        "labs_recall": 0.9826,
+        "unit_exact": 1.0,
+        "range_exact": 1.0,
+        "lab_date_exact": 1.0,
+        "value_altered": 0,
+        "meds_f1": 0.9595,
+        "meds_precision": 1.0,
+        "meds_recall": 0.9222,
+        "meds_status_acc": 0.9036,
+        "false_current": 2,
+        "dose_exact": 1.0,
+        "frequency_exact": 0.8554,
+        "follow_up_f1": 1.0,
+        "date_acc": 0.5132,
+        "schema_valid": 0.9211,
+        "evidence_valid": 0.9961,
+        "fields_in_evidence": 0.9961,
+        "unsupported_rate": 0.0,
+        "unsupported_items": 0,
+        "docs": 76
+      },
+      "extra:base-q4grid": {
+        "all_f1": 0.8897,
+        "labs_f1": 0.8927,
+        "labs_precision": 0.9631,
+        "labs_recall": 0.8319,
+        "unit_exact": 1.0,
+        "range_exact": 0.9461,
+        "lab_date_exact": 0.3902,
+        "value_altered": 0,
+        "meds_f1": 0.9775,
+        "meds_precision": 0.9886,
+        "meds_recall": 0.9667,
+        "meds_status_acc": 0.8161,
+        "false_current": 2,
+        "dose_exact": 0.8851,
+        "frequency_exact": 0.2299,
+        "follow_up_f1": 0.0909,
+        "date_acc": 0.0,
+        "schema_valid": 0.1184,
+        "evidence_valid": 0.5401,
+        "fields_in_evidence": 0.2171,
+        "unsupported_rate": 0.062,
+        "unsupported_items": 24,
+        "docs": 76
+      },
+      "extra:ft-final": {
         "all_f1": 0.9833,
         "labs_f1": 0.9868,
         "labs_precision": 1.0,
@@ -310,6 +466,62 @@
         "new_tokens_mean": 177.3
       },
       "finetuned": {
+        "all_f1": 0.8571,
+        "labs_f1": 0.8,
+        "labs_precision": 0.7778,
+        "labs_recall": 0.8235,
+        "unit_exact": 0.7857,
+        "range_exact": 1.0,
+        "lab_date_exact": 1.0,
+        "value_altered": 1,
+        "meds_f1": 0.9167,
+        "meds_precision": 1.0,
+        "meds_recall": 0.8462,
+        "meds_status_acc": 0.8182,
+        "false_current": 1,
+        "dose_exact": 1.0,
+        "frequency_exact": 1.0,
+        "follow_up_f1": 0.9091,
+        "date_acc": 0.95,
+        "schema_valid": 1.0,
+        "evidence_valid": 1.0,
+        "fields_in_evidence": 0.9815,
+        "unsupported_rate": 0.0185,
+        "unsupported_items": 1,
+        "docs": 20,
+        "latency_median_ms": 1445,
+        "peak_mem_mb": 5270,
+        "new_tokens_mean": 147.2
+      },
+      "extra:base-q4grid": {
+        "all_f1": 0.5714,
+        "labs_f1": 0.4243,
+        "labs_precision": 0.4375,
+        "labs_recall": 0.4118,
+        "unit_exact": 0.8571,
+        "range_exact": 1.0,
+        "lab_date_exact": 0.0,
+        "value_altered": 8,
+        "meds_f1": 0.8695,
+        "meds_precision": 1.0,
+        "meds_recall": 0.7692,
+        "meds_status_acc": 0.9,
+        "false_current": 1,
+        "dose_exact": 1.0,
+        "frequency_exact": 1.0,
+        "follow_up_f1": 0.2858,
+        "date_acc": 0.15,
+        "schema_valid": 0.4,
+        "evidence_valid": 0.6897,
+        "fields_in_evidence": 0.4828,
+        "unsupported_rate": 0.069,
+        "unsupported_items": 2,
+        "docs": 20,
+        "latency_median_ms": 1299,
+        "peak_mem_mb": 5000,
+        "new_tokens_mean": 133.8
+      },
+      "extra:ft-final": {
         "all_f1": 0.9296,
         "labs_f1": 0.9714,
         "labs_precision": 0.9444,
@@ -341,26 +553,26 @@
   },
   "comparisons": {
     "test: fine-tuned minus original, all-facts F1": {
-      "difference": 0.1726,
+      "difference": 0.1738,
       "ci95": [
-        0.1465,
-        0.2015
+        0.1485,
+        0.202
       ],
       "docs": 204
     },
     "test: fine-tuned minus original, labs F1": {
-      "difference": 0.0921,
+      "difference": 0.0945,
       "ci95": [
-        0.0571,
-        0.1348
+        0.0603,
+        0.1339
       ],
       "docs": 204
     },
     "test: fine-tuned minus original, medications F1": {
-      "difference": 0.1725,
+      "difference": 0.1703,
       "ci95": [
-        0.1325,
-        0.2255
+        0.1302,
+        0.2227
       ],
       "docs": 204
     },
@@ -373,26 +585,42 @@
       "docs": 204
     },
     "test: fine-tuned minus rules, labs F1": {
-      "difference": -0.0078,
+      "difference": -0.0054,
       "ci95": [
-        -0.0195,
-        -0.0011
+        -0.0103,
+        -0.0012
+      ],
+      "docs": 204
+    },
+    "test: fine-tuned minus Original, browser rounding, all-facts F1": {
+      "difference": 0.3599,
+      "ci95": [
+        0.2992,
+        0.4241
+      ],
+      "docs": 204
+    },
+    "test: fine-tuned minus Fine-tuned, nf4 (final), all-facts F1": {
+      "difference": 0.0012,
+      "ci95": [
+        -0.0043,
+        0.0095
       ],
       "docs": 204
     },
     "challenge: fine-tuned minus original, all-facts F1": {
-      "difference": 0.3162,
+      "difference": 0.2438,
       "ci95": [
-        0.1587,
-        0.4851
+        0.0921,
+        0.4274
       ],
       "docs": 20
     },
     "challenge: fine-tuned minus original, labs F1": {
-      "difference": 0.4,
+      "difference": 0.2286,
       "ci95": [
-        0.1111,
-        0.7027
+        -0.0829,
+        0.5346
       ],
       "docs": 20
     },
@@ -405,25 +633,41 @@
       "docs": 20
     },
     "challenge: fine-tuned minus original, follow_up F1": {
-      "difference": 0.5667,
+      "difference": 0.6424,
       "ci95": [
-        0.3007,
-        0.8333
+        0.4,
+        1.0
       ],
       "docs": 20
     },
     "challenge: fine-tuned minus rules, labs F1": {
-      "difference": 0.3286,
+      "difference": 0.1571,
       "ci95": [
-        0.0565,
-        0.6518
+        -0.0769,
+        0.4597
+      ],
+      "docs": 20
+    },
+    "challenge: fine-tuned minus Original, browser rounding, all-facts F1": {
+      "difference": 0.2857,
+      "ci95": [
+        0.11,
+        0.5018
+      ],
+      "docs": 20
+    },
+    "challenge: fine-tuned minus Fine-tuned, nf4 (final), all-facts F1": {
+      "difference": -0.0724,
+      "ci95": [
+        -0.1532,
+        0.0105
       ],
       "docs": 20
     }
   },
   "training": {
     "config": {
-      "run": "final",
+      "run": "q4grid",
       "n_train": 951,
       "epochs": 1.0,
       "lr": 0.0002,
@@ -436,8 +680,9 @@
       "n_val_loss": 30,
       "seed": 1234,
       "max_steps": null,
+      "base_grid": "q4f16_1",
       "base_model": "Qwen/Qwen3-1.7B",
-      "quant": "bnb nf4, double quant, fp16 compute",
+      "quant": "fp16 weights rounded to the q4f16_1 grid (model/q4grid.py), frozen; fp16 compute",
       "target_modules": [
         "down_proj",
         "gate_proj",
@@ -458,17 +703,55 @@
     },
     "summary": {
       "steps": 119,
-      "elapsed_min": 26.7,
-      "peak_mem_mb": 3372,
-      "examples_per_s": 0.595,
-      "val_loss_before": 0.12298433872698242
+      "elapsed_min": 27.0,
+      "peak_mem_mb": 5367,
+      "examples_per_s": 0.587,
+      "val_loss_before": 0.24082327105312964
     }
   },
-  "browser": null,
+  "browser": {
+    "docs": "data/processed/test40.jsonl (first 5 test docs of each layout, 40 docs)",
+    "runtime": "WebLLM 0.2.89 in Chrome, GTX 1650 (WebGPU), q4f16_1",
+    "model": "ReportCompanion-q4grid-Qwen3-1.7B-q4f16_1-MLC (q4grid adapter merged, converted)",
+    "browser": {
+      "valid_format": 0.925,
+      "all_facts_f1": 0.9958,
+      "labs_recall": 0.989,
+      "document_date": 0.875,
+      "unsupported_items": 0
+    },
+    "same_model_in_python": {
+      "valid_format": 0.925,
+      "all_facts_f1": 0.9937,
+      "labs_recall": 0.989,
+      "document_date": 0.875,
+      "unsupported_items": 0
+    },
+    "earlier_broken_build_final": {
+      "valid_format": 0.1,
+      "all_facts_f1": 0.223,
+      "labs_recall": 0.1374,
+      "document_date": 0.9,
+      "unsupported_items": 0
+    },
+    "identical_parsed_answers_browser_vs_python": "36/40",
+    "latency_ms_per_doc": {
+      "mean": 31924,
+      "median": 31308,
+      "p90": 42706
+    }
+  },
   "missing": [],
+  "extra": {
+    "extra:base-q4grid": "Original, browser rounding",
+    "extra:ft-final": "Fine-tuned, nf4 (final)"
+  },
   "notes": [
-    "Rules only attempt lab rows and the document date, so they have no all-facts, medicine or follow-up score.",
-    "The rules' test-name dictionary is the same list the synthetic templates use, which flatters them on this data.",
-    "Original and fine-tuned models were both run in 4-bit (nf4) with the same prompt, greedy decoding and a 1,024-token limit."
+    "The fine-tuned model is the browser-ready version: it was trained on Qwen3-1.7B weights rounded to 4 bits exactly the way the browser rounds them, and these numbers come from that rounded model run in Python. In Chrome it gives the same answers on 36 of 40 test documents and the same scores.",
+    "The original model is shown at its stronger 4-bit setting (nf4). With the browser's rounding, which is what the app runs live, it does worse: all-facts F1 0.634 on the test set instead of 0.820.",
+    "An earlier fine-tune trained on the nf4 weights (final) scored about the same on the test set (0.992) and better on the challenge set (0.930 vs 0.857, though with 20 documents the 95% interval for the difference crosses zero), but it broke when converted for the browser, so it is not the one shown.",
+    "All models get the same prompt, greedy decoding and a 1,024-token limit.",
+    "Latency and memory are from a Kaggle T4 at batch size 16, not from a browser. The browser-rounded models use more memory here only because Python keeps the rounded weights in 16-bit; the browser stores them in 4-bit (about 0.9 GB). In Chrome on a GTX 1650 the fine-tuned model takes about 32 s per document.",
+    "Rules only attempt lab rows and the document date, so they have no all-facts, medicine or follow-up score. Their test-name dictionary is the same list the synthetic templates use, which flatters them on this data."
   ]
 }

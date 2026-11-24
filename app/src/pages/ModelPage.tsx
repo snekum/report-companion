@@ -122,7 +122,7 @@ export function ModelPage() {
                     </ul>
                   )}
                   <details><summary className="small">Raw output</summary><div className="raw">{src.raw}</div></details>
-                  {typeof src.latencyMs === "number" && <p className="tiny muted">Generation time when prepared: {(src.latencyMs / 1000).toFixed(1)} s (batched, GTX 1650).</p>}
+                  {typeof src.latencyMs === "number" && <p className="tiny muted">Generation time when prepared: {(src.latencyMs / 1000).toFixed(1)} s (batched, in Python, not in a browser).</p>}
                 </>
               )}
             </div>

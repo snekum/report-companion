@@ -1,0 +1,32 @@
+{
+  "docs": "data/processed/test40.jsonl (first 5 test docs of each layout, 40 docs)",
+  "runtime": "WebLLM 0.2.89 in Chrome, GTX 1650 (WebGPU), q4f16_1",
+  "model": "ReportCompanion-q4grid-Qwen3-1.7B-q4f16_1-MLC (q4grid adapter merged, converted)",
+  "browser": {
+    "valid_format": 0.925,
+    "all_facts_f1": 0.9958,
+    "labs_recall": 0.989,
+    "document_date": 0.875,
+    "unsupported_items": 0
+  },
+  "same_model_in_python": {
+    "valid_format": 0.925,
+    "all_facts_f1": 0.9937,
+    "labs_recall": 0.989,
+    "document_date": 0.875,
+    "unsupported_items": 0
+  },
+  "earlier_broken_build_final": {
+    "valid_format": 0.1,
+    "all_facts_f1": 0.223,
+    "labs_recall": 0.1374,
+    "document_date": 0.9,
+    "unsupported_items": 0
+  },
+  "identical_parsed_answers_browser_vs_python": "36/40",
+  "latency_ms_per_doc": {
+    "mean": 31924,
+    "median": 31308,
+    "p90": 42706
+  }
+}

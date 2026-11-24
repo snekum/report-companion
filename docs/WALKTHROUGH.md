@@ -54,7 +54,7 @@ A separate **challenge set** of 20 hand-written documents ([pipeline/challenge/c
 - **Original Qwen3-1.7B** with the extraction prompt.
 - **Fine-tuned Qwen3-1.7B**: the same model plus a LoRA adapter.
 
-Both models run in the same 4-bit setup, with the same prompt, greedy decoding (always pick the most likely next word, so runs are repeatable) and the same 1,024-token limit ([model/generate.py](../model/generate.py)).
+Both models get the same prompt, greedy decoding (always pick the most likely next word, so runs are repeatable) and the same 1,024-token limit ([model/generate.py](../model/generate.py)).
 
 ## 5. Fine-tuning on a 4 GB laptop GPU
 
@@ -64,7 +64,9 @@ The loss is computed **only on the answer** (the JSON), not on the instructions 
 
 The training loop ([model/train.py](../model/train.py)) is about 150 lines of plain PyTorch around transformers and peft, rather than TRL's trainer. The reason is memory. For every position in a 1,500-token example, the model scores all 151,936 words in its vocabulary. Done for every position and converted to 32-bit for the loss, that alone is about 1 GB, and the backward pass doubles it. Because only the answer positions are trained, the loop asks the model for scores at those positions only (`logits_to_keep`), which brings peak memory down to about 3 GB and makes training fit on the GTX 1650.
 
-Training runs at about 32 seconds per example on this GPU. A small pilot ran locally first; see the progress log for how the full run was done.
+Training runs at about 32 seconds per example on this GPU. A small pilot ran locally first. The full runs (951 documents, 1 epoch, about 27 minutes each) ran on a free Kaggle T4 from a generated notebook ([tools/make_cloud_notebook.py](../tools/make_cloud_notebook.py)).
+
+The shipped model doesn't use QLoRA's 4-bit format (nf4) for the frozen weights. It uses a copy of the weights rounded exactly the way the browser rounds them. Section 6 explains why.
 
 ## 6. Running in the browser
 
@@ -79,6 +81,20 @@ A fine-tuned model has the same architecture, so it can reuse that compiled prog
 
 The conversion was first tested on the original model, by comparing the result with the official prebuilt files, before any fine-tuned weights existed.
 
+### When the browser version broke
+
+The first full fine-tune (`final`) scored 0.99 F1 in Python. In Chrome, only 10% of its answers were in a valid format. It typically closed the answer right after the date and started a new object for each field.
+
+Checking one suspect at a time ([results/deployment/diag_browser/](../results/deployment/diag_browser/)):
+
+- **The prompt** matched training token for token.
+- **The merged model** was perfect in Python.
+- **The converted weights**, unpacked back into Python, failed exactly like the browser did. So the browser runtime was fine and the weights were the problem.
+
+The cause was rounding. Both QLoRA and the browser store weights in 4 bits, but they round differently: nf4 uses levels spaced for a bell-shaped spread of weights, while the browser's `q4f16_1` uses 15 evenly spaced levels per group of 32 weights. The adapter's changes are tiny next to that rounding error (about 0.4% of a weight against 10%). An adapter tuned to correct for one set of rounding errors doesn't correct for another. Putting the `final` adapter on the browser-rounded weights without merging failed the same way, which confirmed it.
+
+The fix: [model/q4grid.py](../model/q4grid.py) reproduces the browser's rounding exactly, checked against the converter on every quantised tensor. The model was then retrained with that rounded copy as its frozen base (`--base-grid q4f16_1`). Training then sees the same rounding errors the browser will have. The merged result converts cleanly. In Chrome it scores the same as in Python on 40 test documents (F1 0.996).
+
 Browsers without WebGPU still get the full app with clearly labelled prepared results and the rule-based extraction. There is no silent fallback to an online AI service.
 
 ## 7. The app
@@ -90,4 +106,10 @@ Browsers without WebGPU still get the full app with clearly labelled prepared re
 
 ## 8. Results
 
-_Added after the final evaluation run._
+Full tables: [results/RESULTS.md](../results/RESULTS.md). The short version:
+
+- **Fine-tuning mostly taught format and faithful copying.** On 204 test documents, all-facts F1 went from 0.82 to 0.99. Answers in the required format went from 22% to 96%, and facts that don't appear in the document went from 52 to 0. Follow-up instructions improved the most (F1 0.37 to 1.0).
+- **On layouts never seen in training it held up** (F1 0.99), apart from document dates on the compact lab layout, where it copies a "COLL" prefix into the date.
+- **On the 20 hand-written challenge documents it scored 0.86, against 0.61 for the original model.** The first fine-tune, which can't run in the browser, scored 0.93. Training on the browser's rounding costs some robustness on unusual documents: it listed blood pressure as a lab result and missed values written in a sentence.
+- **The rules baseline stays very hard to beat on lab rows** in these tidy synthetic layouts (F1 1.0). It falls to 0.64 on the challenge set, where the fine-tuned model gets 0.80.
+- **None of this says much about real clinical records.** The documents are synthetic or hand-written fiction, and no clinician reviewed the outputs.
